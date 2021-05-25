@@ -8,13 +8,13 @@ import './App.css';
 const App = () => {
     return (
         <Router>
-            <Fragment>
+            <>
                 <Switch>
                     <Route exact path='/'>
                         <Landing />
                     </Route>
                 </Switch>
-            </Fragment>
+            </>
         </Router>
     );
 };
