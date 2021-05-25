@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased:
+## Unreleased: feature2/contact-page <> 2021-05-25
+
+### Added
+
+-   `Contact` & `ContactItem` components
+-   Basic contact page setup
+-   Routing to contact page
+-   Contact page initial CSS
+-   `Footer` component
 
 ---
 
