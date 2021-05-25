@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Landing from './components/layout/Landing';
 
 import './App.css';
 
 const App = () => {
     return (
-        <div>
-            <h1>Hello, world.</h1>
-        </div>
+        <Router>
+            <Fragment>
+                <Switch>
+                    <Route exact path='/'>
+                        <Landing />
+                    </Route>
+                </Switch>
+            </Fragment>
+        </Router>
     );
 };
 
