@@ -16,10 +16,10 @@ const Landing = () => {
                     <Link to='/' className='nav-link active'>
                         Home
                     </Link>
-                    <Link to='/' className='nav-link'>
+                    <Link to='/projects' className='nav-link'>
                         Projects
                     </Link>
-                    <Link to='/' className='nav-link'>
+                    <Link to='/contact' className='nav-link'>
                         Contact
                     </Link>
                 </nav>
