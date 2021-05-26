@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## feature3/projects-page <> 2021-05-26
+
+### Added
+
+-   Projects & ProjectItem components
+-   Project page setup and routing
+
 ## feature2/contact-page <> 2021-05-26
 
 ### Added
