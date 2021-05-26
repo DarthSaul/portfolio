@@ -6,11 +6,11 @@ const ContactItem = ({ type, icon, link }) => {
         <a
             href={link}
             target='_blank'
-            rel='noopener noreferrer external'
+            rel='noopener noreferrer'
             className='contact-item'
         >
-            <p className='p'>{type}</p>
-            <FontAwesomeIcon icon={icon} />
+            <p>{type}</p>
+            <FontAwesomeIcon icon={icon} className='my' />
         </a>
     );
 };
