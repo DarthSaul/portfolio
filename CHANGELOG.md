@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased: feature2/contact-page <> 2021-05-25
+## Unreleased:
+
+---
+
+## feature2/contact-page <> 2021-05-26
 
 ### Added
 
@@ -11,8 +15,7 @@ All notable changes to this project will be documented in this file.
 -   Routing to contact page
 -   Contact page initial CSS
 -   `Footer` component
-
----
+-   Dynamic navbar
 
 ## feature1/landing-page <> 2021-05-25
 

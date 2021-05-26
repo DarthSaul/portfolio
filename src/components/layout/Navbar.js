@@ -1,20 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
-const Navbar = () => {
+const Navbar = ({ active }) => {
+    const navItems = [
+        { name: 'Home', path: '/' },
+        { name: 'Projects', path: '/projects' },
+        { name: 'Contact', path: '/contact' }
+    ];
     return (
         <nav className='navbar'>
-            <Link to='/'>SG</Link>
+            <Link to='/'>
+                <FontAwesomeIcon icon={faHome} /> SG
+            </Link>
             <ul>
-                <li>
-                    <Link to='/'>Home</Link>
-                </li>
-                <li>
-                    <Link to='/projects'>Projects</Link>
-                </li>
-                <li>
-                    <Link to='/contact'>Contact</Link>
-                </li>
+                {navItems.map((el, ind) => (
+                    <li key={ind}>
+                        <Link
+                            to={el.path}
+                            className={
+                                active === el.name
+                                    ? 'nav-link active'
+                                    : 'nav-link'
+                            }
+                        >
+                            {el.name}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

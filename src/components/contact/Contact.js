@@ -12,7 +12,7 @@ import ContactItem from './ContactItem';
 const Contact = () => {
     return (
         <>
-            <Navbar />
+            <Navbar active={'Contact'} />
             <div className='container'>
                 <div className='contact-container'>
                     <ContactItem
@@ -23,17 +23,17 @@ const Contact = () => {
                     <ContactItem
                         type='LinkedIn'
                         icon={faLinkedin}
-                        link='linkedin.com/saulgraves'
+                        link='https://www.linkedin.com/in/saulgraves/'
                     />
                     <ContactItem
                         type='GitHub'
                         icon={faGithub}
-                        link='github.com/DarthSaul'
+                        link='https://github.com/DarthSaul'
                     />
                     <ContactItem
                         type='Instgram'
                         icon={faInstagram}
-                        link='instagram.com'
+                        link='https://www.instagram.com/'
                     />
                 </div>
             </div>
