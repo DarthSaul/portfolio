@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased:
+## Unreleased: feature4/vertical-nav <> YYYY-MM-DD
+
+### Changed
+
+-   Navbar to vertical display
 
 ---
 
