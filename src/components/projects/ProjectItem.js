@@ -15,6 +15,7 @@ const ProjectItem = ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     };
+    const handleClick = `location.href='${githubLink}'`;
     return (
         <a
             href={projectLink}
@@ -27,14 +28,13 @@ const ProjectItem = ({
                 <p>{name}</p>
                 <FontAwesomeIcon icon={icon} className='my' />
                 <p className='project-description'>{description}</p>
-                <a
-                    href={githubLink}
+                <button
+                    onClick={() => handleClick}
                     className='btn my-1'
-                    target='_blank'
-                    rel='noopener noreferrer'
+                    type='button'
                 >
                     View the code
-                </a>
+                </button>
             </div>
         </a>
     );

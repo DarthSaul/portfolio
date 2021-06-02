@@ -7,7 +7,6 @@ const Footer = () => {
     return (
         <footer>
             <h1>Saul Graves</h1>
-            {/* <div>some links</div> */}
             <div className='footer-contact'>
                 <a href='mailto:graves.saul@gmail.com'>graves.saul@gmail.com</a>
                 <div className='footer-links'>

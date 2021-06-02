@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Contact from '../contact/Contact';
-import Projects from '../projects/Projects';
+import ContactPage from '../contact/ContactPage';
+import ProjectsPage from '../projects/ProjectsPage';
 import Footer from '../layout/Footer';
 
 const Routes = () => {
@@ -10,10 +10,10 @@ const Routes = () => {
         <>
             <Switch>
                 <Route exact path='/contact'>
-                    <Contact />
+                    <ContactPage />
                 </Route>
                 <Route exact path='/projects'>
-                    <Projects />
+                    <ProjectsPage />
                 </Route>
             </Switch>
             <Footer />

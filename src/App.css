@@ -136,7 +136,7 @@
 
 /* About Section */
 .about-container {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.9)
@@ -148,6 +148,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1.4rem;
+    padding: 2rem 1rem;
 }
 .about-showcase {
     width: 60%;
@@ -200,11 +201,12 @@
         url('./img/background.jpg');
     background-size: cover;
     background-position: contain;
-    padding: 1rem;
-    height: 500px;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 400px;
+    margin-bottom: 1.4rem;
 }
 .projects-inner {
     max-width: 85%;
@@ -249,36 +251,50 @@
 
 /* Contact */
 .contact-container {
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)
+        ),
+        url('./img/background.jpg');
+    background-size: cover;
+    background-position: contain;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: -20px;
+}
+
+.contact-inner {
+    max-width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contact-item {
-    background-color: #ffffff;
-    background-image: repeating-radial-gradient(
-            circle at 0 0,
-            transparent 0,
-            #ffffff 12px
-        ),
-        repeating-linear-gradient(
-            rgba(243, 152, 29, 0.1),
-            rgba(243, 152, 29, 0.7)
-        );
-    margin: 1rem;
+    margin: 2rem;
     border-radius: 12px;
-    height: 250px;
-    width: 400px;
+    width: 250px;
+    height: 175px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2.2rem;
     text-decoration: none;
+    box-shadow: 3px 5px 10px black;
+    font-size: 5em;
 }
 
 .contact-item:visited {
     color: black;
+}
+
+.contact-item-icon {
+    color: var(--dark-red);
+    margin: 0.5rem 0;
 }
 
 /* Footer */
@@ -308,6 +324,7 @@ footer h1 {
     display: flex;
     justify-content: space-around;
     margin-top: 0.4rem;
+    margin-left: 0.4rem;
 }
 .footer-location {
     font-weight: 200;
