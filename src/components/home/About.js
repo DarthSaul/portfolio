@@ -26,7 +26,7 @@ const About = () => {
                         aliquam inventore magnam ad!
                     </p>
                     <div className='about-links-container'>
-                        <Link to='/about'>
+                        <Link to='/about' className='more-about'>
                             <FontAwesomeIcon icon={faChevronRight} /> More about
                             Saul
                         </Link>

@@ -4,7 +4,7 @@ import { faWrench } from '@fortawesome/free-solid-svg-icons';
 
 import Navbar from '../layout/Navbar';
 
-const ProjectsPage = () => {
+const AboutPage = () => {
     return (
         <>
             <div className='contact-page'>
@@ -18,4 +18,4 @@ const ProjectsPage = () => {
     );
 };
 
-export default ProjectsPage;
+export default AboutPage;
