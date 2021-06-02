@@ -2,13 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased: feature4/vertical-nav <> YYYY-MM-DD
+## Unreleased: feature5/redesign <> YYYY-MM-DD
+
+---
+
+## feature4/vertical-nav <> 2021-06-01
 
 ### Changed
 
 -   Navbar to vertical display
-
----
 
 ## feature3/projects-page <> 2021-05-26
 
