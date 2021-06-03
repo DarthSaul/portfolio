@@ -12,58 +12,6 @@
     font-family: sans-serif;
 }
 
-/* Padding */
-.p {
-    padding: 0.5rem;
-}
-.p-1 {
-    padding: 1rem;
-}
-.p-2 {
-    padding: 2rem;
-}
-.p-3 {
-    padding: 3rem;
-}
-.py {
-    padding: 0.5rem 0;
-}
-.py-1 {
-    padding: 1rem 0;
-}
-.py-2 {
-    padding: 2rem 0;
-}
-.py-3 {
-    padding: 3rem 0;
-}
-
-/* Margin */
-.m {
-    margin: 0.5rem;
-}
-.m-1 {
-    margin: 1rem;
-}
-.m-2 {
-    margin: 2rem;
-}
-.m-3 {
-    margin: 3rem;
-}
-.my {
-    margin: 0.5rem 0;
-}
-.my-1 {
-    margin: 1rem 0;
-}
-.my-2 {
-    margin: 2rem 0;
-}
-.my-3 {
-    margin: 3rem 0;
-}
-
 /* Utilities */
 .btn {
     display: inline-block;
@@ -81,7 +29,7 @@
 }
 
 /* Navbar */
-.navbar {
+.vert-navbar {
     position: fixed;
     left: 0;
     top: 0;
@@ -95,18 +43,18 @@
     font-size: 1.2em;
 }
 
-.navbar ul {
+.vert-navbar ul {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
     list-style: none;
 }
 
-.navbar ul li {
+.vert-navbar ul li {
     margin-top: 1rem;
 }
 
-.navbar a {
+.vert-navbar a {
     font-weight: 300;
     color: black;
     text-decoration: none;
@@ -115,7 +63,7 @@
     -webkit-transition: margin-left 300ms;
 }
 
-.navbar a:hover {
+.vert-navbar a:hover {
     margin-left: 0.6rem;
     color: var(--dark-red);
     -webkit-transition: color 300ms;
@@ -126,7 +74,7 @@
     margin-right: 1rem;
 }
 
-.navbar .nav-link.active {
+.vert-navbar .vert-nav-link.active {
     color: var(--dark-red);
 }
 
@@ -137,7 +85,7 @@
 }
 
 /* About Section */
-.about-container {
+.about-wrapper {
     min-height: 100vh;
     background-image: linear-gradient(
             rgba(255, 255, 255, 0.9),
@@ -146,29 +94,17 @@
         url('./img/background.jpg');
     background-size: cover;
     background-position: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.4rem;
-    padding: 2rem 1rem;
 }
-.about-showcase {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+@media (min-width: 576px) {
+    .about-wrapper .container {
+        max-width: 60%;
+    }
 }
-.about-img img {
-    max-height: 350px;
-    box-shadow: 3px 5px 8px black;
-}
-.about-text {
-    width: 50%;
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+/* Need media queries */
+/* .about-img {
+
+} */
 .about-text h3 {
     font-size: 1.8em;
     font-family: 'Merriweather', serif;

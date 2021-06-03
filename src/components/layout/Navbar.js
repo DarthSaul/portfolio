@@ -16,7 +16,7 @@ const Navbar = ({ active }) => {
         { name: 'Contact', path: '/contact', icon: faAddressBook }
     ];
     return (
-        <nav className='navbar'>
+        <nav className='vert-navbar'>
             <ul>
                 {navItems.map((el, ind) => (
                     <li key={ind}>
@@ -24,8 +24,8 @@ const Navbar = ({ active }) => {
                             to={el.path}
                             className={
                                 active === el.name
-                                    ? 'nav-link active'
-                                    : 'nav-link'
+                                    ? 'vert-nav-link active'
+                                    : 'vert-nav-link'
                             }
                         >
                             <FontAwesomeIcon
