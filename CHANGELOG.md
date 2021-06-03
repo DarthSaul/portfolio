@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased: feature5/redesign <> 2021-06-02
+## Unreleased: feature6/bootstrap <> YYYY-MM-DD
+
+### Added
+
+---
+
+## feature5/redesign <> 2021-06-02
 
 ### Added
 
@@ -11,8 +17,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 -   Bring all content to home page, scroll down with vertical navbar
-
----
 
 ## feature4/vertical-nav <> 2021-06-01
 
