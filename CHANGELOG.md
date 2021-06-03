@@ -2,9 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased:
+## Unreleased: feature5/redesign <> 2021-06-02
+
+### Added
+
+-   New components for home page
+
+### Changed
+
+-   Bring all content to home page, scroll down with vertical navbar
 
 ---
+
+## feature4/vertical-nav <> 2021-06-01
+
+### Changed
+
+-   Navbar to vertical display
 
 ## feature3/projects-page <> 2021-05-26
 

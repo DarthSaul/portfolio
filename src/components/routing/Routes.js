@@ -1,19 +1,23 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Contact from '../contact/Contact';
-import Projects from '../projects/Projects';
+import ContactPage from '../contact/ContactPage';
+import ProjectsPage from '../projects/ProjectsPage';
+import AboutPage from '../about/AboutPage';
 import Footer from '../layout/Footer';
 
 const Routes = () => {
     return (
         <>
             <Switch>
-                <Route exact path='/contact'>
-                    <Contact />
-                </Route>
                 <Route exact path='/projects'>
-                    <Projects />
+                    <ProjectsPage />
+                </Route>
+                <Route exact path='/about'>
+                    <AboutPage />
+                </Route>
+                <Route exact path='/contact'>
+                    <ContactPage />
                 </Route>
             </Switch>
             <Footer />

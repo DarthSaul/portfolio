@@ -11,10 +11,11 @@ const ProjectItem = ({
 }) => {
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${imgUrl})`,
-        backgroundSize: `120%`,
+        backgroundSize: `140%`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     };
+    const handleClick = `location.href='${githubLink}'`;
     return (
         <a
             href={projectLink}
@@ -27,9 +28,13 @@ const ProjectItem = ({
                 <p>{name}</p>
                 <FontAwesomeIcon icon={icon} className='my' />
                 <p className='project-description'>{description}</p>
-                <a href={githubLink} className='btn my-1'>
+                <button
+                    onClick={() => handleClick}
+                    className='btn my-1'
+                    type='button'
+                >
                     View the code
-                </a>
+                </button>
             </div>
         </a>
     );
