@@ -39,7 +39,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 1.2rem;
     font-size: 1.2em;
 }
 
@@ -78,6 +77,64 @@
     color: var(--dark-red);
 }
 
+@media (max-width: 768px) {
+    .vert-navbar {
+        background-color: #fcedea;
+        position: fixed;
+        width: 100%;
+        height: 5rem;
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+        padding: 1rem 0;
+    }
+
+    .vert-navbar ul {
+        width: 100%;
+        margin: 0rem 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+    }
+    .vert-navbar ul li {
+        margin: 0;
+    }
+    .nav-icon {
+        margin-right: 0.3rem;
+    }
+}
+
+@media (max-width: 510px) {
+    .vert-navbar {
+        background-color: #fcedea;
+        position: fixed;
+        width: 100%;
+        height: 7rem;
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+        padding: 1rem 0;
+    }
+    .vert-navbar ul {
+        width: auto;
+        margin: auto;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+    }
+}
+
 /* Home */
 .home-container {
     background-color: rgba(223, 223, 252, 0.2);
@@ -96,7 +153,7 @@
     background-position: contain;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     .about-wrapper .container {
         max-width: 60%;
     }
@@ -330,4 +387,30 @@ footer {
     font-size: 1.4em;
     line-height: 1.5rem;
     color: var(--dark-red);
+}
+
+@media (max-width: 768px) {
+    footer {
+        height: 10rem;
+        margin-bottom: 5rem;
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-name h1 {
+        font-size: 2.2em;
+    }
+    .footer-name,
+    .footer-contact {
+        margin: 0;
+    }
+    .footer-location {
+        display: none;
+    }
+}
+@media (max-width: 510px) {
+    footer {
+        margin-bottom: 7rem;
+    }
 }
