@@ -170,6 +170,7 @@
 .more-about:hover {
     margin-left: 0.6rem;
     -webkit-transition: margin-left 300ms;
+    text-decoration: none;
 }
 
 /* Projects */
