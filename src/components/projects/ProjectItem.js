@@ -16,6 +16,7 @@ const ProjectItem = ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     };
+    const handleClick = `location.href='${githubLink}'`;
     return (
         <a
             href={projectLink}
@@ -24,12 +25,12 @@ const ProjectItem = ({
             className='project-item d-flex flex-column justify-content-center align-items-center m-3'
             style={divStyle}
         >
-            <div className='project-item-inner d-flex flex-column justify-content-center align-items-center p-2'>
+            <div className='project-item-inner d-flex flex-column justify-content-center align-items-center p-2 text-center'>
                 <p className='fw-bold'>{name}</p>
                 <FontAwesomeIcon icon={icon} className='mb-3 fs-1' />
-                <p className='project-description text-center'>{description}</p>
+                <p className='project-description'>{description}</p>
                 <Button
-                    href={githubLink}
+                    onClick={() => handleClick}
                     variant='secondary'
                     className='my-1 fs-6 px-3 fw-light'
                     target='_blank'
