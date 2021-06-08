@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import contactInfo from '../../utilities/contactInfo';
 
 const Footer = () => {
     return (
@@ -19,30 +19,17 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className='footer-links'>
-                    <a
-                        href='https://www.linkedin.com/in/saulgraves/'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='footer-link'
-                    >
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                    <a
-                        href='https://www.linkedin.com/in/saulgraves/'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='footer-link'
-                    >
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a
-                        href='mailto:graves.saul@gmail.com'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='about-link'
-                    >
-                        <FontAwesomeIcon icon={faEnvelope} />
-                    </a>
+                    {contactInfo.map((item, ind) => (
+                        <a
+                            key={ind}
+                            href={item.link}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='footer-link'
+                        >
+                            <FontAwesomeIcon icon={item.icon} />
+                        </a>
+                    ))}
                 </div>
             </div>
             <div className='footer-location'>

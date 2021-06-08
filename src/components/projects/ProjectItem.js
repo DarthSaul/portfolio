@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProjectItem = ({
@@ -15,26 +16,27 @@ const ProjectItem = ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     };
-    const handleClick = `location.href='${githubLink}'`;
     return (
         <a
             href={projectLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='project-item'
+            className='project-item d-flex flex-column justify-content-center align-items-center m-3'
             style={divStyle}
         >
-            <div className='project-item-content'>
-                <p>{name}</p>
-                <FontAwesomeIcon icon={icon} className='my' />
-                <p className='project-description'>{description}</p>
-                <button
-                    onClick={() => handleClick}
-                    className='btn my-1'
+            <div className='project-item-inner d-flex flex-column justify-content-center align-items-center p-2'>
+                <p className='fw-bold'>{name}</p>
+                <FontAwesomeIcon icon={icon} className='mb-3 fs-1' />
+                <p className='project-description text-center'>{description}</p>
+                <Button
+                    href={githubLink}
+                    variant='secondary'
+                    className='my-1 fs-6 px-3 fw-light'
+                    target='_blank'
                     type='button'
                 >
                     View the code
-                </button>
+                </Button>
             </div>
         </a>
     );

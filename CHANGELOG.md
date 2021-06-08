@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased: feature5/redesign <> 2021-06-02
+## Unreleased: feature6/bootstrap <> 2021-06-08
+
+### Added
+
+-   Bootstrap package and styling
+-   Accessibility for various screensizes via Boostrap
+-   Bootstrap buttons
+-   Profile photo
+-   Replaced placeholder text with content
+
+### Changed
+
+-   Removed custom padding & margins from CSS to Bootstrap HTML classes
+-   Moved contact info and project to utility files, then pull those arrays in and map over where necessary -- can be moved to context...
+
+---
+
+## feature5/redesign <> 2021-06-02
 
 ### Added
 
@@ -11,8 +28,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 -   Bring all content to home page, scroll down with vertical navbar
-
----
 
 ## feature4/vertical-nav <> 2021-06-01
 
