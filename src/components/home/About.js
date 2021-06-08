@@ -19,7 +19,7 @@ const About = () => {
                             className='w-100 rounded about-img'
                         />
                     </div>
-                    <div className='about-content col-md-8 col-lg-7 d-flex flex-column justify-content-between my-4'>
+                    <div className='about-content col-md-8 col-lg-7 d-flex flex-column justify-content-evenly my-4'>
                         <h3 className='fs-2'>
                             Hello, I'm Saul Graves. A full-stack developer based
                             in Pittsburgh, PA.
