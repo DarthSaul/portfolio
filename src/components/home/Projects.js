@@ -8,8 +8,8 @@ import ProjectItem from '../projects/ProjectItem';
 
 const Projects = () => {
     return (
-        <div className='projects-container'>
-            <div className='projects-inner'>
+        <div className='projects-wrapper d-flex justify-content-center align-items-center'>
+            <div className='projects-inner d-flex flex-wrap justify-content-center align-items-center'>
                 <ProjectItem
                     name='Marvel Ultimate Team'
                     description='Build a team of Marvel super heroes!'
