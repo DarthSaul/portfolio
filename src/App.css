@@ -159,12 +159,6 @@
 .about-content h3 {
     font-family: 'Merriweather', serif;
 }
-@media (min-width: 1500px) {
-    .about-description {
-        font-size: 1em;
-        color: red;
-    }
-}
 .about-links-container a {
     text-decoration: none;
     color: var(--dark-red);
