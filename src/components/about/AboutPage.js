@@ -8,7 +8,7 @@ const AboutPage = () => {
     return (
         <>
             <div className='contact-page'>
-                <Navbar active={'Contact'} />
+                <Navbar active={'About'} />
 
                 <h1>
                     <FontAwesomeIcon icon={faWrench} /> Under construction...
