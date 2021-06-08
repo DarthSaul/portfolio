@@ -13,7 +13,7 @@ const ContactItem = ({ icon, link, imgUrl }) => {
             href={link}
             target='_blank'
             rel='noopener noreferrer'
-            className='contact-item'
+            className='contact-item m-4 d-flex justify-content-center align-items-center'
             style={divStyle}
         >
             <FontAwesomeIcon icon={icon} className='contact-item-icon' />

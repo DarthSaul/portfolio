@@ -1,32 +1,21 @@
 import React from 'react';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import ContactItem from '../contact/ContactItem';
 
-import gmail from '../../img/gmail.jpg';
-import linkedIn from '../../img/linkedIn.jpg';
-import github from '../../img/github.jpg';
+import contactInfo from '../../utilities/contactInfo';
 
 const Contact = () => {
     return (
-        <div className='contact-container'>
-            <div className='contact-inner'>
-                <ContactItem
-                    imgUrl={gmail}
-                    icon={faEnvelope}
-                    link='mailto:graves.saul@gmail.com'
-                />
-                <ContactItem
-                    imgUrl={linkedIn}
-                    icon={faLinkedin}
-                    link='https://www.linkedin.com/in/saulgraves/'
-                />
-                <ContactItem
-                    imgUrl={github}
-                    icon={faGithub}
-                    link='https://github.com/DarthSaul'
-                />
+        <div className='contact-wrapper d-flex justify-content-center align-items-center py-3'>
+            <div className='contact-inner d-flex flex-column justify-content-around align-items-center flex-xl-row'>
+                {contactInfo.map((item, ind) => (
+                    <ContactItem
+                        key={ind}
+                        imgUrl={item.backgroundImg}
+                        icon={item.icon}
+                        link={item.link}
+                    />
+                ))}
             </div>
         </div>
     );

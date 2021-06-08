@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <Navbar active={'Home'} />
-            <div className='home-container'>
+            <div className='home-container p-3'>
                 <About />
                 <Projects />
                 <Contact />
