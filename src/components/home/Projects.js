@@ -6,11 +6,10 @@ import projects from '../../utilities/projects';
 
 const Projects = () => {
     return (
-        <div className='projects-wrapper d-flex justify-content-center align-items-center p-3 mb-3'>
-            <div className='projects-inner d-flex flex-wrap justify-content-center align-items-center w-75'>
-                {projects.map((item, ind) => (
+        <div className='projects-wrapper row justify-content-center'>
+            {projects.map((item, ind) => (
+                <div className='col-10 col-md-7 col-lg-4 mb-5 mx-3' key={ind}>
                     <ProjectItem
-                        key={ind}
                         name={item.name}
                         description={item.description}
                         icon={item.icon}
@@ -18,8 +17,8 @@ const Projects = () => {
                         githubLink={item.githubLink}
                         imgUrl={item.imgUrl}
                     />
-                ))}
-            </div>
+                </div>
+            ))}
         </div>
     );
 };

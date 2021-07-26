@@ -1,18 +1,32 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWrench } from '@fortawesome/free-solid-svg-icons';
 
 import Navbar from '../layout/Navbar';
+import ProjectItem from './ProjectItem';
+import projects from '../../utilities/projects';
 
 const ProjectsPage = () => {
     return (
         <>
-            <div className='contact-page'>
+            <div className='contact-page py-4'>
                 <Navbar active={'Projects'} />
 
-                <h1>
-                    <FontAwesomeIcon icon={faWrench} /> Under construction...
-                </h1>
+                <div className='row justify-content-center my-5'>
+                    {projects.map((item, ind) => (
+                        <div
+                            className='col-10 col-md-7 col-lg-4 mb-5 mx-3'
+                            key={ind}
+                        >
+                            <ProjectItem
+                                name={item.name}
+                                description={item.description}
+                                icon={item.icon}
+                                projectLink={item.projectLink}
+                                githubLink={item.githubLink}
+                                imgUrl={item.imgUrl}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );

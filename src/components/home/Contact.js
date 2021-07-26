@@ -6,17 +6,15 @@ import contactInfo from '../../utilities/contactInfo';
 
 const Contact = () => {
     return (
-        <div className='contact-wrapper d-flex justify-content-center align-items-center py-3'>
-            <div className='contact-inner d-flex flex-column justify-content-around align-items-center flex-xl-row'>
-                {contactInfo.map((item, ind) => (
-                    <ContactItem
-                        key={ind}
-                        imgUrl={item.backgroundImg}
-                        icon={item.icon}
-                        link={item.link}
-                    />
-                ))}
-            </div>
+        <div className='contact-wrapper row justify-content-center py-3'>
+            {contactInfo.map((item, ind) => (
+                <div
+                    className='col-sm-1 my-auto mx-4 mx-lg-3 text-center'
+                    key={ind}
+                >
+                    <ContactItem icon={item.icon} link={item.link} />
+                </div>
+            ))}
         </div>
     );
 };

@@ -4,16 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faHome,
     faPencilRuler,
-    faUserNinja,
-    faAddressBook
+    faUserNinja
 } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ active }) => {
     const navItems = [
         { name: 'Home', path: '/', icon: faHome },
         { name: 'Projects', path: '/projects', icon: faPencilRuler },
-        { name: 'About', path: '/about', icon: faUserNinja },
-        { name: 'Contact', path: '/contact', icon: faAddressBook }
+        { name: 'About', path: '/about', icon: faUserNinja }
+        // { name: 'Contact', path: '/contact', icon: faAddressBook }
     ];
     return (
         <nav className='vert-navbar'>
