@@ -53,6 +53,8 @@
     text-decoration: none;
     -webkit-transition: color 300ms;
     -webkit-transition: margin-left 300ms;
+    transition: color 300ms;
+    transition: margin-left 300ms;
 }
 
 .vert-navbar a:hover {
@@ -60,6 +62,8 @@
     color: var(--dark-red);
     -webkit-transition: color 300ms;
     -webkit-transition: margin-left 300ms;
+    transition: color 300ms;
+    transition: margin-left 300ms;
 }
 
 .nav-icon {
@@ -186,46 +190,9 @@
 }
 
 .project-item {
+    height: 350px;
     border-radius: 12px;
-    width: 400px;
-    height: 250px;
-    font-size: 1.4em;
     box-shadow: 3px 5px 8px black;
-    text-shadow: 2px 2px 3px black;
-    text-decoration: none;
-    transition-property: width, height, font-size;
-    transition-duration: 300ms;
-}
-.project-item:hover {
-    width: 425px;
-    height: 275px;
-    font-size: 1.5em;
-    transition-property: width, height, font-size;
-    transition-duration: 300ms;
-}
-@media (max-width: 840px) {
-    .project-item {
-        width: 350px;
-        height: 250px;
-    }
-    .project-item:hover {
-        width: 375px;
-        height: 275px;
-        font-size: 1.5em;
-    }
-}
-.project-item:visited {
-    color: black;
-}
-.project-item-inner {
-    width: 90%;
-    text-decoration: none;
-    border-radius: 12px;
-    color: white;
-}
-.project-description {
-    font-size: 0.8em;
-    width: 90%;
 }
 
 /* Contact */

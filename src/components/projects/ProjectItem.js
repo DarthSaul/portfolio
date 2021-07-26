@@ -16,30 +16,37 @@ const ProjectItem = ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     };
-    const handleClick = `location.href='${githubLink}'`;
     return (
-        <a
-            href={projectLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='project-item d-flex flex-column justify-content-center align-items-center m-3'
+        <div
+            className='d-flex flex-column justify-content-around text-center p-5 project-item'
             style={divStyle}
         >
-            <div className='project-item-inner d-flex flex-column justify-content-center align-items-center p-2 text-center'>
-                <p className='fw-bold'>{name}</p>
-                <FontAwesomeIcon icon={icon} className='mb-3 fs-1' />
-                <p className='project-description'>{description}</p>
+            <a
+                href={projectLink}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='d-flex flex-column align-items-center text-decoration-none text-white'
+            >
+                <p className='fs-2'>{name}</p>
+                <FontAwesomeIcon icon={icon} className='mb-3' size='4x' />
+                <p className='fs-4'>{description}</p>
+            </a>
+            <a
+                href={githubLink}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='mx-auto'
+            >
                 <Button
-                    onClick={() => handleClick}
-                    variant='secondary'
-                    className='my-1 fs-6 px-3 fw-light'
+                    variant='success'
+                    className='btn btn-lg fs-5 px-3 fw-light'
                     target='_blank'
                     type='button'
                 >
                     View the code
                 </Button>
-            </div>
-        </a>
+            </a>
+        </div>
     );
 };
 
