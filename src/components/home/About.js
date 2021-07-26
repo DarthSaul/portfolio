@@ -11,25 +11,24 @@ const About = () => {
     return (
         <div className='about-wrapper d-flex justify-content-between align-items-center mb-3 p-3'>
             <div className='container'>
-                <div className='row'>
-                    <div className='col-12 col-md-4 col-lg-5 d-flex justify-content-between align-items-center my-4 about-img'>
+                <div className='row justify-content-center'>
+                    <div className='col-9 col-lg-5 my-4'>
                         <img
                             src={profileShot}
                             alt=''
-                            className='w-100 rounded about-img'
+                            className='w-100 about-img'
                         />
                     </div>
-                    <div className='about-content col-md-8 col-lg-7 d-flex flex-column justify-content-evenly my-4'>
+                    <div className='about-content col-9 col-lg-7 d-flex flex-column justify-content-evenly my-4'>
                         <h3 className='fs-2'>
                             Hello, I'm Saul Graves. A full-stack developer based
                             in Pittsburgh, PA.
                         </h3>
                         <p className='fs-5'>
-                            I'm an innately curious self-taught web developer
-                            with experience building applications in the MERN
-                            Stack. I love to learn, create and have a deep
-                            relationship with coffee. You can check out my work
-                            below.
+                            I'm a self-taught web developer with experience
+                            building MERN Stack applications. I love to create,
+                            learn, and have a deep relationship with coffee. You
+                            can check out my work below.
                         </p>
                         <div className='about-links-container d-flex justify-content-between align-items-center fs-6 fw-light'>
                             <Link to='/about' className='more-about'>

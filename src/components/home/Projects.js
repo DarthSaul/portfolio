@@ -8,9 +8,8 @@ const Projects = () => {
     return (
         <div className='projects-wrapper row justify-content-center'>
             {projects.map((item, ind) => (
-                <div className='col-4 my-auto mx-3'>
+                <div className='col-10 col-md-7 col-lg-4 mb-5 mx-3' key={ind}>
                     <ProjectItem
-                        key={ind}
                         name={item.name}
                         description={item.description}
                         icon={item.icon}

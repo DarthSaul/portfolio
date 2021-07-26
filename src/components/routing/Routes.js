@@ -1,10 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import ContactPage from '../contact/ContactPage';
 import ProjectsPage from '../projects/ProjectsPage';
 import AboutPage from '../about/AboutPage';
 import Footer from '../layout/Footer';
+import NotFound from '../layout/NotFound';
+// import ContactPage from '../contact/ContactPage';
 
 const Routes = () => {
     return (
@@ -16,8 +17,11 @@ const Routes = () => {
                 <Route exact path='/about'>
                     <AboutPage />
                 </Route>
-                <Route exact path='/contact'>
+                {/* <Route exact path='/contact'>
                     <ContactPage />
+                </Route> */}
+                <Route>
+                    <NotFound />
                 </Route>
             </Switch>
             <Footer />
