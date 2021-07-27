@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
-import Navbar from '../layout/Navbar';
+import { NavContext } from '../../contexts/NavContext';
+
 import ProjectItem from './ProjectItem';
 import projects from '../../utilities/projects';
 
 const ProjectsPage = () => {
+    const { setActivePage } = useContext(NavContext);
+
+    useEffect(() => {
+        setActivePage('Projects');
+    }, [setActivePage]);
+
     return (
         <>
             <div className='contact-page py-4'>
-                <Navbar active={'Projects'} />
-
                 <div className='row justify-content-center my-5'>
                     {projects.map((item, ind) => (
                         <div

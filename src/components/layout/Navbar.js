@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -6,14 +6,16 @@ import {
     faPencilRuler,
     faUserNinja
 } from '@fortawesome/free-solid-svg-icons';
+import { NavContext } from '../../contexts/NavContext';
 
-const Navbar = ({ active }) => {
+const Navbar = () => {
     const navItems = [
         { name: 'Home', path: '/', icon: faHome },
         { name: 'Projects', path: '/projects', icon: faPencilRuler },
         { name: 'About', path: '/about', icon: faUserNinja }
         // { name: 'Contact', path: '/contact', icon: faAddressBook }
     ];
+    const { page } = useContext(NavContext);
     return (
         <nav className='vert-navbar'>
             <ul>
@@ -22,7 +24,7 @@ const Navbar = ({ active }) => {
                         <Link
                             to={el.path}
                             className={
-                                active === el.name
+                                page === el.name
                                     ? 'vert-nav-link active'
                                     : 'vert-nav-link'
                             }

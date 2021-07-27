@@ -3,4 +3,11 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { NavProvider } from './contexts/NavContext';
+
+ReactDOM.render(
+    <NavProvider>
+        <App />
+    </NavProvider>,
+    document.getElementById('root')
+);

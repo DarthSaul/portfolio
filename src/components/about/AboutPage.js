@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+
+import { NavContext } from '../../contexts/NavContext';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import profileShot from '../../img/profile_shot.png';
 
 import contactInfo from '../../utilities/contactInfo';
 
-import Navbar from '../layout/Navbar';
-
 const AboutPage = () => {
+    const { setActivePage } = useContext(NavContext);
+
+    useEffect(() => {
+        setActivePage('About');
+    }, [setActivePage]);
+
     return (
         <>
             <div className='contact-page'>
-                <Navbar active={'About'} />
-
                 <div className='about-wrapper d-flex justify-content-between align-items-center mb-3 p-3'>
                     <div className='container'>
                         <div className='row justify-content-center'>
