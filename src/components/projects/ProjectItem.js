@@ -19,7 +19,7 @@ const ProjectItem = ({
     };
     return (
         <div
-            className='d-flex flex-column justify-content-center align-items-center text-white text-center project-item'
+            className='d-flex flex-column justify-content-center align-items-center text-white text-center project-item py-3'
             style={divStyle}
         >
             <a
@@ -28,10 +28,10 @@ const ProjectItem = ({
                 rel='noopener noreferrer'
                 className='text-decoration-none text-white'
             >
-                <p className='fs-2 project-title'>{name}</p>
+                <p className='fs-3 project-title'>{name}</p>
             </a>
-            <FontAwesomeIcon icon={icon} className='mb-3' size='4x' />
-            <p className='fs-4'>{description}</p>
+            <FontAwesomeIcon icon={icon} className='mb-3' size='3x' />
+            <p className='fs-5 fw-light'>{description}</p>
             <a
                 href={githubLink}
                 target='_blank'

@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
-import Navbar from '../layout/Navbar';
+import { NavContext } from '../../contexts/NavContext';
+
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from '../layout/Footer';
 
 const Home = () => {
+    const { setActivePage } = useContext(NavContext);
+
+    useEffect(() => {
+        setActivePage('Home');
+    }, [setActivePage]);
+
     return (
         <>
-            <Navbar active={'Home'} />
-            <div className='home-container p-3'>
+            <div className='home-container'>
                 <About />
                 <Projects />
                 <Contact />

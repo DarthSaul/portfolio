@@ -9,17 +9,17 @@ import contactInfo from '../../utilities/contactInfo';
 
 const About = () => {
     return (
-        <div className='about-wrapper d-flex justify-content-between align-items-center mb-3 p-3'>
+        <div className='about-wrapper'>
             <div className='container'>
-                <div className='row justify-content-center'>
-                    <div className='col-9 col-lg-5 my-4'>
+                <div className='row mx-lg-3'>
+                    <div className='col-8 col-lg-5 my-4 mx-auto'>
                         <img
                             src={profileShot}
                             alt=''
-                            className='w-100 about-img'
+                            className='about-img w-100'
                         />
                     </div>
-                    <div className='about-content col-9 col-lg-7 d-flex flex-column justify-content-evenly my-4'>
+                    <div className='about-content col-8 col-lg-7 d-flex flex-column justify-content-between my-5 mx-auto'>
                         <h3 className='fs-2'>
                             Hello, I'm Saul Graves. A full-stack developer based
                             in Pittsburgh, PA.
@@ -30,7 +30,7 @@ const About = () => {
                             learn, and have a deep relationship with coffee. You
                             can check out my work below.
                         </p>
-                        <div className='about-links-container d-flex justify-content-between align-items-center fs-6 fw-light'>
+                        <div className='about-links-container d-flex justify-content-between align-items-center fs-5 fw-light'>
                             <Link to='/about' className='more-about'>
                                 <FontAwesomeIcon icon={faChevronRight} /> More
                                 about Saul
