@@ -15,7 +15,7 @@ const App = () => {
             <>
                 <ScrollToTop />
                 <Switch>
-                    <Route exact path={['/', 'portfolio']}>
+                    <Route exact path={['/', '/portfolio']}>
                         <Home />
                     </Route>
                     <Route>
