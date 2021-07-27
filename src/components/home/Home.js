@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <>
-            <div className='home-container p-3'>
+            <div className='home-container'>
                 <About />
                 <Projects />
                 <Contact />

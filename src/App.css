@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: flex-start;
     font-size: 1.2em;
+    min-width: 20%;
 }
 
 .vert-navbar ul {
@@ -150,18 +151,22 @@
     background-size: cover;
     background-position: contain;
 }
+.about-wrapper .container {
+    width: 100%;
+}
 @media (min-width: 768px) {
+    .about-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .about-wrapper .container {
-        max-width: 60%;
+        max-width: 80%;
+        margin-left: 20%;
     }
 }
 .about-img {
     border-radius: 12px;
-}
-@media (max-width: 768px) {
-    .about-img {
-        max-width: 100%;
-    }
 }
 .about-content h3 {
     font-family: 'Merriweather', serif;
@@ -192,11 +197,23 @@
     background-size: cover;
     background-position: contain;
     min-height: 500px;
-    padding: 5rem 0 2rem;
 }
-
+.projects-wrapper.container {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .projects-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects-wrapper .container {
+        max-width: 80%;
+        margin-left: 20%;
+    }
+}
 .project-item {
-    height: 400px;
+    height: 350px;
     border-radius: 12px;
     box-shadow: 3px 5px 8px black;
     text-shadow: 2px 2px 3px black;
@@ -216,7 +233,19 @@
     background-size: cover;
     background-position: contain;
     min-height: 400px;
-    margin-bottom: -20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contact-wrapper .container {
+    height: 100%;
+    margin: auto;
+}
+@media (min-width: 768px) {
+    .contact-wrapper .container {
+        max-width: 80%;
+        margin-left: 20%;
+    }
 }
 
 .contact-item-icon {
@@ -226,7 +255,7 @@
     color: blue;
 }
 
-.contact-page {
+/* .contact-page {
     min-height: 100vh;
     background-image: linear-gradient(
             rgba(255, 255, 255, 0.9),
@@ -238,7 +267,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* Footer */
 footer {

@@ -13,16 +13,16 @@ const contactItems = [
         backgroundImg: github
     },
     {
-        name: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/saulgraves/',
-        icon: faLinkedin,
-        backgroundImg: linkedIn
-    },
-    {
         name: 'Email',
         link: 'mailto:graves.saul@gmail.com',
         icon: faEnvelope,
         backgroundImg: gmail
+    },
+    {
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/saulgraves/',
+        icon: faLinkedin,
+        backgroundImg: linkedIn
     }
 ];
 
