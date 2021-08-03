@@ -12,9 +12,9 @@ import github from '../img/github.jpg';
 const projects = [
     {
         name: 'Coffee Corner',
-        description: 'Coming soon...',
+        description: 'Join a community of coffee lovers',
         icon: faCoffee,
-        projectLink: '',
+        projectLink: 'https://ancient-cove-69346.herokuapp.com/',
         githubLink: 'https://github.com/DarthSaul/coffee-corner',
         imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1627321743/Coffee-Corner/coffee_beans_light_cmn7od.jpg'
     },
