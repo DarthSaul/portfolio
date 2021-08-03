@@ -167,6 +167,8 @@
 }
 .about-img {
     border-radius: 12px;
+    max-width: 400px;
+    /* margin: auto; */
 }
 .about-content h3 {
     font-family: 'Merriweather', serif;
@@ -213,7 +215,9 @@
     }
 }
 .project-item {
+    max-width: 600px;
     height: 350px;
+    margin: auto;
     border-radius: 12px;
     box-shadow: 3px 5px 8px black;
     text-shadow: 2px 2px 3px black;

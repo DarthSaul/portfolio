@@ -7,24 +7,33 @@ import profileShot from '../../img/profile_shot.png';
 
 import contactInfo from '../../utilities/contactInfo';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const About = () => {
+    AOS.init();
+
     return (
         <div className='about-wrapper'>
-            <div className='container'>
+            <div
+                className='container'
+                data-aos='fade-up'
+                data-aos-duration='1500'
+            >
                 <div className='row mx-lg-3'>
-                    <div className='col-8 col-lg-5 my-4 mx-auto'>
+                    <div className='col-8 col-lg-3 my-4 mx-auto d-flex align-items-center'>
                         <img
                             src={profileShot}
                             alt=''
                             className='about-img w-100'
                         />
                     </div>
-                    <div className='about-content col-8 col-lg-7 d-flex flex-column justify-content-between my-5 mx-auto'>
+                    <div className='about-content col-8 col-lg-9 d-flex flex-column justify-content-between my-4 mx-auto'>
                         <h3 className='fs-2'>
                             Hello, I'm Saul Graves. A full-stack developer based
                             in Pittsburgh, PA.
                         </h3>
-                        <p className='fs-5'>
+                        <p className='fs-5 my-3'>
                             I'm a self-taught web developer with experience
                             building MERN Stack applications. I love to create,
                             learn, and have a deep relationship with coffee. You
