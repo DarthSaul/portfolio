@@ -19,7 +19,7 @@ const ProjectsPage = () => {
 
     return (
         <>
-            <div className='about-wrapper py-4'>
+            <div className='projects-wrapper py-4'>
                 <div
                     className='container row justify-content-evenly my-5'
                     data-aos='fade-right'
