@@ -13,9 +13,9 @@ const ProjectItem = ({
 }) => {
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imgUrl})`,
-        backgroundSize: `200%`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundSize: `150%`,
+        backgroundPosition: 'contain',
+        backgroundRepeat: 'repeat'
     };
     return (
         <div

@@ -33,7 +33,7 @@ const Navbar = () => {
                                 icon={el.icon}
                                 className='nav-icon'
                             />{' '}
-                            {el.name}
+                            <span>{el.name}</span>
                         </Link>
                     </li>
                 ))}
