@@ -17,7 +17,7 @@ const Contact = () => {
                     <div
                         className='col-12 col-md-3 text-center py-3 my-auto'
                         key={ind}
-                        data-aos='fade-right'
+                        data-aos='fade-left'
                         data-aos-duration='1000'
                     >
                         <ContactItem icon={item.icon} link={item.link} />

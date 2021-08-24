@@ -17,7 +17,7 @@ const Navbar = () => {
     ];
     const { page } = useContext(NavContext);
     return (
-        <nav className='vert-navbar'>
+        <nav className='navbar'>
             <ul>
                 {navItems.map((el, ind) => (
                     <li key={ind}>
