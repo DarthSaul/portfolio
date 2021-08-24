@@ -44,6 +44,9 @@
     margin: 0;
     font-size: 1em;
 }
+.navbar ul li a {
+    font-weight: bold;
+}
 .navbar ul li span {
     display: none;
 }
@@ -106,9 +109,17 @@
     .nav-icon {
         margin-right: 1rem;
     }
-
-    .navbar ul li {
-        font-size: 0.9em;
+    .navbar ul li a {
+        position: relative;
+    }
+    .navbar ul li a:before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 3.4em;
+        left: 2.5em;
+        bottom: -3px;
+        background-color: white;
     }
     .nav-icon {
         padding: 0;
@@ -176,6 +187,9 @@
 .about-links-container a {
     text-decoration: none;
     color: var(--dark-red);
+}
+.about-links-container a:hover {
+    color: #dd1414;
 }
 .more-about {
     -webkit-transition: margin-left 300ms;
@@ -278,7 +292,7 @@
     font-size: 2.4em;
 }
 .project-title:hover {
-    color: red;
+    color: #dd1414;
 }
 .project-item-inner .project-icon {
     margin: auto;
@@ -299,7 +313,7 @@
     border-radius: 6px;
 }
 .git-btn:hover {
-    background-color: rgb(175, 11, 11);
+    background-color: #dd1414;
 }
 
 @media (min-width: 768px) {
@@ -361,8 +375,9 @@
     color: var(--dark-red);
 }
 .contact-item-icon:hover {
-    color: blue;
+    color: #dd1414;
 }
+
 @media (min-width: 768px) {
     .contact-wrapper {
         display: grid;

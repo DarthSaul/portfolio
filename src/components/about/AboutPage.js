@@ -4,8 +4,6 @@ import { NavContext } from '../../contexts/NavContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import profileShot from '../../img/profile_shot.png';
-
 import contactInfo from '../../utilities/contactInfo';
 
 import '../../About.css';
@@ -21,13 +19,6 @@ const AboutPage = () => {
         <>
             <div className='about-page-wrapper'>
                 <div className='about-page-container'>
-                    {/* <div className='about-card-img'>
-                        <img
-                            src={profileShot}
-                            alt=''
-                            className='w-100 about-img'
-                        />
-                    </div> */}
                     <div className='about-card'>
                         <p>
                             Hello, I'm Saul. A full-stack developer based in
@@ -56,10 +47,7 @@ const AboutPage = () => {
                                         rel='noopener noreferrer'
                                         className='contact-item'
                                     >
-                                        <FontAwesomeIcon
-                                            icon={item.icon}
-                                            // size='2x'
-                                        />
+                                        <FontAwesomeIcon icon={item.icon} />
                                     </a>
                                 ))}
                             </div>

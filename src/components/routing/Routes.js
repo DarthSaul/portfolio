@@ -11,15 +11,12 @@ const Routes = () => {
     return (
         <>
             <Switch>
-                <Route exact path='/projects'>
+                <Route exact path='/portfolio/projects'>
                     <ProjectsPage />
                 </Route>
-                <Route exact path='/about'>
+                <Route exact path='/portfolio/about'>
                     <AboutPage />
                 </Route>
-                {/* <Route exact path='/contact'>
-                    <ContactPage />
-                </Route> */}
                 <Route>
                     <NotFound />
                 </Route>
