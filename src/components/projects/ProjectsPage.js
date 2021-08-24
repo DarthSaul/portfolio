@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
+import { gsap } from 'gsap';
 
 import { NavContext } from '../../contexts/NavContext';
 
 import ProjectItem from './ProjectItem';
 import projects from '../../utilities/projects';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const ProjectsPage = () => {
@@ -15,21 +15,23 @@ const ProjectsPage = () => {
         setActivePage('Projects');
     }, [setActivePage]);
 
-    AOS.init();
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 1
+        }
+    });
+
+    tl.from('.projects-wrapper .container', {
+        y: -75,
+        opacity: 0
+    });
 
     return (
         <>
-            <div className='projects-wrapper py-4'>
-                <div
-                    className='container row justify-content-evenly my-5'
-                    data-aos='fade-right'
-                    data-aos-duration='1500'
-                >
+            <div className='projects-wrapper'>
+                <div className='container'>
                     {projects.map((item, ind) => (
-                        <div
-                            className='col-10 col-md-7 col-lg-5 mb-5 mx-3'
-                            key={ind}
-                        >
+                        <div className='project-item-wrapper' key={ind}>
                             <ProjectItem
                                 name={item.name}
                                 description={item.description}
