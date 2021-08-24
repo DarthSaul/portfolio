@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap');
 
 :root {
-    --offset: 8%;
     --dark-red: rgb(155, 0, 0);
 }
 
@@ -9,7 +9,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Buttons */
@@ -278,7 +278,7 @@
     font-size: 2.4em;
 }
 .project-title:hover {
-    color: rgb(212, 212, 212);
+    color: red;
 }
 .project-item-inner .project-icon {
     margin: auto;
