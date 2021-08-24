@@ -12,26 +12,24 @@ const Projects = () => {
 
     return (
         <div className='projects-wrapper'>
-            <div className='container p-4 my-5'>
-                <div className='row justify-content-center'>
-                    {projects.map((item, ind) => (
-                        <div
-                            className='col-10 col-md-7 col-lg-5 m-3 mb-5'
-                            key={ind}
-                            data-aos='fade'
-                            data-aos-duration='1000'
-                        >
-                            <ProjectItem
-                                name={item.name}
-                                description={item.description}
-                                icon={item.icon}
-                                projectLink={item.projectLink}
-                                githubLink={item.githubLink}
-                                imgUrl={item.imgUrl}
-                            />
-                        </div>
-                    ))}
-                </div>
+            <div className='container'>
+                {projects.map((item, ind) => (
+                    <div
+                        key={ind}
+                        data-aos='fade'
+                        data-aos-duration='500'
+                        className='project-item-wrapper'
+                    >
+                        <ProjectItem
+                            name={item.name}
+                            description={item.description}
+                            icon={item.icon}
+                            projectLink={item.projectLink}
+                            githubLink={item.githubLink}
+                            imgUrl={item.imgUrl}
+                        />
+                    </div>
+                ))}
             </div>
         </div>
     );

@@ -12,10 +12,6 @@
     font-family: sans-serif;
 }
 
-/* body {
-    overflow-x: hidden;
-} */
-
 /* Buttons */
 .btn {
     background: var(--dark-red);
@@ -47,14 +43,12 @@
 .navbar ul li {
     margin: 0;
     font-size: 1em;
-    /* font-size: 0.9em; */
 }
 .navbar ul li span {
     display: none;
 }
 .nav-icon {
     margin: 0 0.3rem;
-    /* margin-right: 0.3rem; */
 }
 
 .navbar a {
@@ -140,8 +134,7 @@
             rgba(255, 255, 255, 0.9)
         ),
         url('./img/background.jpg');
-    background-size: cover;
-    background-position: contain;
+    background-size: contain;
     padding: 4em;
 }
 .about-wrapper .container {
@@ -253,47 +246,96 @@
     }
 }
 
-/* Projects */
+/***** PROEJCTS *****/
 .projects-wrapper {
     background-image: linear-gradient(
             rgba(196, 193, 193, 0.75),
             rgba(196, 193, 193, 0.75)
         ),
         url('./img/background.jpg');
-    background-size: cover;
-    background-position: contain;
+    background-size: contain;
     min-height: 500px;
-}
-.projects-wrapper .container {
-    width: 100%;
-    margin: auto;
-}
-@media (min-width: 768px) {
-    .projects-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .projects-wrapper .container {
-        max-width: 80%;
-        margin-left: 20%;
-    }
+    padding: 5em 0;
 }
 
-.project-item {
-    max-width: 500px;
-    height: 350px;
+.projects-wrapper .container {
     margin: auto;
-    border-radius: 12px;
+    padding: 0 2em;
+}
+.project-item-wrapper {
+    margin-bottom: 4em;
+}
+.project-item-inner {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 2em 0;
     box-shadow: 0px 6px 3px rgba(0, 0, 0, 1);
-    text-shadow: 2px 2px 3px black;
-    padding: 2rem;
+}
+.project-item-inner .project-title {
+    font-size: 2.4em;
 }
 .project-title:hover {
-    color: var(--dark-red);
+    color: rgb(212, 212, 212);
+}
+.project-item-inner .project-icon {
+    margin: auto;
+    margin-bottom: 0.5em;
+}
+.project-desc {
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+.git-btn {
+    background-color: var(--dark-red);
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    margin-top: 0.6em;
+    border: none;
+    color: white;
+    font-weight: lighter;
+    border-radius: 6px;
+}
+.git-btn:hover {
+    background-color: rgb(175, 11, 11);
 }
 
-/* Contact */
+@media (min-width: 768px) {
+    .projects-wrapper {
+        margin: inherit 4em;
+    }
+    .projects-wrapper .container {
+        width: 75%;
+        padding: 0;
+        margin: auto 3em;
+        margin-left: 18%;
+        display: grid;
+        grid-template-columns: repeat(2, 46%);
+        justify-content: space-between;
+        column-gap: 3.3em;
+        row-gap: 1em;
+    }
+    .project-item-wrapper {
+        font-size: 0.8em;
+    }
+    .project-item-inner {
+        padding: 2em;
+        height: 300px;
+    }
+    .project-item-inner .project-title {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 900px) {
+    .project-item-wrapper {
+        font-size: 0.9em;
+    }
+}
+
+/***** CONTACT *****/
 .contact-wrapper {
     background-image: linear-gradient(
             rgba(255, 255, 255, 0.9),
@@ -309,35 +351,48 @@
 }
 .contact-wrapper .container {
     height: 100%;
-    margin: auto;
+    width: 80%;
+    text-align: center;
 }
-@media (min-width: 768px) {
-    .contact-wrapper .container {
-        max-width: 80%;
-        margin-left: 20%;
-    }
+.contact-item {
+    margin-bottom: 1em;
 }
-
 .contact-item-icon {
     color: var(--dark-red);
 }
 .contact-item-icon:hover {
     color: blue;
 }
+@media (min-width: 768px) {
+    .contact-wrapper {
+        display: grid;
+        place-content: center;
+        padding-left: 10%;
+    }
+    .contact-wrapper .container {
+        display: flex;
+        justify-content: center;
+    }
+    .contact-item {
+        width: 100%;
+        padding: 0;
+        margin: 0 1.5em;
+    }
+}
 
 /* Footer */
 footer {
     width: 100%;
-    height: 8rem;
-    font-size: 0.8em;
-    background-color: rgb(189, 186, 186);
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: space-between;
-    align-items: center;
+    background-color: #f0f0f0;
 }
-.footer-name {
-    margin: auto;
+footer .container {
+    margin-left: 1em;
+    margin-bottom: 5em;
+    padding: 2.5em 0 0.5em;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .footer-name h1 {
     color: var(--dark-red);
@@ -345,8 +400,8 @@ footer {
     font-weight: 400;
 }
 .footer-contact {
-    margin: auto;
-    font-size: 1.4em;
+    margin-top: 1em;
+    font-size: 1.3em;
 }
 .footer-contact a {
     text-decoration: none;
@@ -366,7 +421,7 @@ footer {
 
 .footer-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 0.6rem;
 }
 .footer-link {
@@ -375,35 +430,48 @@ footer {
 }
 
 .footer-location {
-    margin: auto;
     font-weight: 200;
     font-size: 1.4em;
-    line-height: 1.5rem;
+    margin-top: 2em;
+    line-height: 1rem;
     color: var(--dark-red);
 }
 
-@media (max-width: 768px) {
-    footer {
-        height: 10rem;
-        margin-bottom: 5rem;
-        padding: 4rem 0;
+@media (min-width: 768px) {
+    footer .container {
+        margin: 0;
+        padding: 2em 3em;
+        min-width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
     .footer-name h1 {
-        font-size: 2.2em;
+        margin: 0;
     }
-    .footer-name,
+    .footer-email {
+        display: none;
+    }
     .footer-contact {
         margin: 0;
     }
+    .footer-links {
+        justify-content: center;
+    }
+    .footer-link {
+        padding: 0 0.5em;
+    }
     .footer-location {
-        display: none;
+        margin: 0;
+        text-align: right;
+    }
+    .footer-location p {
+        margin: 1em;
     }
 }
-@media (max-width: 510px) {
-    footer {
-        margin-bottom: 4rem;
+@media (min-width: 1050px) {
+    .footer-email {
+        display: unset;
     }
 }
