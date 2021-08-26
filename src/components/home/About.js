@@ -8,8 +8,6 @@ import profileShot from '../../img/profile_shot.png';
 
 import contactInfo from '../../utilities/contactInfo';
 
-import 'aos/dist/aos.css';
-
 const About = () => {
     const tl = gsap.timeline({
         defaults: {
@@ -30,18 +28,20 @@ const About = () => {
                 </div>
                 <div className='about-content'>
                     <p className='headline'>
-                        Hello, I'm Saul. A full-stack developer based in
-                        Pittsburgh.
+                        Hello, I'm <span>Saul.</span>
                     </p>
 
                     <p className='desc'>
-                        I'm a self-taught web developer with experience building
-                        MERN Stack applications. I love to create, learn, and
-                        have a deep relationship with coffee. You can check out
-                        my work below.
+                        I'm a <strong>full-stack web developer</strong> based in
+                        Pittsburgh. I work in the MERN stack, where I build
+                        RESTful web APIs and pair them with responsive, engaging
+                        frontend experiences.
+                        <a href='#projects'>
+                            You can check out my latest projects below.
+                        </a>
                     </p>
                     <div className='about-links-container'>
-                        <Link to='/about' className='more-about'>
+                        <Link to='/portfolio/about' className='more-about'>
                             <FontAwesomeIcon icon={faChevronRight} /> More about
                             Saul
                         </Link>

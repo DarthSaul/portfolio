@@ -18,16 +18,14 @@ const ProjectItem = ({
     };
     return (
         <div className='project-item-inner' style={divStyle}>
-            <a
-                href={projectLink}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-decoration-none text-white'
-            >
-                <p className='project-title'>{name}</p>
-            </a>
-            <FontAwesomeIcon icon={icon} className='project-icon' size='3x' />
+            <p className='project-title'>{name}</p>
             <p className='project-desc'>{description}</p>
+            <a href={projectLink} target='_blank' rel='noopener noreferrer'>
+                <button className='project-btn' target='_blank' type='button'>
+                    <FontAwesomeIcon icon={icon} className='me-2' />
+                    Website
+                </button>
+            </a>
             <a href={githubLink} target='_blank' rel='noopener noreferrer'>
                 <button className='git-btn' target='_blank' type='button'>
                     <FontAwesomeIcon icon={faGithub} className='me-2' />

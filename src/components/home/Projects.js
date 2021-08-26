@@ -11,7 +11,7 @@ const Projects = () => {
     AOS.init();
 
     return (
-        <div className='projects-wrapper'>
+        <div className='projects-wrapper' id='projects'>
             <div className='container'>
                 {projects.map((item, ind) => (
                     <div
