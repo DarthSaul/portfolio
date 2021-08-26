@@ -10,9 +10,9 @@ import { NavContext } from '../../contexts/NavContext';
 
 const Navbar = () => {
     const navItems = [
-        { name: 'Home', path: '/', icon: faHome },
-        { name: 'Projects', path: '/projects', icon: faPencilRuler },
-        { name: 'About', path: '/about', icon: faUserNinja }
+        { name: 'Home', path: '/portfolio', icon: faHome },
+        { name: 'Projects', path: '/portfolio/projects', icon: faPencilRuler },
+        { name: 'About', path: '/portfolio/about', icon: faUserNinja }
         // { name: 'Contact', path: '/contact', icon: faAddressBook }
     ];
     const { page } = useContext(NavContext);

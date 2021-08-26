@@ -44,6 +44,9 @@
     margin: 0;
     font-size: 1em;
 }
+.navbar ul li a {
+    font-weight: bold;
+}
 .navbar ul li span {
     display: none;
 }
@@ -106,9 +109,17 @@
     .nav-icon {
         margin-right: 1rem;
     }
-
-    .navbar ul li {
-        font-size: 0.9em;
+    .navbar ul li a {
+        position: relative;
+    }
+    .navbar ul li a:before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 2.5em;
+        left: 5px;
+        bottom: -3px;
+        background-color: white;
     }
     .nav-icon {
         padding: 0;
@@ -152,11 +163,33 @@
     margin-bottom: 3em;
 }
 
-.headline {
-    font-size: 1.8em;
+.about-content .headline,
+.about-content .headline span {
     font-family: 'Merriweather', serif;
 }
 
+.about-content .headline {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.about-content .headline span {
+    font-size: 1.7em;
+    font-weight: bold;
+    position: relative;
+}
+.about-content .headline span:before {
+    content: '';
+    position: absolute;
+    background-color: #dd1414;
+    /* background-color: var(--dark-red); */
+    height: 0.1em;
+    left: 0.3em;
+    bottom: 0.2em;
+    width: 90%;
+    opacity: 0.75;
+    z-index: -1;
+}
 .about-links-container {
     font-size: 1.3em;
     margin-top: 1em;
@@ -177,6 +210,9 @@
     text-decoration: none;
     color: var(--dark-red);
 }
+.about-links-container a:hover {
+    color: #dd1414;
+}
 .more-about {
     -webkit-transition: margin-left 300ms;
     transition: margin-left 300ms;
@@ -186,6 +222,20 @@
     -webkit-transition: margin-left 300ms;
     transition: margin-left 300ms;
     text-decoration: none;
+}
+.desc a {
+    text-decoration: none;
+    color: var(--dark-red);
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1.1em;
+}
+.desc a:hover {
+    color: #dd1414;
+}
+.desc strong {
+    font-size: 1.3em;
 }
 @media (min-width: 450px) {
     .about-content .about-links-container {
@@ -221,13 +271,14 @@
         display: flex;
         flex-direction: column;
     }
-    .headline {
+    .about-content .headline {
         margin: 0;
+        font-size: 2.4em;
     }
     .about-content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
     }
     .about-content .desc {
         margin-bottom: 2em;
@@ -240,9 +291,10 @@
     .about-img-wrapper {
         flex-basis: 100%;
         margin: auto 0;
+        margin-right: 2em;
     }
-    .headline {
-        font-size: 2.5em;
+    .about-content .headline {
+        font-size: 2.7em;
     }
 }
 
@@ -271,26 +323,22 @@
     flex-direction: column;
     text-align: center;
     color: white;
-    padding: 2em 0;
+    padding: 2em;
     box-shadow: 0px 6px 3px rgba(0, 0, 0, 1);
 }
 .project-item-inner .project-title {
     font-size: 2.4em;
 }
-.project-title:hover {
-    color: red;
-}
-.project-item-inner .project-icon {
-    margin: auto;
-    margin-bottom: 0.5em;
-}
+
 .project-desc {
     font-size: 1.3em;
     font-weight: lighter;
 }
+.project-btn,
 .git-btn {
     background-color: var(--dark-red);
     padding: 0.5em 1.5em;
+    min-width: 10em;
     font-size: 1.2em;
     margin-top: 0.6em;
     border: none;
@@ -298,8 +346,9 @@
     font-weight: lighter;
     border-radius: 6px;
 }
+.project-btn:hover,
 .git-btn:hover {
-    background-color: rgb(175, 11, 11);
+    background-color: #dd1414;
 }
 
 @media (min-width: 768px) {
@@ -321,17 +370,25 @@
         font-size: 0.8em;
     }
     .project-item-inner {
-        padding: 2em;
-        height: 300px;
+        height: 325px;
+        justify-content: center;
     }
     .project-item-inner .project-title {
         font-size: 2em;
+    }
+    .project-btn {
+        margin-top: 1.5em;
     }
 }
 
 @media (min-width: 900px) {
     .project-item-wrapper {
         font-size: 0.9em;
+    }
+}
+@media (min-width: 1200px) {
+    .project-item-inner .project-title {
+        font-size: 2.4em;
     }
 }
 
@@ -361,8 +418,9 @@
     color: var(--dark-red);
 }
 .contact-item-icon:hover {
-    color: blue;
+    color: #dd1414;
 }
+
 @media (min-width: 768px) {
     .contact-wrapper {
         display: grid;
@@ -377,6 +435,11 @@
         width: 100%;
         padding: 0;
         margin: 0 1.5em;
+    }
+}
+@media (min-width: 1800px) {
+    .contact-wrapper {
+        padding-left: 5%;
     }
 }
 
