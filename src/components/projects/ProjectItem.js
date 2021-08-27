@@ -7,7 +7,7 @@ const ProjectItem = ({
     icon,
     projectLink,
     githubLink,
-    description,
+    headline,
     imgUrl
 }) => {
     const divStyle = {
@@ -19,7 +19,7 @@ const ProjectItem = ({
     return (
         <div className='project-item-inner' style={divStyle}>
             <p className='project-title'>{name}</p>
-            <p className='project-desc'>{description}</p>
+            <p className='project-desc'>{headline}</p>
             <a href={projectLink} target='_blank' rel='noopener noreferrer'>
                 <button className='project-btn' target='_blank' type='button'>
                     <FontAwesomeIcon icon={icon} className='me-2' />
