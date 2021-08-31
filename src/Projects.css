@@ -6,7 +6,7 @@
         ),
         url('./img/background.jpg');
     background-size: contain;
-    padding: 4em 0.5em;
+    padding: 4em 2em;
 }
 
 .project-showcase-wrapper {
@@ -46,6 +46,9 @@ p.project-headline {
 }
 
 @media (min-width: 768px) {
+    .projects-page-wrapper {
+        padding: 4em 0;
+    }
     .projects-page-container {
         width: 90%;
         margin-left: auto;

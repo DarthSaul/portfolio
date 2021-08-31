@@ -23,8 +23,8 @@ const ProjectsPage = () => {
         }
     });
 
-    tl.from('.projects-wrapper .container', {
-        y: -75,
+    tl.from('.projects-page-container', {
+        x: 125,
         opacity: 0
     });
 
