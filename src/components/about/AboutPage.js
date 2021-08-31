@@ -25,7 +25,7 @@ const AboutPage = () => {
 
     const tl = gsap.timeline({
         defaults: {
-            duration: 1.5
+            duration: 1
         }
     });
 
