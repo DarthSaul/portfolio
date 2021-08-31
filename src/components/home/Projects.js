@@ -22,7 +22,7 @@ const Projects = () => {
                     >
                         <ProjectItem
                             name={item.name}
-                            description={item.description}
+                            headline={item.headline}
                             icon={item.icon}
                             projectLink={item.projectLink}
                             githubLink={item.githubLink}
