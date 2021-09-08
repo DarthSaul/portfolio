@@ -9,4 +9,4 @@ My web developer portfolio!
 -   GSAP animations
 -   Font Awesome icons
 -   Minor inclusions of Bootstrap
--   Node
+-   Built using Node
