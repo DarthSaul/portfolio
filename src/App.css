@@ -411,15 +411,15 @@ p.project-headline {
     background-position: contain;
     min-height: 400px;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
 }
 .contact-wrapper .container {
     height: 100%;
-    width: 80%;
-    text-align: center;
 }
 .contact-item {
+    text-align: center;
     margin-bottom: 1em;
 }
 .contact-item-icon {
@@ -430,11 +430,6 @@ p.project-headline {
 }
 
 @media (min-width: 768px) {
-    .contact-wrapper {
-        display: grid;
-        place-content: center;
-        padding-left: 10%;
-    }
     .contact-wrapper .container {
         display: flex;
         justify-content: center;
@@ -442,12 +437,7 @@ p.project-headline {
     .contact-item {
         width: 100%;
         padding: 0;
-        margin: 0 1.5em;
-    }
-}
-@media (min-width: 1800px) {
-    .contact-wrapper {
-        padding-left: 5%;
+        margin: 0 1em;
     }
 }
 
