@@ -443,7 +443,6 @@ p.project-headline {
 
 /* Footer */
 footer {
-    width: 100%;
     background-color: #f0f0f0;
 }
 footer .container {
@@ -499,14 +498,17 @@ footer .container {
 }
 
 @media (min-width: 768px) {
+    footer {
+        width: 100%;
+    }
     footer .container {
         margin: 0;
         padding: 2em 3em;
         min-width: 100%;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 2fr 0.5fr 2fr;
+        grid-template-rows: auto;
         align-items: center;
-        justify-content: space-between;
     }
     .footer-name h1 {
         margin: 0;
@@ -516,19 +518,15 @@ footer .container {
     }
     .footer-contact {
         margin: 0;
-    }
-    .footer-links {
-        justify-content: center;
+        text-align: center;
     }
     .footer-link {
-        padding: 0 0.5em;
+        padding: 0;
+        margin: auto;
     }
     .footer-location {
         margin: 0;
         text-align: right;
-    }
-    .footer-location p {
-        margin: 1em;
     }
 }
 @media (min-width: 1050px) {
