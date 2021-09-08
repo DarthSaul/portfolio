@@ -13,8 +13,8 @@ const Projects = () => {
 
     return (
         <>
-            <div className='projects-page-wrapper'>
-                <div className='projects-page-container' id='projects'>
+            <div className='projects-page-wrapper' id='projects'>
+                <div className='projects-page-container'>
                     {projects.map((item, ind) => (
                         <div
                             className='project-showcase-wrapper'
