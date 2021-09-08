@@ -2,12 +2,14 @@ import {
     faMask,
     faHamburger,
     faFolder,
-    faCoffee
+    faCoffee,
+    faDragon
 } from '@fortawesome/free-solid-svg-icons';
 
 import marvel from '../img/marvel.jpg';
 import food from '../img/food.jpg';
 import github from '../img/github.jpg';
+import ghibli from '../img/ghibli.jpeg';
 
 const projects = [
     {
@@ -32,11 +34,25 @@ const projects = [
         projectLink: 'https://arcane-lowlands-25770.herokuapp.com/',
         githubLink: 'https://github.com/DarthSaul/food-from-friends',
         imgUrl: food,
-        desc: `Social networking web app designed for sharing 'lists' of your food recommendations in a city.`,
+        desc: `Social networking web app designed for sharing 'lists' of your food recommendations in a city. Built with React.`,
         bullets: [
             'Express-based backend server with validation. Full CRUD access to database.',
             'Frontend state management through React Context API.',
             'Styled with Bootstrap.'
+        ]
+    },
+    {
+        name: 'Ghibli Wallpapers',
+        headline: 'A Studio Ghibli wallpaper library ',
+        icon: faDragon,
+        projectLink: 'https://calm-mountain-15835.herokuapp.com/home',
+        githubLink: 'https://github.com/DarthSaul/ghibli-wallpapers',
+        imgUrl: ghibli,
+        desc: '',
+        bullets: [
+            'Express app, RESTful web API.',
+            'Styled with custom CSS, no Bootstrap. Responsive functionality and image download built with JavaScript.',
+            'Connected to Mongo Atlas via Mongoose.js'
         ]
     },
     {
@@ -60,7 +76,7 @@ const projects = [
         projectLink: '',
         githubLink: 'https://github.com/DarthSaul/portfolio',
         imgUrl: github,
-        desc: 'This website! No prior template, but lots of inspiration from a wonderful place: the internet.',
+        desc: 'This website! No prior template, and lots of inspiration from a wonderful place: the internet.',
         bullets: [
             'React.js single-page application.',
             'Designed primarily with custom CSS. Mobile-first responsive approach.',
