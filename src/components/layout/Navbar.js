@@ -13,7 +13,6 @@ const Navbar = () => {
         { name: 'Home', path: '/portfolio', icon: faHome },
         { name: 'Projects', path: '/portfolio/projects', icon: faPencilRuler },
         { name: 'About', path: '/portfolio/about', icon: faUserNinja }
-        // { name: 'Contact', path: '/contact', icon: faAddressBook }
     ];
     const { page } = useContext(NavContext);
     return (

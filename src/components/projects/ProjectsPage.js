@@ -8,8 +8,6 @@ import { NavContext } from '../../contexts/NavContext';
 import ProjectItem from './ProjectItem';
 import projects from '../../utilities/projects';
 
-import '../../Projects.css';
-
 const ProjectsPage = () => {
     const { setActivePage } = useContext(NavContext);
 

@@ -18,7 +18,7 @@ const Home = () => {
         <>
             <div className='home-container'>
                 <About />
-                <Projects />
+                <Projects id='projects' />
                 <Contact />
             </div>
             <Footer />
