@@ -14,6 +14,11 @@ My web developer portfolio! Currently serving as a hub for my project library, b
 
 ```
 $ git clone https://github.com/DarthSaul/portfolio.git
+```
+
+Navigate to project folder, then execute
+
+```
 $ npm install
 $ npm start
 ```
