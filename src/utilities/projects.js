@@ -48,7 +48,7 @@ const projects = [
         projectLink: 'https://calm-mountain-15835.herokuapp.com/home',
         githubLink: 'https://github.com/DarthSaul/ghibli-wallpapers',
         imgUrl: ghibli,
-        desc: '',
+        desc: 'My favorite project to date! A simple, lightweight program used to search and download Studio Ghibli desktop wallpapers.',
         bullets: [
             'Express app, RESTful web API.',
             'Styled with custom CSS, no Bootstrap. Responsive functionality and image download built with JavaScript.',
