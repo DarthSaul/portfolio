@@ -1,5 +1,6 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
 
 import resume from '../Saul_Graves-Resume.pdf';
 
@@ -22,7 +23,7 @@ const contactItems = [
     {
         name: 'Resume',
         link: resume,
-        icon: faFile
+        icon: faFileAlt
     }
 ];
 
