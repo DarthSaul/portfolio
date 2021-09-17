@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { gsap } from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,19 +10,11 @@ import {
     faGitAlt
 } from '@fortawesome/free-brands-svg-icons';
 
-import { NavContext } from '../../contexts/NavContext';
-
 import contactInfo from '../../utilities/contactInfo';
 
 import '../../About.css';
 
 const AboutPage = () => {
-    const { setActivePage } = useContext(NavContext);
-
-    useEffect(() => {
-        setActivePage('About');
-    }, [setActivePage]);
-
     const tl = gsap.timeline({
         defaults: {
             duration: 1

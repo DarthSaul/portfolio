@@ -1,41 +1,39 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faHome,
     faPencilRuler,
     faUserNinja
 } from '@fortawesome/free-solid-svg-icons';
-import { NavContext } from '../../contexts/NavContext';
 
 const Navbar = () => {
-    const navItems = [
-        { name: 'Home', path: '/portfolio', icon: faHome },
-        { name: 'Projects', path: '/portfolio/projects', icon: faPencilRuler },
-        { name: 'About', path: '/portfolio/about', icon: faUserNinja }
-    ];
-    const { page } = useContext(NavContext);
     return (
         <nav className='navbar'>
             <ul>
-                {navItems.map((el, ind) => (
-                    <li key={ind}>
-                        <Link
-                            to={el.path}
-                            className={
-                                page === el.name
-                                    ? 'vert-nav-link active'
-                                    : 'vert-nav-link'
-                            }
-                        >
-                            <FontAwesomeIcon
-                                icon={el.icon}
-                                className='nav-icon'
-                            />{' '}
-                            <span>{el.name}</span>
-                        </Link>
-                    </li>
-                ))}
+                <li>
+                    <a href='#home' className='vert-nav-link'>
+                        <FontAwesomeIcon icon={faHome} className='nav-icon' />{' '}
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href='#projects' className='vert-nav-link'>
+                        <FontAwesomeIcon
+                            icon={faPencilRuler}
+                            className='nav-icon'
+                        />{' '}
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href='#about' className='vert-nav-link'>
+                        <FontAwesomeIcon
+                            icon={faUserNinja}
+                            className='nav-icon'
+                        />{' '}
+                        <span>About</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     );

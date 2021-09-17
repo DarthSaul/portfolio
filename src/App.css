@@ -177,12 +177,12 @@
     font-size: 1.7em;
     font-weight: bold;
     position: relative;
+    z-index: 1;
 }
 .about-content .headline span:before {
     content: '';
     position: absolute;
     background-color: #dd1414;
-    /* background-color: var(--dark-red); */
     height: 0.1em;
     left: 0.3em;
     bottom: 0.2em;
@@ -307,7 +307,7 @@
         ),
         url('./img/background.jpg');
     background-size: contain;
-    padding: 4em 2em;
+    padding: 6em 2em 4em;
 }
 .project-showcase-wrapper {
     background: rgba(32, 86, 126, 0.8);

@@ -1,6 +1,4 @@
-import React, { useContext, useEffect } from 'react';
-
-import { NavContext } from '../../contexts/NavContext';
+import React from 'react';
 
 import About from './About';
 import Projects from './Projects';
@@ -8,16 +6,10 @@ import Contact from './Contact';
 import Footer from '../layout/Footer';
 
 const Home = () => {
-    const { setActivePage } = useContext(NavContext);
-
-    useEffect(() => {
-        setActivePage('Home');
-    }, [setActivePage]);
-
     return (
         <>
             <div className='home-container'>
-                <About />
+                <About id='home' />
                 <Projects id='projects' />
                 <Contact />
             </div>
