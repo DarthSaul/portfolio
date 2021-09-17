@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './components/home/Home';
-import Routes from './components/routing/Routes';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+
+import NotFound from './components/layout/NotFound';
 
 import './App.css';
 
@@ -16,10 +18,9 @@ const App = () => {
                     <Route exact path={'/'}>
                         <Home />
                     </Route>
-                    <Route>
-                        <Routes />
-                    </Route>
+                    <NotFound />
                 </Switch>
+                <Footer />
             </>
         </Router>
     );

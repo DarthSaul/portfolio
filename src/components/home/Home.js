@@ -1,19 +1,17 @@
 import React from 'react';
 
-import About from './About';
+import Main from './Main';
 import Projects from './Projects';
-import Contact from './Contact';
-import Footer from '../layout/Footer';
+import About from './About';
 
 const Home = () => {
     return (
         <>
             <div className='home-container'>
+                <Main />
+                <Projects />
                 <About />
-                <Projects id='projects' />
-                <Contact />
             </div>
-            <Footer />
         </>
     );
 };
