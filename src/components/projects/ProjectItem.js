@@ -20,18 +20,28 @@ const ProjectItem = ({
         <div className='project-item-inner' style={divStyle}>
             <p className='project-title'>{name}</p>
             <p className='project-desc'>{headline}</p>
-            <a href={projectLink} target='_blank' rel='noopener noreferrer'>
-                <button className='project-btn' target='_blank' type='button'>
-                    <FontAwesomeIcon icon={icon} className='me-2' />
+            <button className='project-btn' target='_blank' type='button'>
+                <a
+                    href={projectLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='website-link'
+                >
+                    <FontAwesomeIcon icon={icon} className='website-icon' />
                     Website
-                </button>
-            </a>
-            <a href={githubLink} target='_blank' rel='noopener noreferrer'>
-                <button className='git-btn' target='_blank' type='button'>
-                    <FontAwesomeIcon icon={faGithub} className='me-2' />
+                </a>{' '}
+            </button>
+            <button className='git-btn' target='_blank' type='button'>
+                <a
+                    href={githubLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='website-link'
+                >
+                    <FontAwesomeIcon icon={faGithub} className='website-icon' />
                     GitHub
-                </button>
-            </a>
+                </a>
+            </button>
         </div>
     );
 };

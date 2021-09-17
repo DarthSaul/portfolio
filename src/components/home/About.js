@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { gsap } from 'gsap';
 
-import profileShot from '../../img/profile_shot.png';
-
 import contactInfo from '../../utilities/contactInfo';
 
 const About = () => {
@@ -21,10 +19,14 @@ const About = () => {
     });
 
     return (
-        <div className='about-wrapper'>
+        <div className='about-wrapper' id='home'>
             <div className='container'>
                 <div className='about-img-wrapper'>
-                    <img src={profileShot} alt='' className='about-img' />
+                    <img
+                        src='https://res.cloudinary.com/darthsaul/image/upload/v1631887548/Portfolio/profile_shot_ij0pnu.png'
+                        alt='profile'
+                        className='about-img'
+                    />
                 </div>
                 <div className='about-content'>
                     <p className='headline'>

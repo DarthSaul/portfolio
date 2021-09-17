@@ -7,7 +7,7 @@
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.9)
         ),
-        url('./img/background.jpg');
+        url('https://res.cloudinary.com/darthsaul/image/upload/v1631887587/Portfolio/background_dvwyql.jpg');
     background-size: contain;
     padding: 4em;
 }

@@ -34,10 +34,10 @@ const Projects = () => {
                                 <p className='project-headline'>{item.desc}</p>
                                 {item.bullets &&
                                     item.bullets.map((el, index) => (
-                                        <p className='bullet' key={index}>
+                                        <p key={index}>
                                             <FontAwesomeIcon
                                                 icon={faChevronRight}
-                                                className='me-2'
+                                                className='bullet'
                                             />
                                             {el}
                                         </p>

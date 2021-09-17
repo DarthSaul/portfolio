@@ -5,9 +5,6 @@ import Home from './components/home/Home';
 import Routes from './components/routing/Routes';
 import Navbar from './components/layout/Navbar';
 
-import ScrollToTop from './components/layout/ScrollToTop';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const App = () => {
@@ -15,9 +12,8 @@ const App = () => {
         <Router>
             <>
                 <Navbar />
-                <ScrollToTop />
                 <Switch>
-                    <Route exact path={['/', '/portfolio']}>
+                    <Route exact path={'/'}>
                         <Home />
                     </Route>
                     <Route>
