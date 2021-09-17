@@ -22,6 +22,15 @@
     border: none;
 }
 
+/* Not Found */
+.not-found h1 {
+    font-size: 4em;
+}
+.not-found h1 a {
+    text-decoration: none;
+    display: block;
+}
+
 /* Navbar */
 .navbar {
     background-color: #fcedea;
@@ -36,9 +45,11 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 1em;
     padding: 1em 3em;
     width: 100%;
+    height: 100%;
 }
 .navbar ul li {
     margin: 0;
@@ -96,15 +107,16 @@
         padding: 0;
     }
     .navbar ul {
-        margin: 0;
-        margin-left: 0.5em;
         padding: 0;
+        margin-left: 0.5em;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        height: 20vh;
+        justify-content: center;
         align-items: flex-start;
         font-size: 1.2em;
+    }
+    .navbar ul li {
+        padding: 0.75em 0;
     }
     .nav-icon {
         margin-right: 1rem;
@@ -144,7 +156,7 @@
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.9)
         ),
-        url('./img/background.jpg');
+        url('https://res.cloudinary.com/darthsaul/image/upload/v1631887587/Portfolio/background_dvwyql.jpg');
     background-size: contain;
     padding: 4em;
 }
@@ -177,12 +189,12 @@
     font-size: 1.7em;
     font-weight: bold;
     position: relative;
+    z-index: 1;
 }
 .about-content .headline span:before {
     content: '';
     position: absolute;
     background-color: #dd1414;
-    /* background-color: var(--dark-red); */
     height: 0.1em;
     left: 0.3em;
     bottom: 0.2em;
@@ -305,9 +317,9 @@
             rgba(196, 193, 193, 0.75),
             rgba(196, 193, 193, 0.75)
         ),
-        url('./img/background.jpg');
+        url('https://res.cloudinary.com/darthsaul/image/upload/v1631887587/Portfolio/background_dvwyql.jpg');
     background-size: contain;
-    padding: 4em 2em;
+    padding: 6em 2em 4em;
 }
 .project-showcase-wrapper {
     background: rgba(32, 86, 126, 0.8);
@@ -322,6 +334,7 @@
 }
 
 .project-showcase-content {
+    line-height: 2em;
     margin: 1em;
     padding: 1.5em;
     border-radius: 18px;
@@ -337,6 +350,7 @@
 
 p.project-headline {
     font-size: 1.2em;
+    margin-bottom: 0.75em;
 }
 .project-item-inner {
     border-radius: 6px;
@@ -354,22 +368,38 @@ p.project-headline {
 .project-desc {
     font-size: 1.3em;
     font-weight: lighter;
+    margin-bottom: 1em;
+}
+.bullet {
+    margin-right: 0.5em;
 }
 .project-btn,
 .git-btn {
     background-color: var(--dark-red);
     padding: 0.5em 1.5em;
-    min-width: 10em;
-    font-size: 1.2em;
-    margin-top: 0.6em;
+    margin: 0.6em auto;
     border: none;
-    color: white;
-    font-weight: lighter;
     border-radius: 6px;
+    width: 200px;
+    font-size: 1.1em;
 }
 .project-btn:hover,
 .git-btn:hover {
     background-color: #dd1414;
+}
+
+.website-link {
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.website-link:hover {
+    color: white;
+}
+
+.website-icon {
+    margin-right: 0.5em;
 }
 
 @media (min-width: 768px) {
@@ -404,6 +434,10 @@ p.project-headline {
         padding: 0.4em 0.9em;
         min-width: 8em;
     }
+    .project-btn,
+    .git-btn {
+        margin-left: unset;
+    }
 }
 @media (min-width: 1250px) {
     .project-item-inner .project-title {
@@ -417,7 +451,7 @@ p.project-headline {
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.9)
         ),
-        url('./img/background.jpg');
+        url('https://res.cloudinary.com/darthsaul/image/upload/v1631887587/Portfolio/background_dvwyql.jpg');
     background-size: cover;
     background-position: contain;
     min-height: 400px;
@@ -428,6 +462,7 @@ p.project-headline {
 }
 .contact-wrapper .container {
     height: 100%;
+    padding: 3em;
 }
 .contact-item {
     text-align: center;
@@ -496,7 +531,7 @@ footer .container {
     margin-top: 0.6rem;
 }
 .footer-link {
-    padding-right: 1.6rem;
+    padding-right: 1.6em;
     font-size: 1.2em;
 }
 
@@ -504,7 +539,7 @@ footer .container {
     font-weight: 200;
     font-size: 1.4em;
     margin-top: 2em;
-    line-height: 1rem;
+    line-height: 1.6em;
     color: var(--dark-red);
 }
 
@@ -532,7 +567,7 @@ footer .container {
         text-align: center;
     }
     .footer-link {
-        padding: 0;
+        padding: 0.3em;
         margin: auto;
     }
     .footer-location {
