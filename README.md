@@ -7,8 +7,7 @@ My web developer portfolio! Currently serving as a hub for my project library, b
 -   JavaScript, React.js, Node.js
 -   Mobile-first CSS, responsive design.
 -   GSAP animations
--   Font Awesome icons
--   Minor inclusions of Bootstrap
+-   Icons from Font Awesome's React library
 
 ## Development
 
