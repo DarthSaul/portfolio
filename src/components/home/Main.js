@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { gsap } from 'gsap';
@@ -43,10 +42,10 @@ const About = () => {
                         </a>
                     </p>
                     <div className='about-links-container'>
-                        <Link to='/portfolio/about' className='more-about'>
+                        <a href='#about' className='more-about'>
                             <FontAwesomeIcon icon={faChevronRight} /> More about
                             Saul
-                        </Link>
+                        </a>
                         <div className='links-wrapper'>
                             {contactInfo.map((item, ind) => (
                                 <a
