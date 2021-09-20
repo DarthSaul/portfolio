@@ -95,17 +95,27 @@ const AboutPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='about-card'>
+                        <div className='about-card col'>
                             <p className='desc'>
-                                I started programming because I wanted to create{' '}
+                                I began MERN stack development when I decided I
+                                wanted to create{' '}
                                 <span className='call-out'>
                                     immersive digital experiences
                                 </span>{' '}
-                                that are accessible to anyone at anytime. As the
-                                son of an architect, I obsess over designing
-                                efficient backend servers. As the son of a
-                                writer, I tell exciting stories through
-                                meaningful frontend user experiences.
+                                that are accessible to anyone at anytime. I
+                                obsess over clean, efficient, and well-designed
+                                backend architecture. I love bringing awesome
+                                programs to the frontend user and am passionate
+                                about building responsive UX/UI.
+                            </p>
+                            <p className='email'>
+                                Want to chat?{' '}
+                                <a
+                                    href='mailto:graves.saul@gmail.com'
+                                    className='call-out'
+                                >
+                                    Shoot me an email.
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -113,26 +123,38 @@ const AboutPage = () => {
                     <div className='card-row-two'>
                         <div className='about-card'>
                             <p className='desc'>
-                                When I'm not coding, I'm brewing{' '}
-                                <span className='call-out'>coffee</span> (a
-                                lot), playing{' '}
-                                <span className='call-out'>
-                                    ultimate frisbee
-                                </span>
-                                , or finding{' '}
-                                <span className='call-out'>delicious food</span>
-                                . I'm interested in the future of cities and our
-                                relationship with them. My favorite movie is
-                                animated.
+                                When I'm not coding, I'm brewing a lot of{' '}
+                                <a
+                                    href='https://ancient-cove-69346.herokuapp.com/'
+                                    className='proj-link'
+                                >
+                                    coffee
+                                </a>
+                                , finding{' '}
+                                <a
+                                    href='https://arcane-lowlands-25770.herokuapp.com/'
+                                    className='proj-link'
+                                >
+                                    delicious food
+                                </a>
+                                , or playing ultimate frisbee. I'm fascinated by
+                                the future of cities and our relationship with
+                                them. My favorite movie is a{' '}
+                                <a
+                                    href='https://calm-mountain-15835.herokuapp.com/home'
+                                    className='proj-link'
+                                >
+                                    1997 animated classic.
+                                </a>
                             </p>
                         </div>
                         <div className='about-card'>
                             <div className='flex'>
-                                <h3>
+                                <h4>
                                     <span className='call-out'>
-                                        Want to chat?
+                                        Let's get in touch
                                     </span>
-                                </h3>
+                                </h4>
                                 <div className='about-page-links'>
                                     {contactInfo.map((item, ind) => (
                                         <a
