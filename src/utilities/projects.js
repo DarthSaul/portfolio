@@ -18,7 +18,7 @@ const projects = [
         bullets: [
             'RESTful API backend built with Express / Node.js.',
             'Frontend interface through React.js, responsive design with Bootstrap.',
-            'Mongo Atlas database, Cloudinary image upload, JWT authentication.',
+            'MongoDB Atlas database, Cloudinary image upload, JWT authentication.',
             'Full CRUD: Create & edit profiles, coffees, brew methods, and more.'
         ]
     },
@@ -33,6 +33,7 @@ const projects = [
         bullets: [
             'Express-based backend server with validation. Full CRUD access to database.',
             'Frontend state management through React Context API.',
+            'Dynamic React components, React Router single-page architecture.',
             'Styled with Bootstrap.'
         ]
     },
@@ -47,7 +48,7 @@ const projects = [
         bullets: [
             'Express app, RESTful web API.',
             'Styled with custom CSS, no Bootstrap. Responsive functionality and image download built with JavaScript.',
-            'Connected to Mongo Atlas via Mongoose.js'
+            'Connected to MongoDB Atlas via Mongoose.js.'
         ]
     },
     {
@@ -60,8 +61,10 @@ const projects = [
         desc: `First large-scale project. Marvel API wrapper gives users ability to search Marvel database for comics and super heroes.`,
         bullets: [
             'Uses EJS for HTML dynamic templating.',
+            'Responsive UI implemented via Bootstrap.',
             'Location data managed with Mapbox SDK.',
-            'Passport.js authentication.'
+            'Passport.js authentication.',
+            'Website security measures in place.'
         ]
     },
     {

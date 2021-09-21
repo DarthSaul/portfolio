@@ -226,6 +226,7 @@
     color: #dd1414;
 }
 .more-about {
+    /* font-weight: bold; */
     -webkit-transition: margin-left 300ms;
     transition: margin-left 300ms;
 }
@@ -238,7 +239,6 @@
 .desc a {
     text-decoration: none;
     color: var(--dark-red);
-    font-weight: bold;
     display: block;
     margin-top: 0.5em;
     font-size: 1.1em;
@@ -515,14 +515,8 @@ footer .container {
     font-weight: 200;
 }
 
-.footer-email {
-    -webkit-transition: padding-left 300ms;
-    transition: padding-left 300ms;
-}
 .footer-email:hover {
-    padding-left: 0.6rem;
-    -webkit-transition: padding-left 300ms;
-    transition: padding-left 300ms;
+    color: #dd1414;
 }
 
 .footer-links {
@@ -533,6 +527,10 @@ footer .container {
 .footer-link {
     padding-right: 1.6em;
     font-size: 1.2em;
+}
+
+.footer-link:hover {
+    color: #dd1414;
 }
 
 .footer-location {

@@ -15,11 +15,6 @@
 .title {
     font-size: 1.8em;
     margin-bottom: 1em;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.title p {
-    font-family: 'Nunito Sans', sans-serif;
 }
 
 .about-card {
@@ -44,10 +39,6 @@
 .about-card p,
 .about-card h3 {
     font-family: 'Nunito', sans-serif;
-}
-
-.about-card .title p {
-    font-family: 'Nunito Sans', sans-serif;
 }
 
 .about-card p {
@@ -140,6 +131,7 @@
 .desc a.proj-link {
     color: black;
     display: inline;
+    font-weight: bold;
 }
 @media (min-width: 768px) {
     .about-page-container {

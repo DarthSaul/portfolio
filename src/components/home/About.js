@@ -43,8 +43,8 @@ const AboutPage = () => {
                             I'm a{' '}
                             <span className='call-out'>
                                 full-stack developer
-                            </span>
-                            , currently hacking away in Pittsburgh, PA. I create{' '}
+                            </span>{' '}
+                            creating{' '}
                             <span className='call-out'>functional</span>,{' '}
                             <span className='call-out'>accessible</span> and{' '}
                             <span className='call-out'>beautiful</span>{' '}

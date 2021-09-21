@@ -33,10 +33,11 @@ const About = () => {
                     </p>
 
                     <p className='desc'>
-                        I'm a <strong>full-stack web developer</strong> based in
-                        Pittsburgh. I work in the MERN stack, where I build
-                        RESTful web APIs and pair them with responsive, engaging
-                        frontend experiences.
+                        I'm a passionate{' '}
+                        <strong>full-stack web developer</strong> building
+                        RESTful web APIs alongside fantastic frontend
+                        experiences. While I'm based in Pittsburgh, I love to
+                        work across the globe.
                         <a href='#projects'>
                             You can check out my latest projects below.
                         </a>
