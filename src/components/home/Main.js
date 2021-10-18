@@ -22,7 +22,7 @@ const About = () => {
             <div className='container'>
                 <div className='about-img-wrapper'>
                     <img
-                        src='https://res.cloudinary.com/darthsaul/image/upload/v1631887548/Portfolio/profile_shot_ij0pnu.png'
+                        src='https://res.cloudinary.com/darthsaul/image/upload/v1634576349/Portfolio/IMG_7676_1_xzxscy.jpg'
                         alt='profile'
                         className='about-img'
                     />
