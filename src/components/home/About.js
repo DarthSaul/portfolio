@@ -7,7 +7,8 @@ import {
     faCss3Alt,
     faReact,
     faNode,
-    faGitAlt
+    faGitAlt,
+    faVuejs
 } from '@fortawesome/free-brands-svg-icons';
 
 import contactInfo from '../../utilities/contactInfo';
@@ -70,10 +71,19 @@ const AboutPage = () => {
                                     <FontAwesomeIcon icon={faReact} />
                                 </div>
                                 <div className='skill'>
+                                    <FontAwesomeIcon icon={faVuejs} />
+                                </div>
+                                <div className='skill'>
                                     <FontAwesomeIcon icon={faNode} />
                                 </div>
                                 <div className='skill'>
                                     <FontAwesomeIcon icon={faGitAlt} />
+                                </div>
+                                <div className='skill'>
+                                    <img
+                                        src='https://res.cloudinary.com/darthsaul/image/upload/v1635794376/Portfolio/d3_logo_zonxch.svg'
+                                        alt=''
+                                    />
                                 </div>
                                 <div className='skill'>
                                     <img
