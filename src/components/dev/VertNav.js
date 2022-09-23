@@ -14,11 +14,11 @@ const VertNav = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 	return (
 		<>
-			<Stack gap={2} className="mb-4 h2">
+			<div className="mb-4 h2">
 				<div>Saul</div>
 				<div>Graves</div>
-			</Stack>
-			<Stack className="mb-4">
+			</div>
+			<Stack className="mb-4 nav-links">
 				<div>
 					<Link to="/dev" className="text-dark">
 						Work
