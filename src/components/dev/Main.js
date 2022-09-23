@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { componentDidMount } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Container from 'react-bootstrap/Container';
@@ -11,7 +11,7 @@ import contactInfo from '../../utilities/contactInfo';
 import '../../Main.css';
 
 const Main = () => {
-	const contactFiltered = contactInfo;
+	contactInfo.pop();
 	return (
 		<Container fluid className="pt-5">
 			<Row className="wrapper">
@@ -26,7 +26,7 @@ const Main = () => {
 						<div>Contact</div>
 					</Stack>
 					<Row>
-						{contactFiltered.map((item, ind) => (
+						{contactInfo.map((item, ind) => (
 							<Col>
 								{' '}
 								<a
