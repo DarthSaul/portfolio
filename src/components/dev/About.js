@@ -9,19 +9,19 @@ import VertNav from './VertNav';
 
 import '../../Main.css';
 
-const Main = () => {
+const About = () => {
 	return (
 		<Container fluid className="pt-5">
 			<Row className="wrapper">
 				<Col xs={2} className="columns px-5">
 					<VertNav />
 				</Col>
-				<Col className="columns blue">2 of 4</Col>
-				<Col className="columns green">3 of 4</Col>
-				<Col className="columns">4 of 4</Col>
+				<Col className="columns blue display-3">ABOUT</Col>
+				<Col className="columns red">blank</Col>
+				<Col className="columns green">Photo here</Col>
 			</Row>
 		</Container>
 	);
 };
 
-export default Main;
+export default About;
