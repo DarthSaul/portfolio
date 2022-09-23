@@ -1,4 +1,17 @@
 .wrapper {
 	height: 100vh;
+}
+
+.columns {
+	height: 100%;
+}
+
+.red {
 	background-color: red;
+}
+.blue {
+	background-color: blue;
+}
+.green {
+	background-color: green;
 }

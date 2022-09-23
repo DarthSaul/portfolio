@@ -1,58 +1,51 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { gsap } from 'gsap';
-
-import contactInfo from '../../utilities/contactInfo';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import Stack from 'react-bootstrap/Stack';
+
+import contactInfo from '../../utilities/contactInfo';
 
 import '../../Main.css';
 
 const Main = () => {
-	const tl = gsap.timeline({
-		defaults: {
-			duration: 1.5,
-		},
-	});
-
-	tl.from('.container', {
-		y: -125,
-		opacity: 0,
-	});
-
+	const contactFiltered = contactInfo;
 	return (
-		<Container>
+		<Container fluid className="pt-5">
 			<Row className="wrapper">
-				<Col xs={2}>1 of 4</Col>
-				<Col>2 of 4</Col>
-				<Col>3 of 4</Col>
-				<Col>4 of 4</Col>
-			</Row>
-			{/* <Row>
-				<Col>
-					<Card
-						bg="dark"
-						key="dark"
-						text="white"
-						style={{ width: '18rem' }}
-						className="mb-2"
-					>
-						<Card.Header>Header</Card.Header>
-						<Card.Body>
-							<Card.Title>Dark Card Title </Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card
-								title and make up the bulk of the card's
-								content.
-							</Card.Text>
-						</Card.Body>
-					</Card>
+				<Col xs={2} className="columns px-5">
+					<Stack gap={2} className="mb-5 h2">
+						<div>Saul</div>
+						<div>Graves</div>
+					</Stack>
+					<Stack className="mb-3">
+						<div>Work</div>
+						<div>About</div>
+						<div>Contact</div>
+					</Stack>
+					<Row>
+						{contactFiltered.map((item, ind) => (
+							<Col>
+								{' '}
+								<a
+									key={ind}
+									href={item.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="about-link"
+								>
+									<FontAwesomeIcon icon={item.icon} />
+								</a>
+							</Col>
+						))}
+					</Row>
 				</Col>
-			</Row> */}
+				<Col className="columns blue">2 of 4</Col>
+				<Col className="columns green">3 of 4</Col>
+				<Col className="columns">4 of 4</Col>
+			</Row>
 		</Container>
 	);
 };
