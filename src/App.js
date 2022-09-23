@@ -9,18 +9,19 @@ import Footer from './components/layout/Footer';
 import NotFound from './components/layout/NotFound';
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 	return (
 		<Router>
 			<>
-				<Navbar />
+				{/* <Navbar /> */}
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/dev" element={<DevHome />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
-				<Footer />
+				{/* <Footer /> */}
 			</>
 		</Router>
 	);
