@@ -42,9 +42,8 @@ const VertNav = () => {
 			</Stack>
 			<Row>
 				{contactItems.map((item, ind) => (
-					<Col xs={1}>
+					<Col xs={1} key={ind}>
 						<a
-							key={ind}
 							href={item.link}
 							target="_blank"
 							rel="noopener noreferrer"

@@ -2,44 +2,51 @@ import React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Stack from 'react-bootstrap/Stack';
 import Col from 'react-bootstrap/Col';
 
 import VertNav from './VertNav';
 
 import ProjectCard from './ProjectCard';
 
-import projects from '../../utilities/projects';
+import projects from '../../utilities/projectsDev';
 
 import '../../Main.css';
 
 const Projects = () => {
-	const projectsOne = projects.slice(0, 2);
-	const projectsTwo = projects.slice(2);
 	return (
-		<Container fluid className="pt-5">
+		<Container fluid className="my-5">
 			<Row className="wrapper">
 				<Col xs={2} className="columns px-5">
 					<VertNav />
 				</Col>
-				<Col className="columns">
-					<Row xs={1} className="g-4">
-						{projectsOne.map((item, ind) => (
-							<Col key={ind}>
-								<ProjectCard />
-							</Col>
-						))}
+				<Col xs={7} className="columns">
+					<Row className="mb-2" style={{ minHeight: ' 50% ' }}>
+						<Col>
+							<ProjectCard project={projects.coffeeCorner} />
+						</Col>
+					</Row>
+
+					<Row className="gx-2" style={{ minHeight: ' 30% ' }}>
+						<Col>
+							<ProjectCard project={projects.ghibli} />
+						</Col>
+						<Col>
+							<ProjectCard project={projects.marvel} />
+						</Col>
 					</Row>
 				</Col>
-				<Col className="columns">
-					<Row xs={1} className="g-4">
-						{projectsTwo.map((item, ind) => (
-							<Col key={ind}>
-								<ProjectCard />
-							</Col>
-						))}
-					</Row>
+
+				<Col>
+					<Stack gap={2}>
+						<div style={{ minHeight: ' 40% ' }}>
+							<ProjectCard project={projects.foodFromFriends} />
+						</div>
+						<div style={{ minHeight: ' 40% ' }}>
+							<ProjectCard project={projects.portfolio} />
+						</div>
+					</Stack>
 				</Col>
-				<Col className="columns text-center">4 of 4</Col>
 			</Row>
 		</Container>
 	);
