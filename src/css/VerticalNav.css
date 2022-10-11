@@ -1,0 +1,11 @@
+.vertical-nav {
+	min-width: 200px;
+}
+
+.title {
+	font-size: 2em;
+}
+
+.nav-links a {
+	text-decoration: none;
+}

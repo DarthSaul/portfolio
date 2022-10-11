@@ -8,35 +8,26 @@ import Stack from 'react-bootstrap/Stack';
 
 import contactInfo from '../../utilities/contactInfo';
 
-import '../../Main.css';
+import '../../css/VerticalNav.css';
 
 const VertNav = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 	return (
-		<>
-			<div className="mb-4 h2">
+		<Col xs={1} className="vertical-nav">
+			<div className="mb-4 title">
 				<div>Saul</div>
 				<div>Graves</div>
 			</div>
 			<Stack className="mb-4 nav-links">
 				<div>
-					<Link to="/dev" className="text-dark">
-						Work
-					</Link>
-				</div>
-				<div>
 					<Link to="/projects" className="text-dark">
 						Projects
 					</Link>
 				</div>
+
 				<div>
 					<Link to="/about" className="text-dark">
 						About
-					</Link>
-				</div>
-				<div>
-					<Link to="/contact" className="text-dark">
-						Contact
 					</Link>
 				</div>
 			</Stack>
@@ -54,7 +45,7 @@ const VertNav = () => {
 					</Col>
 				))}
 			</Row>
-		</>
+		</Col>
 	);
 };
 

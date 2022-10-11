@@ -4,16 +4,19 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import '../../css/Contact.css';
+import '../../css/Work.css';
 
-const Contact = () => {
+const Main = () => {
 	return (
-		<Container fluid className="mt-4">
+		<Container fluid>
 			<Row className="wrapper">
-				<Col className="columns h1">Contact</Col>
+				<Col xs={8} className="blue">
+					2 of 3
+				</Col>
+				<Col className="green">3 of 3</Col>
 			</Row>
 		</Container>
 	);
 };
 
-export default Contact;
+export default Main;

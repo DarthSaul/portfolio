@@ -2,50 +2,46 @@ import React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Stack from 'react-bootstrap/Stack';
 import Col from 'react-bootstrap/Col';
-
-import VertNav from './VertNav';
 
 import ProjectCard from './ProjectCard';
 
 import projects from '../../utilities/projectsDev';
 
-import '../../Main.css';
+import '../../css/Projects.css';
 
 const Projects = () => {
 	return (
-		<Container fluid className="my-5">
+		<Container fluid>
 			<Row className="wrapper">
-				<Col xs={2} className="columns px-5">
-					<VertNav />
+				<Col xs={12} lg={7} className="columns p-0">
+					<Row className="mb-2" style={{ minHeight: ' 48% ' }}>
+						<Col>
+							<ProjectCard project={projects.conservationLabs} />
+						</Col>
+					</Row>
+
+					<Row className="gx-2" style={{ minHeight: ' 33% ' }}>
+						<Col sm={7}>
+							<ProjectCard project={projects.ghibli} />
+						</Col>
+						<Col className="mb-5">
+							<ProjectCard project={projects.portfolio} />
+						</Col>
+					</Row>
 				</Col>
-				<Col xs={7} className="columns">
-					<Row className="mb-2" style={{ minHeight: ' 50% ' }}>
+
+				<Col className="columns px-2">
+					<Row className="mb-2" style={{ minHeight: ' 33% ' }}>
+						<Col>
+							<ProjectCard project={projects.foodFromFriends} />
+						</Col>
+					</Row>
+					<Row className="mb-2" style={{ minHeight: ' 54% ' }}>
 						<Col>
 							<ProjectCard project={projects.coffeeCorner} />
 						</Col>
 					</Row>
-
-					<Row className="gx-2" style={{ minHeight: ' 30% ' }}>
-						<Col>
-							<ProjectCard project={projects.ghibli} />
-						</Col>
-						<Col>
-							<ProjectCard project={projects.marvel} />
-						</Col>
-					</Row>
-				</Col>
-
-				<Col>
-					<Stack gap={2}>
-						<div style={{ minHeight: ' 40% ' }}>
-							<ProjectCard project={projects.foodFromFriends} />
-						</div>
-						<div style={{ minHeight: ' 40% ' }}>
-							<ProjectCard project={projects.portfolio} />
-						</div>
-					</Stack>
 				</Col>
 			</Row>
 		</Container>

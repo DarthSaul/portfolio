@@ -7,6 +7,16 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const projects = {
+	conservationLabs: {
+		name: 'Conservation Labs',
+		headline: 'Front-end developer',
+		icon: faCoffee,
+		projectLink: 'https://ancient-cove-69346.herokuapp.com/',
+		githubLink: 'https://github.com/DarthSaul/coffee-corner',
+		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1665443587/Portfolio/Screen_Shot_2022-10-10_at_6.12.43_PM_hfwvg7.png',
+		desc: `My current work for c labs!`,
+		bullets: ['Bullet 1', 'Bullet 1', 'Bullet 1', 'Bullet 1'],
+	},
 	coffeeCorner: {
 		name: 'Coffee Corner',
 		headline: 'Join a community of coffee lovers',
