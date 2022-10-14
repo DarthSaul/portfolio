@@ -1,9 +1,13 @@
-.wrapper {
-	height: 100vh;
+.projects-wrapper {
+	max-width: 1400px;
 }
 
 .columns {
 	height: 100%;
+}
+
+.project-container {
+	height: 435px;
 }
 
 .project-card-body {
@@ -15,4 +19,19 @@
 	background-color: rgba(0, 0, 0, 0.75);
 	color: white;
 	padding: 1em;
+}
+
+@media (min-width: 700px) {
+	.projects-2 {
+		height: 300px;
+	}
+	.projects-3 {
+		height: 200px;
+	}
+	.projects-4 {
+		height: 350px;
+	}
+	.projects-5 {
+		height: 350px;
+	}
 }
