@@ -14,7 +14,7 @@ const Projects = () => {
 	return (
 		<Container fluid>
 			<Row className="wrapper">
-				<Col xs={12} lg={7} className="columns p-0">
+				<Col xs={12} lg={7} className="columns">
 					<Row className="mb-2" style={{ minHeight: ' 48% ' }}>
 						<Col>
 							<ProjectCard project={projects.conservationLabs} />
