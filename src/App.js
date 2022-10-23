@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/dev/Layout';
 import Projects from './components/dev/Projects';
 import About from './components/dev/About';
+import ProjectPage from './components/dev/ProjectPage';
 
 // Bootstrap CSS & Bundle JS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +20,7 @@ const App = () => {
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Projects />} />
 					<Route path="about" element={<About />} />
+					<Route path="project/:id" element={<ProjectPage />} />
 				</Route>
 			</Routes>
 		</Router>

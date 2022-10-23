@@ -16,6 +16,7 @@ const projects = {
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1665443587/Portfolio/Screen_Shot_2022-10-10_at_6.12.43_PM_hfwvg7.png',
 		desc: `My current work for c labs!`,
 		bullets: ['Bullet 1', 'Bullet 1', 'Bullet 1', 'Bullet 1'],
+		id: 1,
 	},
 	coffeeCorner: {
 		name: 'Coffee Corner',
@@ -31,6 +32,7 @@ const projects = {
 			'MongoDB Atlas database, Cloudinary image upload, JWT authentication.',
 			'Full CRUD: Create & edit profiles, coffees, brew methods, and more.',
 		],
+		id: 2,
 	},
 	foodFromFriends: {
 		name: 'Food From Friends',
@@ -46,6 +48,7 @@ const projects = {
 			'Dynamic React components, React Router single-page architecture.',
 			'Styled with Bootstrap.',
 		],
+		id: 3,
 	},
 	ghibli: {
 		name: 'Ghibli Wallpapers',
@@ -60,6 +63,7 @@ const projects = {
 			'Styled with custom CSS, no Bootstrap. Responsive functionality and image download built with JavaScript.',
 			'Connected to MongoDB Atlas via Mongoose.js.',
 		],
+		id: 4,
 	},
 	marvel: {
 		name: 'Marvel Ultimate Team',
@@ -76,6 +80,7 @@ const projects = {
 			'Passport.js authentication.',
 			'Website security measures in place.',
 		],
+		id: 5,
 	},
 	portfolio: {
 		name: 'Portfolio',
@@ -90,6 +95,7 @@ const projects = {
 			'Designed primarily with custom CSS. Mobile-first responsive approach.',
 			'Animations implemented with JavaScript.',
 		],
+		id: 6,
 	},
 };
 export default projects;

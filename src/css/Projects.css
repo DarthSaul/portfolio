@@ -21,6 +21,10 @@
 	padding: 1em;
 }
 
+.project-link {
+	text-decoration: none;
+}
+
 @media (min-width: 700px) {
 	.projects-2 {
 		height: 300px;

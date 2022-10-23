@@ -34,7 +34,7 @@ const HoNav = () => {
 				<div className="col-auto p-0">
 					<button
 						type="button"
-						class="btn btn-transparent p-0 text-muted"
+						className="btn btn-transparent p-0 text-muted"
 						onClick={() => toggleMenu(!menu)}
 					>
 						Menu
