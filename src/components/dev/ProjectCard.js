@@ -12,13 +12,18 @@ function ProjectCard({ project }) {
 		borderRadius: 0,
 	};
 	return (
-		<Card className="h-100" border="light" style={divStyle}>
-			<Card.Body className="project-card-body m-0 p-0">
-				<Link className="text-white project-link" to={`/project/${id}`}>
-					<div className="card-title-overlay">{name}</div>
-				</Link>
-			</Card.Body>
-		</Card>
+		<Link className="text-white project-link" to={`/project/${id}`}>
+			<Card className="h-100" border="light" style={divStyle}>
+				<Card.Body className="project-card-body m-0 p-0">
+					<div
+						onClick={(e) => e.preventDefault()}
+						className="card-title-overlay"
+					>
+						{name}
+					</div>
+				</Card.Body>
+			</Card>
+		</Link>
 	);
 }
 

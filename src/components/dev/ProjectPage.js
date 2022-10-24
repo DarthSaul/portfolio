@@ -44,7 +44,7 @@ const ProjectPage = () => {
 				</>
 			) : (
 				<>
-					<div>ProjectPage {id}</div>
+					<div>{name}</div>
 					<div>ProjectPage {name}</div>
 				</>
 			)}
