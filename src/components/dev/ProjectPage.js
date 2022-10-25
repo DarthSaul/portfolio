@@ -32,21 +32,85 @@ const ProjectPage = () => {
 		getProject(id);
 	}, [id]);
 
-	const { name } = projectData;
+	const { name, headline, imgUrl } = projectData;
 	const { error, message } = errorData;
 
 	return (
-		<div>
+		<div className="container-fluid mb-5">
 			{error ? (
 				<>
 					<div> Sorry, something went wrong! </div>
 					<div> {message} </div>
 				</>
 			) : (
-				<>
-					<div>{name}</div>
-					<div>ProjectPage {name}</div>
-				</>
+				<div className="row">
+					<div className="col-xs-12 col-sm-7">
+						<div className="container">
+							<div className="row">
+								<div className="col-xs-12 display-3">
+									{name}
+								</div>
+								<div className="col-xs-12 lead text-muted ps-3 mb-4">
+									{headline}
+								</div>
+								<div className="col-xs-6 w-25 ps-3">
+									<hr />
+								</div>
+								<div className="row">
+									<div className="col-6">
+										<div className="h1">text</div>
+										<div>
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Ea sit
+											modi recusandae voluptate
+											dignissimos? Sequi impedit alias
+											temporibus magnam dolor? Est unde
+											quibusdam natus repudiandae
+											accusantium quae obcaecati esse
+											incidunt.
+										</div>
+									</div>
+									<div className="col-6">
+										<div className="h1">text</div>
+										<div>
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Ea sit
+											modi recusandae voluptate
+											dignissimos? Sequi impedit alias
+											temporibus magnam dolor? Est unde
+											quibusdam natus repudiandae
+											accusantium quae obcaecati esse
+											incidunt.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="col-xs-12 col-sm container ps-5">
+						<div className="col-xs-12 mb-5">
+							<img
+								src={imgUrl}
+								className="img-fluid shadow rounded-3"
+								alt="Project showcase"
+							/>
+						</div>
+						<div className="col-xs-12 mb-5">
+							<img
+								src={imgUrl}
+								className="img-fluid shadow rounded-3"
+								alt="Project showcase"
+							/>
+						</div>
+						<div className="col-xs-12">
+							<img
+								src={imgUrl}
+								className="img-fluid rounded-3"
+								alt="Project showcase"
+							/>
+						</div>
+					</div>
+				</div>
 			)}
 		</div>
 	);

@@ -14,7 +14,7 @@ const HoNav = () => {
 		<nav className="navbar bg-transparent py-3">
 			<div className="container-fluid row align-items-start justify-content-between pe-0">
 				<div className="col-auto">
-					<div className="h1 text-weight-bold">
+					<div className="h1 fw-light">
 						<strong>Saul Graves</strong>
 					</div>
 					<div className="external-links">

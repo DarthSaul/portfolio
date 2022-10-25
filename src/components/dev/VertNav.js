@@ -12,10 +12,10 @@ const VertNav = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (
-		<>
+		<div className="position-fixed">
 			<Stack className="mb-4 nav-links">
-				<div className="mb-4 title text-weight-bold">
-					<Link to="/" className="text-dark">
+				<div className="mb-4 title">
+					<Link to="/" className="text-dark fw-bold">
 						<div>Saul</div>
 						<div>Graves</div>
 					</Link>
@@ -44,7 +44,7 @@ const VertNav = () => {
 					</Col>
 				))}
 			</Row>
-		</>
+		</div>
 	);
 };
 
