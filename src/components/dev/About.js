@@ -1,22 +1,17 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
-
 import contactInfo from '../../utilities/contactInfo';
 
 import '../../css/About.css';
 
 const About = () => {
 	return (
-		<Container fluid>
-			<Row className="justify-content-between">
-				<Col xs={12} lg={6} className="columns">
+		<div className="container-fluid">
+			<div className="row justify-content-between">
+				<div xs={12} lg={6} className="col-xs-12 col-lg-6 columns">
 					<div className="mb-4 h2">Bio</div>
-					<Stack gap={4} className="mb-4 h6 fw-light text-muted mb-5">
+					<div className="vstack gap-4 h6 fw-light text-muted mb-4">
 						<div>
 							A few years ago, I decided to teach myself
 							full-stack web development because I wanted to
@@ -39,31 +34,46 @@ const About = () => {
 							cooking delicious food (I think), and brewing A LOT
 							of coffee.
 						</div>
-					</Stack>
-					<div className="h4">Technologies and skills</div>
-					<Row className="mb-5">
-						<Col>
-							<Stack>
-								<div>1</div>
-								<div>2</div>
-								<div>3</div>
-							</Stack>
-						</Col>
-						<Col>
-							<Stack>
-								<div>4</div>
-								<div>5</div>
-								<div>6</div>
-							</Stack>
-						</Col>
-						<Col>
-							<Stack>
-								<div>7</div>
-								<div>8</div>
-								<div>9</div>
-							</Stack>
-						</Col>
-					</Row>
+					</div>
+					<div className="h4">Technologies</div>
+					<div className="row mb-3 fw-light text-muted">
+						<div className="col-auto me-3">
+							<div className="vstack">
+								<div>JavaScript</div>
+								<div>Node, Express</div>
+								<div>React, Vue</div>
+							</div>
+						</div>
+						<div className="col-auto me-3">
+							<div className="vstack">
+								<div>SQL (PostgreSQL)</div>
+								<div>NoSQL (MongoDB)</div>
+								<div>Git, GitHub, AWS</div>
+							</div>
+						</div>
+						<div className="col-auto">
+							<div className="vstack">
+								<div>HTML, CSS</div>
+								<div>Bootstrap</div>
+								<div>Jest</div>
+							</div>
+						</div>
+					</div>
+					<div className="h4">Skills</div>
+					<div className="row mb-4 fw-light text-muted">
+						<div className="col-auto me-3">
+							<div className="vstack">
+								<div>Responsive web design</div>
+								<div>Figma</div>
+							</div>
+						</div>
+						<div className="col-auto me-3">
+							<div className="vstack">
+								<div>REST APIs</div>
+								<div>Agile, Scrum</div>
+							</div>
+						</div>
+					</div>
 					<div className="h4">Let's get in touch</div>
 					<div className="about-page-links">
 						{contactInfo.map((item, ind) => (
@@ -77,17 +87,17 @@ const About = () => {
 							</a>
 						))}
 					</div>
-				</Col>
+				</div>
 
-				<Col xs={12} md="auto">
+				<div className="col-xs-12 col-md-auto">
 					<img
 						src="https://res.cloudinary.com/darthsaul/image/upload/v1634576349/Portfolio/IMG_7676_1_xzxscy.jpg"
 						alt="profile"
 						className="bio-img ml-auto my-4"
 					/>
-				</Col>
-			</Row>
-		</Container>
+				</div>
+			</div>
+		</div>
 	);
 };
 

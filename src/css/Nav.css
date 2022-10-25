@@ -6,6 +6,10 @@
 	font-size: 2em;
 }
 
+.title-name {
+	margin-bottom: -0.3em;
+}
+
 .nav-links a {
 	text-decoration: none;
 	color: #d10909;

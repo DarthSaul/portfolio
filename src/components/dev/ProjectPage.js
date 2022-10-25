@@ -32,7 +32,17 @@ const ProjectPage = () => {
 		getProject(id);
 	}, [id]);
 
-	const { name, headline, imgUrl, desc, bullets, loading } = projectData;
+	const {
+		name,
+		headline,
+		imgUrl,
+		desc,
+		bullets,
+		projectLink,
+		githubLink,
+		currentRole,
+		loading,
+	} = projectData;
 	const { error, message } = errorData;
 
 	return (
@@ -50,20 +60,42 @@ const ProjectPage = () => {
 						<div className="row">
 							<div className="col-xs-12 col-lg-7 mb-4">
 								<div className="container-fluid px-0">
-									<div className="row ">
+									<div className="row">
 										<div className="col-xs-12 display-3">
 											{name}
 										</div>
-										<div className="col-xs-12 lead text-muted ps-3 mb-4">
+										<div className="col-xs-12 lead text-muted ps-3 mb-2">
 											{headline}
 										</div>
-										<div className="col-xs-6 w-25 ps-3">
+										<div className="col-xs-6 w-25 ps-3 mb-1">
 											<hr />
 										</div>
 										<div className="row ps-6">
 											<div className="col-xs-12 mb-4 h4 fw-light">
 												{desc}
 											</div>
+											{!currentRole && (
+												<div className="col-xs-12 mb-4">
+													<a
+														className="btn btn-dark me-3 shadow"
+														href={projectLink}
+														target="_blank"
+														rel="noreferrer"
+														role="button"
+													>
+														Website
+													</a>
+													<a
+														className="btn btn-dark shadow"
+														href={githubLink}
+														target="_blank"
+														rel="noreferrer"
+														role="button"
+													>
+														GitHub
+													</a>
+												</div>
+											)}
 											<div className="col-xs-12">
 												<div className="h4 mb-1">
 													Highlights
@@ -72,7 +104,10 @@ const ProjectPage = () => {
 													<ul className="list-unstyled">
 														{bullets.map(
 															(item, ind) => (
-																<li key={ind}>
+																<li
+																	key={ind}
+																	className="mb-2"
+																>
 																	{'>'} {item}
 																</li>
 															)

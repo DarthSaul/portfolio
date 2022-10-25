@@ -1,11 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
-
 import contactInfo from '../../utilities/contactInfo';
 
 const VertNav = () => {
@@ -13,10 +8,10 @@ const VertNav = () => {
 
 	return (
 		<div className="position-fixed">
-			<Stack className="mb-4 nav-links">
+			<div className="vstack mb-4 nav-links">
 				<div className="mb-4 title">
 					<Link to="/" className="text-dark fw-bold">
-						<div>Saul</div>
+						<div className="title-name">Saul</div>
 						<div>Graves</div>
 					</Link>
 				</div>
@@ -30,10 +25,10 @@ const VertNav = () => {
 						About
 					</Link>
 				</div>
-			</Stack>
-			<Row className="external-links">
+			</div>
+			<div className="row external-links">
 				{contactItems.map((item, ind) => (
-					<Col xs={1} key={ind}>
+					<div className="col-1" key={ind}>
 						<a
 							href={item.link}
 							target="_blank"
@@ -41,9 +36,9 @@ const VertNav = () => {
 						>
 							<FontAwesomeIcon icon={item.icon} />
 						</a>
-					</Col>
+					</div>
 				))}
-			</Row>
+			</div>
 		</div>
 	);
 };
