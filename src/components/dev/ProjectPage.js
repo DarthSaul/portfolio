@@ -32,87 +32,79 @@ const ProjectPage = () => {
 		getProject(id);
 	}, [id]);
 
-	const { name, headline, imgUrl } = projectData;
+	const { name, headline, imgUrl, desc, bullets, loading } = projectData;
 	const { error, message } = errorData;
 
 	return (
-		<div className="container-fluid mb-5">
-			{error ? (
-				<>
-					<div> Sorry, something went wrong! </div>
-					<div> {message} </div>
-				</>
+		<>
+			{loading ? (
+				<div>Loading...</div>
 			) : (
-				<div className="row">
-					<div className="col-xs-12 col-sm-7">
-						<div className="container">
-							<div className="row">
-								<div className="col-xs-12 display-3">
-									{name}
-								</div>
-								<div className="col-xs-12 lead text-muted ps-3 mb-4">
-									{headline}
-								</div>
-								<div className="col-xs-6 w-25 ps-3">
-									<hr />
-								</div>
-								<div className="row">
-									<div className="col-6">
-										<div className="h1">text</div>
-										<div>
-											Lorem ipsum dolor sit amet
-											consectetur adipisicing elit. Ea sit
-											modi recusandae voluptate
-											dignissimos? Sequi impedit alias
-											temporibus magnam dolor? Est unde
-											quibusdam natus repudiandae
-											accusantium quae obcaecati esse
-											incidunt.
+				<div className="container-fluid mb-5">
+					{error ? (
+						<>
+							<div> Sorry, something went wrong! </div>
+							<div> {message} </div>
+						</>
+					) : (
+						<div className="row">
+							<div className="col-xs-12 col-lg-7 mb-4">
+								<div className="container-fluid px-0">
+									<div className="row ">
+										<div className="col-xs-12 display-3">
+											{name}
 										</div>
-									</div>
-									<div className="col-6">
-										<div className="h1">text</div>
-										<div>
-											Lorem ipsum dolor sit amet
-											consectetur adipisicing elit. Ea sit
-											modi recusandae voluptate
-											dignissimos? Sequi impedit alias
-											temporibus magnam dolor? Est unde
-											quibusdam natus repudiandae
-											accusantium quae obcaecati esse
-											incidunt.
+										<div className="col-xs-12 lead text-muted ps-3 mb-4">
+											{headline}
+										</div>
+										<div className="col-xs-6 w-25 ps-3">
+											<hr />
+										</div>
+										<div className="row ps-6">
+											<div className="col-xs-12 mb-4 h4 fw-light">
+												{desc}
+											</div>
+											<div className="col-xs-12">
+												<div className="h4 mb-1">
+													Highlights
+												</div>
+												<div className="text-muted">
+													<ul className="list-unstyled">
+														{bullets.map(
+															(item, ind) => (
+																<li key={ind}>
+																	{'>'} {item}
+																</li>
+															)
+														)}
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div className="col-xs-12 col-lg container ps-3">
+								<div className="col-xs-12 mb-5">
+									<img
+										src={imgUrl}
+										className="img-fluid shadow rounded-3"
+										alt="Project showcase"
+									/>
+								</div>
+								<div className="col-xs-12 mb-5">
+									<img
+										src={imgUrl}
+										className="img-fluid shadow rounded-3"
+										alt="Project showcase"
+									/>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div className="col-xs-12 col-sm container ps-5">
-						<div className="col-xs-12 mb-5">
-							<img
-								src={imgUrl}
-								className="img-fluid shadow rounded-3"
-								alt="Project showcase"
-							/>
-						</div>
-						<div className="col-xs-12 mb-5">
-							<img
-								src={imgUrl}
-								className="img-fluid shadow rounded-3"
-								alt="Project showcase"
-							/>
-						</div>
-						<div className="col-xs-12">
-							<img
-								src={imgUrl}
-								className="img-fluid rounded-3"
-								alt="Project showcase"
-							/>
-						</div>
-					</div>
+					)}
 				</div>
 			)}
-		</div>
+		</>
 	);
 };
 

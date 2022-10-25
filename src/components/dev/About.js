@@ -16,28 +16,28 @@ const About = () => {
 			<Row className="justify-content-between">
 				<Col xs={12} lg={6} className="columns">
 					<div className="mb-4 h2">Bio</div>
-					<Stack
-						gap={4}
-						className="mb-4 h6 font-weight-normal text-muted mb-5"
-					>
+					<Stack gap={4} className="mb-4 h6 fw-light text-muted mb-5">
 						<div>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor
+							A few years ago, I decided to teach myself
+							full-stack web development because I wanted to
+							create immersive digital experiences that make an
+							immediate impact on users no matter where they come
+							from.
 						</div>
 						<div>
-							Ut enim ad minim veniam, quis nostrud exercitation
-							ullamco laboris nisi ut aliquip ex ea commodo
-						</div>
-						<div>Lorem ipsum dolor sit amet,</div>
-						<div>
-							ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore
-							eu fugiat nulla pariatur.
+							I obsess over clean, scalable, and well-designed
+							backend architecture. On the frontend, I build
+							beautiful user experiences rooted in responsive
+							UX/UI and modern web design.
 						</div>
 						<div>
-							commodo consequat. Duis aute irure dolor in
-							reprehenderit in!
+							My JavaScript expertise lies in Node, Express,
+							React, and Vue.
+						</div>
+						<div>
+							While I'm not coding, I'm reading fantasy books,
+							cooking delicious food (I think), and brewing A LOT
+							of coffee.
 						</div>
 					</Stack>
 					<div className="h4">Technologies and skills</div>
