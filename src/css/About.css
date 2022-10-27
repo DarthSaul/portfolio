@@ -1,0 +1,27 @@
+.bio-img {
+	width: 100%;
+	max-width: 275px;
+}
+
+@media (min-width: 768px) {
+	.bio-img {
+		max-width: 325px;
+	}
+}
+
+.about-page-links {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.about-page-links a {
+	padding-right: 0.75em;
+	font-size: 1.25em;
+	margin-bottom: 1em;
+	text-decoration: none;
+	color: #d10909;
+}
+
+.about-page-links a:hover {
+	color: #fc5555;
+}

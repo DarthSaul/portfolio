@@ -1,0 +1,34 @@
+.vertical-nav {
+	min-width: 200px;
+}
+
+.title {
+	font-size: 2em;
+}
+
+.title-name {
+	margin-bottom: -0.3em;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #d10909;
+}
+
+.external-links a {
+	color: black;
+}
+
+.external-links a:hover {
+	color: #6a6a6a;
+}
+
+.overlay-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(27, 45, 73);
+	z-index: 10000;
+}

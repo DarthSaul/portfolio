@@ -1,29 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './components/home/Home';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
+import Layout from './components/dev/Layout';
+import Projects from './components/dev/Projects';
+import About from './components/dev/About';
+import ProjectPage from './components/dev/ProjectPage';
 
-import NotFound from './components/layout/NotFound';
+// Bootstrap CSS & Bundle JS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import './App.css';
+// import './App.css';
+import './css/App.css';
 
 const App = () => {
-    return (
-        <Router>
-            <>
-                <Navbar />
-                <Switch>
-                    <Route exact path={'/'}>
-                        <Home />
-                    </Route>
-                    <NotFound />
-                </Switch>
-                <Footer />
-            </>
-        </Router>
-    );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Projects />} />
+					<Route path="about" element={<About />} />
+					<Route path="project/:id" element={<ProjectPage />} />
+				</Route>
+			</Routes>
+		</Router>
+	);
 };
 
 export default App;
