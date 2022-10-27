@@ -46,7 +46,7 @@ const projects = {
 		icon: faHamburger,
 		projectLink: 'https://arcane-lowlands-25770.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/food-from-friends',
-		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1631887590/Portfolio/food_uvrjyy.jpg',
+		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1666906753/Portfolio/Screen_Shot_2022-10-27_at_5.38.33_PM_ypgjjq.png',
 		desc: `Social networking web app designed for sharing 'lists' of your food recommendations in a city. Built with React.`,
 		bullets: [
 			'Express-based backend server with validation. Full CRUD access to database.',
