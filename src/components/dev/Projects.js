@@ -19,7 +19,7 @@ const Projects = () => {
 							<ProjectCard project={projects.ghibli} />
 						</div>
 						<div className="col-xs-12 col-md mb-2 project-container projects-3">
-							<ProjectCard project={projects.portfolio} />
+							<ProjectCard project={projects.marvel} />
 						</div>
 					</div>
 				</div>

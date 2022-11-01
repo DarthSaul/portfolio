@@ -6,9 +6,7 @@ function ProjectCard({ project }) {
 	const { name, imgUrl, id } = project;
 	const divStyle = {
 		backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(${imgUrl})`,
-		backgroundSize: `150%`,
-		backgroundPosition: 'contain',
-		backgroundRepeat: 'repeat',
+		backgroundSize: `cover`,
 		borderRadius: 0,
 	};
 	return (
