@@ -36,6 +36,7 @@ const ProjectPage = () => {
 		name,
 		headline,
 		imgUrl,
+		imgUrl2,
 		desc,
 		bullets,
 		projectLink,
@@ -129,7 +130,7 @@ const ProjectPage = () => {
 								</div>
 								<div className="col-xs-12 mb-5">
 									<img
-										src={imgUrl}
+										src={imgUrl2}
 										className="img-fluid shadow rounded-3"
 										alt="Project showcase"
 									/>
