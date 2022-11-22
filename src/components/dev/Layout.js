@@ -1,9 +1,5 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 import Nav from './Nav';
 // import VertNav from './VertNav';
 
