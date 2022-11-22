@@ -1,18 +1,15 @@
 import React from 'react';
+import Hero from '../home/Hero';
 import ProjectCard from './ProjectCard';
 import projects from '../../utilities/projectsDev';
 import '../../css/Projects.css';
 
 const Projects = () => {
 	return (
-		<div className="container-fluid projects-wrapper">
-			<div className="row">
-				<div className="col-xs-12 display-3">
-					SAUL GRAVES
-				</div>
-			</div>
-			<div className="row g-4">
+		<div className="row align-items-center justify-content-center h-100">
+			{/* <div className="row g-4">
 				<div className="col-xs-12 col-lg-7">
+
 					<div className="row mb-4">
 						<div className="col project-container">
 							<ProjectCard
@@ -61,7 +58,7 @@ const Projects = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

@@ -29,22 +29,6 @@ const About = () => {
 							they come from.
 						</div>
 						<div>
-							I obsess over clean,
-							scalable, and
-							well-designed backend
-							architecture. On the
-							frontend, I build
-							beautiful user
-							experiences rooted in
-							responsive UX/UI and
-							modern web design.
-						</div>
-						<div>
-							My JavaScript expertise
-							lies in Node, Express,
-							React, and Vue.
-						</div>
-						<div>
 							While I'm not coding,
 							I'm reading fantasy
 							books, cooking delicious

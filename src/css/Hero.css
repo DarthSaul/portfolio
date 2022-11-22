@@ -1,0 +1,21 @@
+.hero-wrapper {
+	position: relative;
+	top: 150px;
+}
+
+.hero-img {
+	width: 20em;
+	height: 20em;
+	background: white;
+	border: 5px solid rgb(6, 255, 214);
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.external-links a {
+	color: black;
+}
+
+.external-links a:hover {
+	color: #6a6a6a;
+}

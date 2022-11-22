@@ -9,17 +9,6 @@ const VertNav = () => {
 	return (
 		<div className="position-fixed">
 			<div className="vstack my-3 nav-links">
-				{/* <div className="mb-4 title">
-					<Link
-						to="/"
-						className="text-dark fw-bold"
-					>
-						<div className="title-name">
-							Saul
-						</div>
-						<div>Graves</div>
-					</Link>
-				</div> */}
 				<div>
 					<Link to="/" className="text-dark">
 						Home
