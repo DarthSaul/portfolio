@@ -7,8 +7,8 @@ const Hero = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (
-		<div className="hero-wrapper px-5 mx-2">
-			<div className="hero-inner row justify-content-between align-items-stretch text-white">
+		<div className="d-flex align-items-center h-100">
+			<div className="row justify-content-between align-items-stretch text-white">
 				<div className="col-xs-12 col-md-7">
 					<div className="row">
 						<div className="col-xs-12 display-1">
@@ -25,11 +25,6 @@ const Hero = () => {
 							quas earum dignissimos
 							ab recusandae quae
 							consequatur fuga,
-							debitis tempore
-							blanditiis deleniti,
-							iste consequuntur id
-							voluptatem beatae?
-							Obcaecati, nihil?
 						</div>
 						<div className="col-xs-12 mb-4">
 							About Me
@@ -46,7 +41,7 @@ const Hero = () => {
 										}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="me-2"
+										className="me-3"
 									>
 										<FontAwesomeIcon
 											icon={

@@ -1,6 +1,36 @@
 .top-navbar {
-	max-width: 95%;
+	width: 95%;
+	max-width: 1100px;
 	margin: auto;
+	height: 4rem;
+}
+
+.top-navbar a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border-radius: 12px;
+}
+
+.top-navbar a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active-nav-link {
+	position: relative;
+}
+
+.active-nav-link:before {
+	content: '';
+	position: absolute;
+	background-color: rgb(6, 255, 214);
+	height: 0.1em;
+	bottom: 0.2em;
+	left: 15%;
+	width: 70%;
+	z-index: 1;
 }
 
 .overlay-menu {

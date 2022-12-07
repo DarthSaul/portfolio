@@ -7,6 +7,7 @@ import '../../css/Projects.css';
 const Projects = () => {
 	return (
 		<div className="row align-items-center justify-content-center h-100">
+			Projects!
 			{/* <div className="row g-4">
 				<div className="col-xs-12 col-lg-7">
 
