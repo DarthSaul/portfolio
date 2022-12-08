@@ -44,6 +44,7 @@ const ProjectPage = () => {
 		currentRole,
 		loading,
 	} = projectData;
+
 	const { error, message } = errorData;
 
 	return (
@@ -54,7 +55,11 @@ const ProjectPage = () => {
 				<div className="container-fluid mb-5">
 					{error ? (
 						<>
-							<div> Sorry, something went wrong! </div>
+							<div>
+								{' '}
+								Sorry, something
+								went wrong!{' '}
+							</div>
 							<div> {message} </div>
 						</>
 					) : (
@@ -63,23 +68,31 @@ const ProjectPage = () => {
 								<div className="container-fluid px-0">
 									<div className="row">
 										<div className="col-xs-12 display-3">
-											{name}
+											{
+												name
+											}
 										</div>
 										<div className="col-xs-12 lead text-muted ps-3 mb-2">
-											{headline}
+											{
+												headline
+											}
 										</div>
 										<div className="col-xs-6 w-25 ps-3 mb-1">
 											<hr />
 										</div>
 										<div className="row ps-6">
 											<div className="col-xs-12 mb-4 h4 fw-light">
-												{desc}
+												{
+													desc
+												}
 											</div>
 											{!currentRole && (
 												<div className="col-xs-12 mb-4">
 													<a
 														className="btn btn-dark me-3 shadow"
-														href={projectLink}
+														href={
+															projectLink
+														}
 														target="_blank"
 														rel="noreferrer"
 														role="button"
@@ -88,7 +101,9 @@ const ProjectPage = () => {
 													</a>
 													<a
 														className="btn btn-dark shadow"
-														href={githubLink}
+														href={
+															githubLink
+														}
 														target="_blank"
 														rel="noreferrer"
 														role="button"
@@ -104,12 +119,22 @@ const ProjectPage = () => {
 												<div className="text-muted">
 													<ul className="list-unstyled">
 														{bullets.map(
-															(item, ind) => (
+															(
+																item,
+																ind
+															) => (
 																<li
-																	key={ind}
+																	key={
+																		ind
+																	}
 																	className="mb-2"
 																>
-																	{'>'} {item}
+																	{
+																		'>'
+																	}{' '}
+																	{
+																		item
+																	}
 																</li>
 															)
 														)}
@@ -123,14 +148,18 @@ const ProjectPage = () => {
 							<div className="col-xs-12 col-lg container ps-3">
 								<div className="col-xs-12 mb-5">
 									<img
-										src={imgUrl}
+										src={
+											imgUrl
+										}
 										className="img-fluid shadow rounded-3"
 										alt="Project showcase"
 									/>
 								</div>
 								<div className="col-xs-12 mb-5">
 									<img
-										src={imgUrl2}
+										src={
+											imgUrl2
+										}
 										className="img-fluid shadow rounded-3"
 										alt="Project showcase"
 									/>

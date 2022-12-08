@@ -7,12 +7,12 @@ const Hero = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (
-		<div className="d-flex align-items-center h-100">
+		<div className="d-flex align-items-center h-100 hero-wrapper">
 			<div className="row justify-content-between align-items-stretch text-white">
 				<div className="col-xs-12 col-md-7">
 					<div className="row">
-						<div className="col-xs-12 display-1">
-							Saul Graves
+						<div className="col-xs-12 display-1 ps-2">
+							Hi, I'm Saul.
 						</div>
 						<div className="col-xs-12 mb-4">
 							Full-stack Engineer

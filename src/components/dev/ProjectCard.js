@@ -1,27 +1,28 @@
-import { Link } from 'react-router-dom';
-
-import Card from 'react-bootstrap/Card';
-
 function ProjectCard({ project }) {
-	const { name, imgUrl, id } = project;
-	const divStyle = {
-		backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(${imgUrl})`,
-		backgroundSize: `cover`,
-		borderRadius: 0,
-	};
+	const { name, imgUrl, headline, desc } = project;
+	const headlineText = 'font-weight: .1em';
+
 	return (
-		<Link className="text-white project-link" to={`/project/${id}`}>
-			<Card className="h-100" border="light" style={divStyle}>
-				<Card.Body className="project-card-body m-0 p-0">
-					<div
-						onClick={(e) => e.preventDefault()}
-						className="card-title-overlay"
-					>
-						{name}
-					</div>
-				</Card.Body>
-			</Card>
-		</Link>
+		<div className="row g-4">
+			<div className="col-md-6">
+				<img
+					src={imgUrl}
+					className="img-fluid rounded shadow-lg"
+					alt="screenshot"
+				/>
+			</div>
+			<div className="col-md-6 bg-transparent text-light">
+				<div>
+					<h3>{name}</h3>
+					<p className={{ headlineText }}>
+						{headline}
+					</p>
+					<p>
+						<small>{desc}</small>
+					</p>
+				</div>
+			</div>
+		</div>
 	);
 }
 

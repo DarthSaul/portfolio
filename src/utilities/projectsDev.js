@@ -15,8 +15,7 @@ const projects = {
 		projectLink: '',
 		githubLink: '',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1665443587/Portfolio/Screen_Shot_2022-10-10_at_6.12.43_PM_hfwvg7.png',
-		imgUrl2:
-			'https://res.cloudinary.com/darthsaul/image/upload/v1667275689/Portfolio/Screen_Shot_2022-11-01_at_12.07.55_AM_pce4g1.png',
+		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1667275689/Portfolio/Screen_Shot_2022-11-01_at_12.07.55_AM_pce4g1.png',
 		desc: `At Conservation Labs, I build digital solutions that provide a beautiful user experience for clients and colleagues alike.`,
 		bullets: [
 			'Develop our front-end codebases with Vue.js, focused on reusability, scalability, and responsive web design.',
@@ -33,8 +32,7 @@ const projects = {
 		projectLink: 'https://ancient-cove-69346.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/coffee-corner',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1667276369/Portfolio/Screen_Shot_2022-11-01_at_12.19.24_AM_hxsmvx.png',
-		imgUrl2:
-			'https://res.cloudinary.com/darthsaul/image/upload/v1667276325/Portfolio/Screen_Shot_2022-11-01_at_12.18.09_AM_gf6s67.png',
+		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1667276325/Portfolio/Screen_Shot_2022-11-01_at_12.18.09_AM_gf6s67.png',
 		desc: `Website for coffee enthusiasts seeking to share their experiences and learn.`,
 		bullets: [
 			'RESTful API backend built with Express / Node.js.',
@@ -51,8 +49,7 @@ const projects = {
 		projectLink: 'https://arcane-lowlands-25770.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/food-from-friends',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1666906753/Portfolio/Screen_Shot_2022-10-27_at_5.38.33_PM_ypgjjq.png',
-		imgUrl2:
-			'https://res.cloudinary.com/darthsaul/image/upload/v1667275508/Portfolio/Screen_Shot_2022-10-31_at_11.46.32_PM_gxjzuh.png',
+		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1667275508/Portfolio/Screen_Shot_2022-10-31_at_11.46.32_PM_gxjzuh.png',
 		desc: `Social networking web app designed for sharing 'lists' of your food recommendations in a city. Built with React.`,
 		bullets: [
 			'Express-based backend server with validation. Full CRUD access to database.',
@@ -69,8 +66,7 @@ const projects = {
 		projectLink: 'https://calm-mountain-15835.herokuapp.com/home',
 		githubLink: 'https://github.com/DarthSaul/ghibli-wallpapers',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1667276165/Portfolio/Screen_Shot_2022-11-01_at_12.14.58_AM_nydib0.png',
-		imgUrl2:
-			'https://res.cloudinary.com/darthsaul/image/upload/v1631887588/Portfolio/ghibli_ha7u7v.jpg',
+		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1631887588/Portfolio/ghibli_ha7u7v.jpg',
 		desc: 'My favorite project to date! A simple, lightweight program used to search and download Studio Ghibli desktop wallpapers.',
 		bullets: [
 			'Express app, RESTful web API.',
@@ -86,8 +82,7 @@ const projects = {
 		projectLink: 'https://lychee-crisp-57990.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/superhero-app',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1667275926/Portfolio/Screen_Shot_2022-11-01_at_12.11.58_AM_j7yfdq.png',
-		imgUrl2:
-			'https://res.cloudinary.com/darthsaul/image/upload/v1667276033/Portfolio/Screen_Shot_2022-11-01_at_12.13.48_AM_bx1jdz.png',
+		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1667276033/Portfolio/Screen_Shot_2022-11-01_at_12.13.48_AM_bx1jdz.png',
 		desc: `First large-scale project. Marvel API wrapper gives users ability to search Marvel database for comics and super heroes.`,
 		bullets: [
 			'Uses EJS for HTML dynamic templating.',
