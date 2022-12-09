@@ -1,13 +1,15 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import contactInfo from '../../utilities/contactInfo';
 
 import '../../css/About.css';
 
 const About = () => {
+	const contactItems = contactInfo.filter((el) => el.beta);
+
 	return (
-		<div className="container-fluid">
+		<div className="container-fluid text-light mt-5 px-0">
 			<div className="row justify-content-between">
 				<div
 					xs={12}
@@ -15,7 +17,7 @@ const About = () => {
 					className="col-xs-12 col-lg-6 columns"
 				>
 					<div className="mt-2 mb-4 h2">Bio</div>
-					<div className="vstack gap-4 h6 fw-light text-muted mb-4">
+					<div className="vstack gap-4 h6 fw-light mb-4">
 						<div>
 							A few years ago, I
 							decided to teach myself
@@ -37,7 +39,7 @@ const About = () => {
 						</div>
 					</div>
 					<div className="h4">Technologies</div>
-					<div className="row mb-3 fw-light text-muted">
+					<div className="row mb-3 fw-light">
 						<div className="col-auto me-3">
 							<div className="vstack">
 								<div>
@@ -84,7 +86,7 @@ const About = () => {
 						</div>
 					</div>
 					<div className="h4">Skills</div>
-					<div className="row mb-4 fw-light text-muted">
+					<div className="row mb-4 fw-light">
 						<div className="col-auto me-3">
 							<div className="vstack">
 								<div>
@@ -112,7 +114,7 @@ const About = () => {
 						Let's get in touch
 					</div>
 					<div className="about-page-links">
-						{contactInfo.map(
+						{contactItems.map(
 							(item, ind) => (
 								<a
 									key={
@@ -137,7 +139,7 @@ const About = () => {
 
 				<div className="col-xs-12 col-md-auto">
 					<img
-						src="https://res.cloudinary.com/darthsaul/image/upload/v1634576349/Portfolio/IMG_7676_1_xzxscy.jpg"
+						src="https://res.cloudinary.com/darthsaul/image/upload/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
 						alt="profile"
 						className="bio-img ml-auto my-4"
 					/>

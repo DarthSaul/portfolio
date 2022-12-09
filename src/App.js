@@ -5,7 +5,7 @@ import Layout from './components/dev/Layout';
 import Projects from './components/dev/Projects';
 import About from './components/dev/About';
 import ProjectPage from './components/dev/ProjectPage';
-import Hero from './components/home/Hero';
+import Hero from './components/dev/Hero';
 
 // Bootstrap CSS & Bundle JS
 import 'bootstrap/dist/css/bootstrap.min.css';

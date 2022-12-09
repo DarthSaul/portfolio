@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const OverlayMenu = ({ toggle }) => {
+const OverlayMenu = ({ toggle, menu }) => {
+	const menuState = menu ? 'open-nav' : 'close';
 	return (
-		<div className="overlay-menu">
+		<div className={`overlay-menu ${menuState}`}>
 			<div className="container">
 				<div className="row justify-content-end pt-3">
 					<button
@@ -20,7 +21,11 @@ const OverlayMenu = ({ toggle }) => {
 						<div className="mb-1">
 							<Link
 								to="/"
-								onClick={() => toggle(false)}
+								onClick={() =>
+									toggle(
+										false
+									)
+								}
 								className="text-white"
 							>
 								Projects
@@ -29,7 +34,11 @@ const OverlayMenu = ({ toggle }) => {
 						<div>
 							<Link
 								to="/about"
-								onClick={() => toggle(false)}
+								onClick={() =>
+									toggle(
+										false
+									)
+								}
 								className="text-white"
 							>
 								About

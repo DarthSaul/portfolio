@@ -5,6 +5,10 @@
 	height: 4rem;
 }
 
+.top-navbar h2 span {
+	color: rgb(6, 255, 214);
+}
+
 .top-navbar a {
 	color: white;
 	text-decoration: none;
@@ -35,10 +39,25 @@
 
 .overlay-menu {
 	position: fixed;
-	top: 0;
+	height: 100vh;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 0;
+	width: 60%;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-50%);
+	transition: all 0.2s;
 	background-color: rgb(27, 45, 73);
 	z-index: 10000;
+}
+.open-nav {
+	visibility: unset;
+	opacity: 1;
+	transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+	.overlay-menu {
+		width: 90%;
+	}
 }

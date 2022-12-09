@@ -1,5 +1,6 @@
 function ProjectCard({ project }) {
-	const { name, imgUrl, headline, desc } = project;
+	const { name, imgUrl, headline, desc, projectLink, githubLink } =
+		project;
 	const headlineText = 'font-weight: .1em';
 
 	return (
@@ -12,7 +13,7 @@ function ProjectCard({ project }) {
 				/>
 			</div>
 			<div className="col-md-6 bg-transparent text-light">
-				<div>
+				<div className="mb-4">
 					<h3>{name}</h3>
 					<p className={{ headlineText }}>
 						{headline}
@@ -21,6 +22,26 @@ function ProjectCard({ project }) {
 						<small>{desc}</small>
 					</p>
 				</div>
+				{projectLink.length ? (
+					<div>
+						<a
+							href={projectLink}
+							target="_blank"
+							rel="noreferrer"
+							className="btn btn-light me-3"
+						>
+							Website
+						</a>
+						<a
+							href={githubLink}
+							target="_blank"
+							rel="noreferrer"
+							className="btn btn-light"
+						>
+							GitHub
+						</a>
+					</div>
+				) : null}
 			</div>
 		</div>
 	);
