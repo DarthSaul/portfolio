@@ -9,7 +9,7 @@ const About = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (
-		<div className="container-fluid text-light mt-5 px-0">
+		<div className="container-fluid text-light px-0">
 			<div className="row justify-content-between">
 				<div
 					xs={12}

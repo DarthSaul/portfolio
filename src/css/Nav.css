@@ -5,7 +5,8 @@
 	height: 4rem;
 }
 
-.top-navbar h2 span {
+.top-navbar h2 span,
+.overlay-menu .fs-2 span {
 	color: rgb(6, 255, 214);
 }
 
@@ -55,7 +56,12 @@
 	opacity: 1;
 	transform: translateX(0);
 }
-
+.overlay-menu a {
+	text-decoration: none;
+}
+.overlay-menu a:hover {
+	border-bottom: 2px solid rgb(6, 255, 214);
+}
 @media (max-width: 600px) {
 	.overlay-menu {
 		width: 90%;
