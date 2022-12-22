@@ -139,7 +139,7 @@ const About = () => {
 
 				<div className="col-xs-12 col-md-auto">
 					<img
-						src="https://res.cloudinary.com/darthsaul/image/upload/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
+						src="https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_600/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
 						alt="profile"
 						className="bio-img ml-auto my-4"
 					/>

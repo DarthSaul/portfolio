@@ -1,34 +1,33 @@
 function ProjectCard({ project }) {
 	const { name, imgUrl, headline, desc, projectLink, githubLink } =
 		project;
-	const headlineText = 'font-weight: .1em';
 
 	return (
-		<div className="row g-4">
-			<div className="col-md-6">
+		<div className="row align-items-end project-row">
+			<div className="col-md-6 mb-4 mb-md-0">
 				<img
 					src={imgUrl}
 					className="img-fluid rounded shadow-lg"
 					alt="screenshot"
 				/>
 			</div>
-			<div className="col-md-6 bg-transparent text-light">
+			<div className="col-md-6 text-light pb-0">
 				<div className="mb-4">
-					<h3>{name}</h3>
-					<p className={{ headlineText }}>
-						{headline}
-					</p>
-					<p>
+					<h1>{name}</h1>
+					<p>{headline}</p>
+				</div>
+				<div>
+					<span className="fs-5">
 						<small>{desc}</small>
-					</p>
+					</span>
 				</div>
 				{projectLink.length ? (
-					<div>
+					<div className="mt-4 mb-2">
 						<a
 							href={projectLink}
 							target="_blank"
 							rel="noreferrer"
-							className="btn btn-light me-3"
+							className="project-btn me-3"
 						>
 							Website
 						</a>
@@ -36,7 +35,7 @@ function ProjectCard({ project }) {
 							href={githubLink}
 							target="_blank"
 							rel="noreferrer"
-							className="btn btn-light"
+							className="project-btn"
 						>
 							GitHub
 						</a>

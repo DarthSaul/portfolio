@@ -1,6 +1,18 @@
 .hero-wrapper {
 	min-height: calc(100vh - 8rem);
 }
+.about-link a {
+	text-decoration: none;
+	background-color: rgb(98, 54, 217);
+	color: white;
+	padding: 0.45em 1.3em;
+	border-radius: 20px;
+}
+.about-link a:hover {
+	font-weight: 500;
+	color: white;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
 .hero-img {
 	width: 20em;

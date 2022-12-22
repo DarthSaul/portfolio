@@ -1,7 +1,9 @@
 import React from 'react';
-import '../../css/Hero.css';
+import { NavLink } from 'react-router-dom';
 import contactInfo from '../../utilities/contactInfo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import '../../css/Hero.css';
 
 const Hero = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
@@ -27,7 +29,11 @@ const Hero = () => {
 							consequatur fuga,
 						</div>
 						<div className="col-xs-12 mb-4">
-							About Me
+							<div className="about-link">
+								<NavLink to="/about">
+									About Me
+								</NavLink>
+							</div>
 						</div>
 						<div className="col-xs-12 external-links">
 							{contactItems.map(

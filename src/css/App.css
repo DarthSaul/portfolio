@@ -7,6 +7,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+body {
+	background-color: #0f2027;
+}
+
 .main-page-container {
 	background: #0f2027; /* fallback for old browsers */
 	background: -webkit-linear-gradient(

@@ -5,7 +5,7 @@ import '../../css/Projects.css';
 
 const Projects = () => {
 	return (
-		<div className="row mt-5">
+		<div className="row mt-5 mx-auto">
 			<div className="col-xs-12 mb-5">
 				<ProjectCard
 					project={projects.conservationLabs}
