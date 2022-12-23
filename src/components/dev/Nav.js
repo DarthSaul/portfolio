@@ -15,7 +15,12 @@ const HoNav = () => {
 				<div className="row justify-content-between align-items-center py-4">
 					<div className="col-auto text-light d-none d-md-block">
 						<h2>
-							Saul <span>Graves</span>
+							<NavLink to="/">
+								Saul{' '}
+								<span>
+									Graves
+								</span>
+							</NavLink>
 						</h2>
 					</div>
 					<div className="d-md-none col-auto pe-3">
@@ -34,7 +39,7 @@ const HoNav = () => {
 						</button>
 					</div>
 					<div className="col-auto d-none d-md-block">
-						<div className="row justify-content-end text-white">
+						<div className="row justify-content-end text-white nav-items">
 							<div className="col-auto ps-4">
 								<NavLink
 									to="/"
