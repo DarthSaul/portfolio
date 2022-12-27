@@ -3,9 +3,17 @@ import ProjectCard from './ProjectCard';
 import projects from '../../utilities/projectsDev';
 import '../../css/Projects.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Projects = () => {
+	AOS.init();
 	return (
-		<div className="row mt-5 mx-auto">
+		<div
+			className="row mt-5 mx-auto"
+			data-aos="fade"
+			data-aos-duration="750"
+		>
 			<div className="col-xs-12 mb-5">
 				<ProjectCard
 					project={projects.conservationLabs}

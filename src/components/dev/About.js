@@ -6,11 +6,20 @@ import contactInfo from '../../utilities/contactInfo';
 
 import '../../css/About.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const About = () => {
+	AOS.init();
+
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (
-		<div className="container-fluid text-light px-0 mt-5 pb-5">
+		<div
+			className="container-fluid text-light px-0 mt-5 pb-5"
+			data-aos="fade"
+			data-aos-duration="750"
+		>
 			<div className="row justify-content-between">
 				<div className="col-xs-12 col-lg-6 columns">
 					<div className="mt-2 mb-4 h2">Bio</div>
