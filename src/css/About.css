@@ -1,3 +1,7 @@
+.bio-text {
+	letter-spacing: 1px;
+}
+
 .bio-img {
 	width: 100%;
 	max-width: 275px;
@@ -19,9 +23,9 @@
 	font-size: 1.25em;
 	margin-bottom: 1em;
 	text-decoration: none;
-	color: #d10909;
+	color: rgb(6, 255, 214);
 }
 
 .about-page-links a:hover {
-	color: #fc5555;
+	color: rgb(248, 105, 198);
 }

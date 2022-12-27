@@ -1,0 +1,34 @@
+.hero-wrapper {
+	min-height: calc(100vh - 8rem);
+}
+.about-link a {
+	text-decoration: none;
+	background-color: rgb(98, 54, 217);
+	color: white;
+	padding: 0.45em 1.3em;
+	border-radius: 20px;
+	border: 0.5px solid rgb(195, 195, 195);
+}
+.about-link a:hover {
+	font-weight: 500;
+	color: white;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.hero-img {
+	width: 20em;
+	height: 20em;
+	background: white;
+	border: 5px solid rgb(6, 255, 214);
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.external-links a {
+	font-size: 1.2em;
+	color: rgb(6, 255, 214);
+}
+
+.external-links a:hover {
+	color: rgb(248, 105, 198);
+}

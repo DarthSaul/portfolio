@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Link} from 'react-router-dom';
 import contactInfo from '../../utilities/contactInfo';
 
 const VertNav = () => {
@@ -8,16 +8,10 @@ const VertNav = () => {
 
 	return (
 		<div className="position-fixed">
-			<div className="vstack mb-4 nav-links">
-				<div className="mb-4 title">
-					<Link to="/" className="text-dark fw-bold">
-						<div className="title-name">Saul</div>
-						<div>Graves</div>
-					</Link>
-				</div>
+			<div className="vstack my-3 nav-links">
 				<div>
 					<Link to="/" className="text-dark">
-						Projects
+						Home
 					</Link>
 				</div>
 				<div>
@@ -34,7 +28,9 @@ const VertNav = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FontAwesomeIcon icon={item.icon} />
+							<FontAwesomeIcon
+								icon={item.icon}
+							/>
 						</a>
 					</div>
 				))}

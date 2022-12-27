@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/dev/Layout';
 import Projects from './components/dev/Projects';
 import About from './components/dev/About';
-import ProjectPage from './components/dev/ProjectPage';
+import Hero from './components/dev/Hero';
 
 // Bootstrap CSS & Bundle JS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,9 +18,15 @@ const App = () => {
 		<Router>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={<Projects />} />
-					<Route path="about" element={<About />} />
-					<Route path="project/:id" element={<ProjectPage />} />
+					<Route index element={<Hero />} />
+					<Route
+						path="projects"
+						element={<Projects />}
+					/>
+					<Route
+						path="about"
+						element={<About />}
+					/>
 				</Route>
 			</Routes>
 		</Router>
