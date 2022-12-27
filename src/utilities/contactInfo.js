@@ -1,4 +1,8 @@
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+	faLinkedin,
+	faGithub,
+	faMedium,
+} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
 
@@ -15,6 +19,12 @@ const contactItems = [
 		name: 'LinkedIn',
 		link: 'https://www.linkedin.com/in/saulgraves/',
 		icon: faLinkedin,
+		beta: true,
+	},
+	{
+		name: 'Medium',
+		link: 'https://medium.com/@saulgraves',
+		icon: faMedium,
 		beta: true,
 	},
 	{

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SkillsTech from './SkillsTech';
 
 import contactInfo from '../../utilities/contactInfo';
 
@@ -9,107 +10,76 @@ const About = () => {
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (
-		<div className="container-fluid text-light px-0">
+		<div className="container-fluid text-light px-0 mt-5 pb-5">
 			<div className="row justify-content-between">
-				<div
-					xs={12}
-					lg={6}
-					className="col-xs-12 col-lg-6 columns"
-				>
+				<div className="col-xs-12 col-lg-6 columns">
 					<div className="mt-2 mb-4 h2">Bio</div>
-					<div className="vstack gap-4 h6 fw-light mb-4">
+					<div className="vstack gap-4 h6 fw-light mb-5 bio-text">
 						<div>
-							A few years ago, I
-							decided to teach myself
-							full-stack web
-							development because I
-							wanted to create
-							immersive digital
-							experiences that make an
-							immediate impact on
-							users no matter where
-							they come from.
+							Hello! I'm Saul, a
+							software developer
+							currently based in New
+							York City.
 						</div>
 						<div>
-							While I'm not coding,
-							I'm reading fantasy
-							books, cooking delicious
-							food (I think), and
-							brewing A LOT of coffee.
+							While I'm trained in the
+							arts of full-stack, I
+							specialize in front-end
+							development, designing
+							immersive user
+							experiences, and
+							building scalable web
+							applications.
+						</div>
+						<div>
+							I currently work at
+							Conservation Labs, where
+							I deliver water usage
+							data and leak insights
+							to customers using our
+							awesome IoT device. I
+							also work on internal
+							tools that assist data
+							scientists in machine
+							learning training and
+							modeling.
+						</div>
+						<div>
+							In 2020, I taught myself
+							web development with the
+							help of the internet,
+							many great books, and
+							tons of practice.
+							Jumping into code has
+							been the best decision
+							of my life, and I
+							recently started writing
+							about my experiences on
+							Medium.
+						</div>
+						<div>
+							While I'm not coding, I
+							try to spend time away
+							from the keyboard. I'm
+							on a big fantasy and
+							sci-fi novel binge,
+							which currently has me
+							reading Frank Herbert's{' '}
+							<i>Dune</i>. I love to
+							cook, although the food
+							may have mixed results.
+							My coffee, however, is
+							perfection.
 						</div>
 					</div>
-					<div className="h4">Technologies</div>
-					<div className="row mb-3 fw-light">
-						<div className="col-auto me-3">
-							<div className="vstack">
-								<div>
-									JavaScript
-								</div>
-								<div>
-									Node,
-									Express
-								</div>
-								<div>
-									React,
-									Vue
-								</div>
-							</div>
-						</div>
-						<div className="col-auto me-3">
-							<div className="vstack">
-								<div>
-									SQL
-									(PostgreSQL)
-								</div>
-								<div>
-									NoSQL
-									(MongoDB)
-								</div>
-								<div>
-									Git,
-									GitHub,
-									AWS
-								</div>
-							</div>
-						</div>
-						<div className="col-auto">
-							<div className="vstack">
-								<div>
-									HTML,
-									CSS
-								</div>
-								<div>
-									Bootstrap
-								</div>
-								<div>Jest</div>
-							</div>
-						</div>
-					</div>
-					<div className="h4">Skills</div>
-					<div className="row mb-4 fw-light">
-						<div className="col-auto me-3">
-							<div className="vstack">
-								<div>
-									Responsive
-									web
-									design
-								</div>
-								<div>Figma</div>
-							</div>
-						</div>
-						<div className="col-auto me-3">
-							<div className="vstack">
-								<div>
-									REST
-									APIs
-								</div>
-								<div>
-									Agile,
-									Scrum
-								</div>
-							</div>
-						</div>
-					</div>
+				</div>
+
+				<div className="col-xs-12 col-md-auto">
+					<img
+						src="https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_600/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
+						alt="profile"
+						className="bio-img ml-auto my-4"
+					/>
 					<div className="h4">
 						Let's get in touch
 					</div>
@@ -136,13 +106,8 @@ const About = () => {
 						)}
 					</div>
 				</div>
-
-				<div className="col-xs-12 col-md-auto">
-					<img
-						src="https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_600/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
-						alt="profile"
-						className="bio-img ml-auto my-4"
-					/>
+				<div className="col-xs-12">
+					<SkillsTech />
 				</div>
 			</div>
 		</div>

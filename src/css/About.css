@@ -1,3 +1,7 @@
+.bio-text {
+	letter-spacing: 1px;
+}
+
 .bio-img {
 	width: 100%;
 	max-width: 275px;
