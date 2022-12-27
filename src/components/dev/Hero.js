@@ -23,20 +23,18 @@ const Hero = () => {
 				<div className="col-xs-12 col-md-7">
 					<div className="row">
 						<div className="col-xs-12 display-1 ps-2 mb-2">
-							Hi, I'm Saul.
+							Hi, I'm Saul
 						</div>
-						<div className="col-xs-12 mb-4">
-							Full-stack Engineer
+						<div className="col-xs-12 mb-5 hero-headline">
+							A{' '}
+							<span className="fs-4 px-1 text-white">
+								Front-End
+								Developer
+							</span>{' '}
+							building awesome user
+							experiences for the web.
 						</div>
-						<div className="col-xs-12 mb-4">
-							Lorem ipsum dolor sit
-							amet consectetur,
-							adipisicing elit.
-							Expedita explicabo neque
-							quas earum dignissimos
-							ab recusandae quae
-							consequatur fuga,
-						</div>
+
 						<div className="col-xs-12 mb-4">
 							<div className="about-link">
 								<NavLink to="/about">

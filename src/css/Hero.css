@@ -1,6 +1,10 @@
 .hero-wrapper {
 	min-height: calc(100vh - 8rem);
 }
+.hero-headline {
+	color: rgba(255, 255, 255, 0.7);
+}
+
 .about-link a {
 	text-decoration: none;
 	background-color: rgb(98, 54, 217);
