@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Layout from './components/dev/Layout';
+import { Element } from 'react-scroll';
+import Nav from './components/dev/Nav';
 import Projects from './components/dev/Projects';
 import About from './components/dev/About';
 import Hero from './components/dev/Hero';
@@ -15,21 +14,22 @@ import './css/App.css';
 
 const App = () => {
 	return (
-		<Router>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<Hero />} />
-					<Route
-						path="projects"
-						element={<Projects />}
-					/>
-					<Route
-						path="about"
-						element={<About />}
-					/>
-				</Route>
-			</Routes>
-		</Router>
+		<div className="main-page-container">
+			<Nav />
+			<div className="content-container">
+				<Element name="home">
+					<Hero />
+				</Element>
+
+				<Element name="work">
+					<Projects />
+				</Element>
+
+				<Element name="about">
+					<About />
+				</Element>
+			</div>
+		</div>
 	);
 };
 

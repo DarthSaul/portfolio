@@ -16,7 +16,7 @@ const About = () => {
 
 	return (
 		<div
-			className="container-fluid text-light px-0 mt-5 pb-5"
+			className="container-fluid text-light mt-5 pb-5"
 			data-aos="fade"
 			data-aos-duration="750"
 		>

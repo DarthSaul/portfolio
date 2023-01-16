@@ -1,5 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {
+	Link,
+	Button,
+	Element,
+	Events,
+	animateScroll as scroll,
+	scrollSpy,
+	scroller,
+} from 'react-scroll';
 import contactInfo from '../../utilities/contactInfo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -37,9 +45,23 @@ const Hero = () => {
 
 						<div className="col-xs-12 mb-4">
 							<div className="about-link">
-								<NavLink to="/about">
+								<Link
+									to="about"
+									duration={
+										10
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
+									}
+									offset={
+										-100
+									}
+								>
 									About Me
-								</NavLink>
+								</Link>
 							</div>
 						</div>
 						<div className="col-xs-12 external-links">

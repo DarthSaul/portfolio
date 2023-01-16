@@ -9,26 +9,37 @@ import 'aos/dist/aos.css';
 const Projects = () => {
 	AOS.init();
 	return (
-		<div
-			className="row mt-5 mx-auto"
-			data-aos="fade"
-			data-aos-duration="750"
-		>
-			<div className="col-xs-12 mb-5">
-				<ProjectCard
-					project={projects.conservationLabs}
-				/>
-			</div>
-			<div className="col-xs-12 mb-5">
-				<ProjectCard
-					project={projects.foodFromFriends}
-				/>
-			</div>
-			<div className="col-xs-12 mb-5">
-				<ProjectCard project={projects.coffeeCorner} />
-			</div>
-			<div className="col-xs-12 mb-5">
-				<ProjectCard project={projects.ghibli} />
+		<div className="container-fluid">
+			<div className="h2 text-light">My Work</div>
+			<div
+				className="row mt-5 mx-auto"
+				data-aos="fade"
+				data-aos-duration="750"
+			>
+				<div className="col-xs-12 mb-5">
+					<ProjectCard
+						project={
+							projects.conservationLabs
+						}
+					/>
+				</div>
+				<div className="col-xs-12 mb-5">
+					<ProjectCard
+						project={
+							projects.foodFromFriends
+						}
+					/>
+				</div>
+				<div className="col-xs-12 mb-5">
+					<ProjectCard
+						project={projects.coffeeCorner}
+					/>
+				</div>
+				<div className="col-xs-12 mb-5">
+					<ProjectCard
+						project={projects.ghibli}
+					/>
+				</div>
 			</div>
 		</div>
 	);

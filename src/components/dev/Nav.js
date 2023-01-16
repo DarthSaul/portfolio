@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import * as Scroll from 'react-scroll';
+import {
+	Link,
+	Button,
+	Element,
+	Events,
+	animateScroll as scroll,
+	scrollSpy,
+	scroller,
+} from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import OverlayMenu from './OverlayMenu';
@@ -10,17 +19,17 @@ const HoNav = () => {
 	let activeClassName = 'active-nav-link';
 
 	return (
-		<>
-			<nav className="top-navbar mb-4">
+		<div className="top-navbar">
+			<nav className="inner-nav ">
 				<div className="row justify-content-between align-items-center py-4">
 					<div className="col-auto text-light d-none d-md-block">
 						<h2>
-							<NavLink to="/">
+							<div>
 								Saul{' '}
 								<span>
 									Graves
 								</span>
-							</NavLink>
+							</div>
 						</h2>
 					</div>
 					<div className="d-md-none col-auto pe-3">
@@ -41,53 +50,68 @@ const HoNav = () => {
 					<div className="col-auto d-none d-md-block">
 						<div className="row justify-content-end text-white nav-items">
 							<div className="col-auto ps-4">
-								<NavLink
-									to="/"
-									className={({
-										isActive,
-									}) =>
-										isActive
-											? activeClassName
-											: undefined
+								<Link
+									activeClass="active-nav-link"
+									to="home"
+									duration={
+										10
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
 									}
 								>
 									Home
-								</NavLink>
+								</Link>
 							</div>
 							<div className="col-auto ps-4">
-								<NavLink
-									to="/projects"
-									className={({
-										isActive,
-									}) =>
-										isActive
-											? activeClassName
-											: undefined
+								<Link
+									activeClass="active-nav-link"
+									to="work"
+									duration={
+										10
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
+									}
+									offset={
+										-100
 									}
 								>
 									Work
-								</NavLink>
+								</Link>
 							</div>
 							<div className="col-auto ps-4">
-								<NavLink
-									to="/about"
-									className={({
-										isActive,
-									}) =>
-										isActive
-											? activeClassName
-											: undefined
+								<Link
+									activeClass="active-nav-link"
+									to="about"
+									duration={
+										10
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
+									}
+									offset={
+										-100
 									}
 								>
 									About
-								</NavLink>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</div>
 			</nav>
-			<OverlayMenu toggle={toggleMenu} menu={menu} />
-		</>
+			{/* <OverlayMenu toggle={toggleMenu} menu={menu} /> */}
+		</div>
 	);
 };
 
