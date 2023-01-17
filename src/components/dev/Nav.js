@@ -1,93 +1,113 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import OverlayMenu from './OverlayMenu';
+import { Link } from 'react-scroll';
 import '../../css/Nav.css';
 
 const HoNav = () => {
-	const [menu, toggleMenu] = useState(false);
-	let activeClassName = 'active-nav-link';
+	const [navBg, setNavBg] = useState(false);
+	const changeNavBg = () => {
+		if (window.scrollY >= 50) {
+			setNavBg(true);
+		} else {
+			setNavBg(false);
+		}
+	};
+	window.addEventListener('scroll', changeNavBg);
 
 	return (
-		<>
-			<nav className="top-navbar mb-4">
-				<div className="row justify-content-between align-items-center py-4">
+		<div className={navBg ? 'top-navbar nav-bg' : 'top-navbar'}>
+			<nav className="inner-nav">
+				<div className="row justify-content-between align-items-center">
 					<div className="col-auto text-light d-none d-md-block">
-						<h2>
-							<NavLink to="/">
+						<h2 className="pt-2">
+							<Link
+								to="home"
+								offset={-100}
+							>
 								Saul{' '}
 								<span>
 									Graves
 								</span>
-							</NavLink>
+							</Link>
 						</h2>
 					</div>
-					<div className="d-md-none col-auto pe-3">
-						<button
-							type="button"
-							className="btn btn-transparent p-0 text-light"
-							onClick={() =>
-								toggleMenu(
-									!menu
-								)
-							}
-						>
-							<FontAwesomeIcon
-								icon={faBars}
-							/>
-						</button>
+					<div className="col-auto text-light d-md-none ">
+						<h2 className="pt-2">
+							<Link
+								to="home"
+								offset={-100}
+							>
+								S<span>G</span>
+							</Link>
+						</h2>
 					</div>
-					<div className="col-auto d-none d-md-block">
+
+					<div className="col-auto">
 						<div className="row justify-content-end text-white nav-items">
 							<div className="col-auto ps-4">
-								<NavLink
-									to="/"
-									className={({
-										isActive,
-									}) =>
-										isActive
-											? activeClassName
-											: undefined
+								<Link
+									activeClass="active-nav-link"
+									to="home"
+									duration={
+										10
+									}
+									offset={
+										-100
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
 									}
 								>
 									Home
-								</NavLink>
+								</Link>
 							</div>
 							<div className="col-auto ps-4">
-								<NavLink
-									to="/projects"
-									className={({
-										isActive,
-									}) =>
-										isActive
-											? activeClassName
-											: undefined
+								<Link
+									activeClass="active-nav-link"
+									to="work"
+									duration={
+										10
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
+									}
+									offset={
+										0
 									}
 								>
 									Work
-								</NavLink>
+								</Link>
 							</div>
 							<div className="col-auto ps-4">
-								<NavLink
-									to="/about"
-									className={({
-										isActive,
-									}) =>
-										isActive
-											? activeClassName
-											: undefined
+								<Link
+									activeClass="active-nav-link"
+									to="about"
+									duration={
+										10
+									}
+									spy={
+										true
+									}
+									smooth={
+										true
+									}
+									offset={
+										0
 									}
 								>
 									About
-								</NavLink>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</div>
 			</nav>
-			<OverlayMenu toggle={toggleMenu} menu={menu} />
-		</>
+		</div>
 	);
 };
 
