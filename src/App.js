@@ -1,15 +1,15 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import Nav from './components/dev/Nav';
-import Projects from './components/dev/Projects';
+import Work from './components/dev/Work';
 import About from './components/dev/About';
 import Hero from './components/dev/Hero';
+import Divider from './components/dev/Divider';
 
 // Bootstrap CSS & Bundle JS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-// import './App.css';
 import './css/App.css';
 
 const App = () => {
@@ -21,9 +21,13 @@ const App = () => {
 					<Hero />
 				</Element>
 
+				<Divider option={1} />
+
 				<Element name="work">
-					<Projects />
+					<Work />
 				</Element>
+
+				<Divider option={2} />
 
 				<Element name="about">
 					<About />

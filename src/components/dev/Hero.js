@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-	Link,
-	Button,
-	Element,
-	Events,
-	animateScroll as scroll,
-	scrollSpy,
-	scroller,
-} from 'react-scroll';
+import { Link } from 'react-scroll';
 import contactInfo from '../../utilities/contactInfo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -23,7 +15,7 @@ const Hero = () => {
 
 	return (
 		<div
-			className="d-flex align-items-center hero-wrapper pb-4"
+			className="container-fluid d-flex align-items-center hero-wrapper"
 			data-aos="fade"
 			data-aos-duration="500"
 		>
@@ -57,7 +49,7 @@ const Hero = () => {
 										true
 									}
 									offset={
-										-100
+										0
 									}
 								>
 									About Me

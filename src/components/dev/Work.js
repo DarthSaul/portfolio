@@ -9,13 +9,17 @@ import 'aos/dist/aos.css';
 const Projects = () => {
 	AOS.init();
 	return (
-		<div className="container-fluid">
-			<div className="h2 text-light">My Work</div>
-			<div
-				className="row mt-5 mx-auto"
-				data-aos="fade"
-				data-aos-duration="750"
-			>
+		<div
+			className="container-fluid work-wrapper"
+			data-aos="fade"
+			data-aos-duration="750"
+		>
+			<div className="row mx-auto pt-3">
+				<div className="col-xs-12 px-0">
+					<div className="my-5 h2 text-light">
+						My Work
+					</div>
+				</div>
 				<div className="col-xs-12 mb-5">
 					<ProjectCard
 						project={

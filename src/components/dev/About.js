@@ -16,13 +16,13 @@ const About = () => {
 
 	return (
 		<div
-			className="container-fluid text-light mt-5 pb-5"
+			className="container-fluid text-light about-wrapper pt-2 pb-5"
 			data-aos="fade"
 			data-aos-duration="750"
 		>
-			<div className="row justify-content-between">
+			<div className="row justify-content-between pt-5 mt-5 pb-5">
 				<div className="col-xs-12 col-lg-6 columns">
-					<div className="mt-2 mb-4 h2">Bio</div>
+					<div className="my-4 h2">Bio</div>
 					<div className="vstack gap-4 h6 fw-light mb-5 bio-text">
 						<div>
 							Hello! I'm Saul, a
@@ -54,17 +54,17 @@ const About = () => {
 							modeling.
 						</div>
 						<div>
-							In 2020, I taught myself
-							web development with the
-							help of the internet,
-							many great books, and
-							tons of practice.
-							Jumping into code has
-							been the best decision
-							of my life, and I
-							recently started writing
-							about my experiences on
-							Medium.
+							I learned web
+							development because I
+							wanted to design, build,
+							and create things that
+							can be shared across the
+							world. Jumping into code
+							has been the best
+							decision of my life, and
+							I recently started
+							writing about my
+							experiences on Medium.
 						</div>
 						<div>
 							While I'm not coding, I
@@ -115,7 +115,7 @@ const About = () => {
 						)}
 					</div>
 				</div>
-				<div className="col-xs-12">
+				<div className="col-xs-12 mb-5">
 					<SkillsTech />
 				</div>
 			</div>

@@ -7,12 +7,6 @@
 	max-width: 275px;
 }
 
-@media (min-width: 768px) {
-	.bio-img {
-		max-width: 325px;
-	}
-}
-
 .about-page-links {
 	display: flex;
 	justify-content: flex-start;
@@ -28,4 +22,11 @@
 
 .about-page-links a:hover {
 	color: rgb(248, 105, 198);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+	.bio-img {
+		max-width: 325px;
+	}
 }
