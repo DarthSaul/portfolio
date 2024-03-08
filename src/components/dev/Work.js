@@ -17,8 +17,15 @@ const Projects = () => {
 			<div className="row mx-auto pt-3">
 				<div className="col-xs-12 px-0">
 					<div className="my-5 h2 text-light">
-						My Work
+						<h2 id="my-work">My Work</h2>
 					</div>
+				</div>
+				<div className="col-xs-12 mb-5">
+					<ProjectCard
+						project={
+							projects.cityNationalBank
+						}
+					/>
 				</div>
 				<div className="col-xs-12 mb-5">
 					<ProjectCard

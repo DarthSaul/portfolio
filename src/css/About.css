@@ -20,6 +20,12 @@
 	color: rgb(6, 255, 214);
 }
 
+.bio-text a {
+	color: rgb(6, 255, 214);
+	text-decoration: none;
+}
+
+.bio-text a:hover,
 .about-page-links a:hover {
 	color: rgb(248, 105, 198);
 }
