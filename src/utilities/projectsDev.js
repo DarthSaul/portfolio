@@ -7,23 +7,36 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const projects = {
+	cityNationalBank: {
+		name: 'City National Bank',
+		headline: 'Senior Platform Developer',
+		currentRole: true,
+		icon: faCoffee,
+		projectLink: '',
+		githubLink: '',
+		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1709935742/Portfolio/jpeak3rvapve2pnwsv3e.png',
+		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1667275689/Portfolio/Screen_Shot_2022-11-01_at_12.07.55_AM_pce4g1.png',
+		desc: `At CNB, I lead the frontend development side of Roxbury, a design system and UI kit consumed across various development teams at the bank.`,
+		bullets: ['...', '....', '...', '...'],
+		id: 1,
+	},
 	conservationLabs: {
 		name: 'Conservation Labs',
 		headline: 'Front-end developer',
-		currentRole: true,
+		currentRole: false,
 		icon: faCoffee,
 		projectLink: '',
 		githubLink: '',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_1000/v1665443587/Portfolio/Screen_Shot_2022-10-10_at_6.12.43_PM_hfwvg7.png',
 		imgUrl2: 'https://res.cloudinary.com/darthsaul/image/upload/v1667275689/Portfolio/Screen_Shot_2022-11-01_at_12.07.55_AM_pce4g1.png',
-		desc: `At Conservation Labs, I build digital solutions that provide a beautiful user experience for clients and colleagues alike.`,
+		desc: `At Conservation Labs, I built and maintained our client-facing Vue.js web application, and also contributed to internal-facing digital tools for the ML team.`,
 		bullets: [
 			'Develop our front-end codebases with Vue.js, focused on reusability, scalability, and responsive web design.',
 			'Manage end-to-end development process, from wireframing to prototyping to implementation to QA.',
 			'Collaborate with team members to ensure tools are meaningful and backed by data.',
 			'Working with Node, PostgreSQL, AWS, Figma, Jest, modern UI frameworks, and more.',
 		],
-		id: 1,
+		id: 2,
 	},
 	coffeeCorner: {
 		name: 'Coffee Corner',
@@ -40,7 +53,7 @@ const projects = {
 			'MongoDB Atlas database, Cloudinary image upload, JWT authentication.',
 			'Full CRUD: Create & edit profiles, coffees, brew methods, and more.',
 		],
-		id: 2,
+		id: 3,
 	},
 	foodFromFriends: {
 		name: 'Food From Friends',
@@ -57,7 +70,7 @@ const projects = {
 			'Dynamic React components, React Router single-page architecture.',
 			'All custom CSS styles; no Bootstrap.',
 		],
-		id: 3,
+		id: 4,
 	},
 	ghibli: {
 		name: 'Ghibli Wallpapers',
@@ -73,7 +86,7 @@ const projects = {
 			'Styled with custom CSS, no Bootstrap. Responsive functionality and image download built with JavaScript.',
 			'Connected to MongoDB Atlas via Mongoose.js.',
 		],
-		id: 4,
+		id: 5,
 	},
 	marvel: {
 		name: 'Marvel Ultimate Team',
@@ -91,7 +104,7 @@ const projects = {
 			'Passport.js authentication.',
 			'Website security measures in place.',
 		],
-		id: 5,
+		id: 6,
 	},
 	portfolio: {
 		name: 'Portfolio',
@@ -106,7 +119,7 @@ const projects = {
 			'Designed primarily with custom CSS. Mobile-first responsive approach.',
 			'Animations implemented with JavaScript.',
 		],
-		id: 6,
+		id: 7,
 	},
 };
 export default projects;

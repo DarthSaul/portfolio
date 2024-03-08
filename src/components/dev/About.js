@@ -22,7 +22,9 @@ const About = () => {
 		>
 			<div className="row justify-content-between pt-5 mt-5 pb-5">
 				<div className="col-xs-12 col-lg-6 columns">
-					<div className="my-4 h2">Bio</div>
+					<div className="my-4 h2">
+						<h2 id="about">Bio</h2>
+					</div>
 					<div className="vstack gap-4 h6 fw-light mb-5 bio-text">
 						<div>
 							Hello! I'm Saul, a
@@ -33,25 +35,27 @@ const About = () => {
 						<div>
 							While I'm trained in the
 							arts of full-stack, I
-							specialize in front-end
-							development, designing
-							immersive user
-							experiences, and
+							currently specialize in
+							front-end development,
+							design systems, TDD, and
 							building scalable web
-							applications.
+							applications rooted in
+							seamless user
+							experiences.
 						</div>
 						<div>
-							I currently work at
-							Conservation Labs, where
-							I deliver water usage
-							data and leak insights
-							to customers using our
-							awesome IoT device. I
-							also work on internal
-							tools that assist data
-							scientists in machine
-							learning training and
-							modeling.
+							I currently work at City
+							National Bank, where I
+							lead the frontend
+							development of our
+							Roxbury Design System, a
+							Vue.js component library
+							and UX/UI kit consumed
+							across various facets of
+							the bank. We're focused
+							on TDD, building at
+							scale and optimizing our
+							library's performance.
 						</div>
 						<div>
 							I learned web
@@ -64,7 +68,15 @@ const About = () => {
 							decision of my life, and
 							I recently started
 							writing about my
-							experiences on Medium.
+							experiences on{' '}
+							<a
+								href="https://medium.com/@saulgraves"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Medium
+							</a>
+							.
 						</div>
 						<div>
 							While I'm not coding, I
@@ -73,12 +85,13 @@ const About = () => {
 							on a big fantasy and
 							sci-fi novel binge,
 							which currently has me
-							reading Frank Herbert's{' '}
-							<i>Dune</i>. I love to
-							cook, although the food
-							may have mixed results.
-							My coffee, however, is
-							perfection.
+							reading Brandon
+							Sanderson's{' '}
+							<i>The Way Of Kings</i>.
+							I love to cook, although
+							the food may have mixed
+							results. My coffee,
+							however, is perfection.
 						</div>
 					</div>
 				</div>
