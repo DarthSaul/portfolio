@@ -1,10 +1,11 @@
+import { useEffect } from 'react';
 import SkillsTech from '../components/dev/SkillsTech';
 import '../css/About.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const AboutPage = () => {
-	AOS.init();
+	useEffect(() => { AOS.init(); }, []);
 
 	return (
 		<div className="content-container">

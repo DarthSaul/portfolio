@@ -56,13 +56,13 @@
 	color: var(--color-accent-hover);
 }
 
-.bio-text a {
+.about-bio-text a {
 	color: var(--color-accent);
 	text-decoration: none;
 	transition: color 0.2s;
 }
 
-.bio-text a:hover {
+.about-bio-text a:hover {
 	color: var(--color-accent-hover);
 }
 

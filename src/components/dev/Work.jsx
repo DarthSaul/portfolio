@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import projects from '../../utilities/projectsDev';
 import '../../css/Projects.css';
@@ -13,7 +14,7 @@ const orderedProjects = [
 ];
 
 const Projects = () => {
-	AOS.init();
+	useEffect(() => { AOS.init(); }, []);
 	return (
 		<div className="work-wrapper" data-aos="fade" data-aos-duration="750">
 			<div className="work-heading">

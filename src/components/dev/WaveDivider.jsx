@@ -1,7 +1,10 @@
-let counter = 0;
+import { useId } from 'react';
 
 const WaveDivider = () => {
-	const id = `wave-${++counter}`;
+	// useId produces values like ":r0:" — colons are invalid in SVG id attributes, so strip them
+	const rawId = useId();
+	const id = `wave-${rawId.replace(/:/g, '')}`;
+
 	return (
 		<svg
 			width="100%"

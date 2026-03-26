@@ -39,6 +39,7 @@
 	--card-gradient: none;
 	--card-border: #2d3f55;
 	--dot-color: rgba(255, 255, 255, 0.07);
+	--row-hover-bg: rgba(255, 255, 255, 0.04);
 }
 
 /* ─────────────────────────────────────────
@@ -80,6 +81,7 @@
 	--card-gradient: none;
 	--card-border: var(--color-gray-200);
 	--dot-color: rgba(0, 0, 0, 0.09);
+	--row-hover-bg: rgba(0, 0, 0, 0.04);
 }
 
 /* ─────────────────────────────────────────
@@ -91,7 +93,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Poppins', sans-serif;
+	font-family: Poppins, sans-serif;
 }
 
 ::selection {
@@ -119,9 +121,7 @@ body {
 	min-height: 100vh;
 	height: 100%;
 	padding: 2rem 0 2rem;
-	transition:
-		background-color 0.3s,
-		background-image 0.3s;
+	transition: background-color 0.3s;
 }
 
 .content-container {

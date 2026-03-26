@@ -60,13 +60,14 @@ function newSparks(ox, oy, color) {
 }
 
 const Hero = () => {
-	AOS.init();
+	useEffect(() => { AOS.init(); }, []);
 	const [particles, setParticles] = useState([]);
 	const timerRef = useRef(null);
 
 	useEffect(() => () => clearInterval(timerRef.current), []);
 
 	const startFireworks = () => {
+		clearInterval(timerRef.current);
 		const fire = () => setParticles(prev => [...prev, ...newRockets()]);
 		fire();
 		timerRef.current = setInterval(fire, 380);

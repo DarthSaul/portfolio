@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import contactInfo from '../../utilities/contactInfo';
 import '../../css/About.css';
@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const About = () => {
-	AOS.init();
+	useEffect(() => { AOS.init(); }, []);
 	const contactItems = contactInfo.filter((el) => el.beta);
 
 	return (

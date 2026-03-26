@@ -85,13 +85,28 @@
 	flex-shrink: 0;
 }
 
+/* Icon swap — fade instead of display:none so the transition is smooth */
+.theme-toggle-knob {
+	position: relative;
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	pointer-events: none;
+	transition: opacity 0.15s ease;
+}
+
 /* Dark mode (default): show moon */
-.theme-icon-sun  { display: none; }
-.theme-icon-moon { display: block; }
+.theme-icon-sun  { opacity: 0; }
+.theme-icon-moon { opacity: 1; }
 
 /* Light mode: show sun */
-[data-theme="light"] .theme-icon-sun  { display: block; }
-[data-theme="light"] .theme-icon-moon { display: none; }
+[data-theme="light"] .theme-icon-sun  { opacity: 1; }
+[data-theme="light"] .theme-icon-moon { opacity: 0; }
 
 /* Mobile: toggle moves next to title; links go on second row */
 .theme-toggle-mobile {

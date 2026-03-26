@@ -4,9 +4,15 @@ import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../../css/Nav.css';
 
+// Restore persisted theme before first render
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+
 const toggleTheme = () => {
 	const html = document.documentElement;
-	html.dataset.theme = html.dataset.theme === 'light' ? 'dark' : 'light';
+	const next = html.dataset.theme === 'light' ? 'dark' : 'light';
+	html.dataset.theme = next;
+	localStorage.setItem('theme', next);
 };
 
 const ThemeToggle = ({ className = '' }) => (
