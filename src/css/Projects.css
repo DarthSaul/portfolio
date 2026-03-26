@@ -1,13 +1,63 @@
+.work-wrapper {
+	padding-top: 5rem;
+}
+
+.work-heading {
+	margin: 1.25rem 0 2rem;
+	color: var(--color-text);
+}
+
+.work-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
 .project-row {
+	display: flex;
+	align-items: flex-end;
+	gap: 2rem;
+	flex-wrap: wrap;
 	padding: 1.75em 1.15em;
-	background-color: rgba(15, 51, 92, 0.3);
-	background-image: radial-gradient(
-		circle farthest-corner at 32.7% 82.7%,
-		rgba(173, 0, 171, 0.55) 8.3%,
-		rgba(15, 51, 92, 0.85) 79.4%
-	);
-	border: 0.75px solid #52798b;
+	background-color: var(--card-bg);
+	background-image: var(--card-gradient);
+	border: 0.75px solid var(--card-border);
 	border-radius: 18px;
+	transition: background-color 0.3s, border-color 0.3s;
+}
+
+.project-img {
+	flex: 0 0 48%;
+}
+
+.project-img img {
+	width: 100%;
+	max-height: 250px;
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	background-color: white;
+}
+
+.project-text {
+	flex: 1;
+	min-width: 240px;
+	color: var(--color-text);
+}
+
+.project-meta {
+	margin-bottom: 1rem;
+}
+
+.project-desc {
+	font-size: 0.9rem;
+	color: var(--color-text-muted);
+}
+
+.project-links {
+	margin-top: 1rem;
+	display: flex;
+	gap: 0.75rem;
 }
 
 .project-btn {
@@ -22,13 +72,21 @@
 	color: black;
 	padding: 0.55em 1.25em;
 	border-radius: 20px;
+	transition: box-shadow 0.15s, color 0.15s;
 }
+
 .project-btn:hover {
 	color: rgb(34, 32, 32);
 	box-shadow: rgba(255, 255, 255, 0.15) 0px 38px 80px 0px;
 }
 
-.project-row .img-fluid {
-	max-height: 250px;
-	background-color: white;
+@media (max-width: 768px) {
+	.project-row {
+		flex-direction: column;
+	}
+
+	.project-img {
+		flex: none;
+		width: 100%;
+	}
 }
