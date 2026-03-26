@@ -4,6 +4,7 @@ import Nav from './components/dev/Nav';
 import Work from './components/dev/Work';
 import About from './components/dev/About';
 import Hero from './components/dev/Hero';
+import WaveDivider from './components/dev/WaveDivider';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 
@@ -14,11 +15,11 @@ const MainPage = () => (
 		<Element name="home">
 			<Hero />
 		</Element>
-		<hr />
+		<WaveDivider />
 		<Element name="work">
 			<Work />
 		</Element>
-		<hr />
+		<WaveDivider />
 		<Element name="about">
 			<About />
 		</Element>

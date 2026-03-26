@@ -13,13 +13,6 @@
 	margin-bottom: 1.25rem;
 }
 
-.about-cols {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3rem;
-	justify-content: space-between;
-}
-
 .about-bio {
 	flex: 1 1 400px;
 }
@@ -32,10 +25,6 @@
 	letter-spacing: 0.5px;
 	margin-bottom: 2rem;
 	color: var(--color-text-muted);
-}
-
-.about-sidebar {
-	flex: 0 1 300px;
 }
 
 .bio-img {

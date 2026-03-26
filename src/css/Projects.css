@@ -1,92 +1,77 @@
 .work-wrapper {
-	padding-top: 5rem;
+	padding: 3rem 0;
 }
 
 .work-heading {
-	margin: 1.25rem 0 2rem;
+	margin-bottom: 1.5rem;
 	color: var(--color-text);
 }
 
 .work-list {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
 }
 
+/* ── Row ── */
 .project-row {
+	display: grid;
+	grid-template-columns: 2.25rem 1fr auto;
+	align-items: start;
+	column-gap: 0.85rem;
+	padding: 0.75rem 0;
+	transition: background-color 0.15s;
+}
+
+.project-row:hover {
+	background-color: rgba(128, 128, 128, 0.06);
+}
+
+/* ── Left: icon + name + headline ── */
+.project-row-left {
+	display: contents;
+}
+
+.project-icon {
+	color: var(--color-accent);
+	font-size: 0.9rem;
+	opacity: 0.75;
+	margin-top: 0.2em;
 	display: flex;
-	align-items: flex-end;
-	gap: 2rem;
-	flex-wrap: wrap;
-	padding: 1.75em 1.15em;
-	background-color: var(--card-bg);
-	background-image: var(--card-gradient);
-	border: 0.75px solid var(--card-border);
-	border-radius: 18px;
-	transition: background-color 0.3s, border-color 0.3s;
+	justify-content: center;
 }
 
-.project-img {
-	flex: 0 0 48%;
+.project-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	min-width: 0;
 }
 
-.project-img img {
-	width: 100%;
-	max-height: 250px;
-	object-fit: cover;
-	border-radius: 8px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-	background-color: white;
-}
-
-.project-text {
-	flex: 1;
-	min-width: 240px;
+.project-name {
+	font-weight: 500;
 	color: var(--color-text);
 }
 
-.project-meta {
-	margin-bottom: 1rem;
-}
-
-.project-desc {
-	font-size: 0.9rem;
+.project-headline {
+	font-size: 0.85rem;
 	color: var(--color-text-muted);
+	font-weight: 300;
 }
 
-.project-links {
-	margin-top: 1rem;
+/* ── Right: links ── */
+.project-row-right {
 	display: flex;
+	align-items: center;
 	gap: 0.75rem;
 }
 
-.project-btn {
-	background: rgb(69, 194, 173);
-	background: linear-gradient(
-		45deg,
-		rgb(100, 196, 180) 1%,
-		rgba(52, 252, 219, 1) 35%,
-		rgba(6, 255, 214, 1) 100%
-	);
+.project-link {
+	color: var(--color-text-muted);
+	font-size: 0.85rem;
 	text-decoration: none;
-	color: black;
-	padding: 0.55em 1.25em;
-	border-radius: 20px;
-	transition: box-shadow 0.15s, color 0.15s;
+	transition: color 0.15s;
 }
 
-.project-btn:hover {
-	color: rgb(34, 32, 32);
-	box-shadow: rgba(255, 255, 255, 0.15) 0px 38px 80px 0px;
-}
-
-@media (max-width: 768px) {
-	.project-row {
-		flex-direction: column;
-	}
-
-	.project-img {
-		flex: none;
-		width: 100%;
-	}
+.project-link:hover {
+	color: var(--color-accent);
 }

@@ -10,6 +10,11 @@ const AboutPage = () => {
 		<div className="content-container">
 			<div className="about-page-wrapper" data-aos="fade" data-aos-duration="500">
 				<h2 className="about-section-heading">Bio</h2>
+				<img
+					src="https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_600/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
+					alt="Saul Graves"
+					className="bio-img"
+				/>
 				<div className="about-bio-text">
 					<div>
 						Hello! I'm Saul, a software developer currently based in New York City.

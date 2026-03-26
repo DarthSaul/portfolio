@@ -12,14 +12,79 @@
 
 .hero-avatar-wrap {
 	margin-top: 2rem;
+	width: 150px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
 }
 
 .hero-avatar {
-	height: 175px;
+	height: 134px;
 	width: auto;
 	display: block;
 	filter: var(--avatar-filter);
 	transition: filter 0.3s;
+	position: relative;
+	z-index: 1;
+}
+
+/* ── Phase 1: rocket streak ── */
+.firework-rocket {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 12px;
+	border-radius: 1px;
+	pointer-events: none;
+	z-index: 0;
+	animation: rocket-fly linear forwards;
+}
+
+/*
+ * translate(-50%, -50%)  — center the element on the avatar's midpoint
+ * rotate(--rotate)       — orient the streak toward its travel direction
+ * translateY(-dist)      — move forward along the rotated local Y axis
+ */
+@keyframes rocket-fly {
+	from {
+		transform: translate(-50%, calc(-50% + var(--origin-y))) rotate(var(--rotate)) translateY(0px);
+		opacity: 1;
+	}
+	to {
+		transform: translate(-50%, calc(-50% + var(--origin-y))) rotate(var(--rotate)) translateY(calc(-1 * var(--dist)));
+		opacity: 1;
+	}
+}
+
+/* ── Phase 2: explosion sparks ── */
+.firework-spark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 0;
+	animation: spark-fly ease-out forwards;
+}
+
+/*
+ * translate(-50% + ox, -50% + oy)  — start at the rocket's endpoint
+ * translate(tx, ty)                 — spread outward from there
+ * scale(0)                          — shrink to nothing at the end
+ */
+@keyframes spark-fly {
+	0% {
+		transform: translate(calc(-50% + var(--ox)), calc(-50% + var(--oy))) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(calc(-50% + var(--ox) + var(--tx)), calc(-50% + var(--oy) + var(--ty))) scale(0);
+		opacity: 0;
+	}
 }
 
 .hero-text {
@@ -39,44 +104,4 @@
 	font-size: 1.25rem;
 	color: var(--color-text);
 	display: block;
-}
-
-.about-link a {
-	text-decoration: none;
-	cursor: pointer;
-	background-color: rgba(15, 51, 92, 0.3);
-	background-image: radial-gradient(
-		circle farthest-corner at 32.7% 82.7%,
-		rgba(173, 0, 171, 0.45) 1%,
-		rgba(15, 51, 92, 0.85) 100%
-	);
-	color: white;
-	padding: 0.45em 1.3em;
-	border-radius: 20px;
-	border: 0.5px solid rgb(195, 195, 195);
-	transition: all 0.1s;
-}
-
-.about-link a:hover {
-	font-weight: 500;
-	background-color: rgb(98, 54, 217);
-	background-image: none;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-	padding: 0.5em 1.4em;
-}
-
-.external-links {
-	display: flex;
-	gap: 1rem;
-}
-
-.external-links a {
-	font-size: 1.2em;
-	color: var(--color-accent);
-	text-decoration: none;
-	transition: color 0.2s;
-}
-
-.external-links a:hover {
-	color: var(--color-accent-hover);
 }

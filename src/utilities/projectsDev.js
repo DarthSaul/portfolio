@@ -1,11 +1,11 @@
-import { faMask, faBurger, faFolder, faMugSaucer, faDragon } from '@fortawesome/free-solid-svg-icons';
+import { faMask, faBurger, faFolder, faMugSaucer, faDragon, faBuildingColumns, faDroplet } from '@fortawesome/free-solid-svg-icons';
 
 const projects = {
 	cityNationalBank: {
 		name: 'City National Bank',
 		headline: 'Senior Platform Developer',
 		currentRole: true,
-		icon: faMugSaucer,
+		icon: faBuildingColumns,
 		projectLink: '',
 		githubLink: '',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1709935742/Portfolio/jpeak3rvapve2pnwsv3e.png',
@@ -18,7 +18,7 @@ const projects = {
 		name: 'Conservation Labs',
 		headline: 'Frontend developer',
 		currentRole: false,
-		icon: faMugSaucer,
+		icon: faDroplet,
 		projectLink: '',
 		githubLink: '',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_1000/v1665443587/Portfolio/Screen_Shot_2022-10-10_at_6.12.43_PM_hfwvg7.png',

@@ -5,7 +5,7 @@
 
 .inner-nav {
 	width: 92%;
-	max-width: 1076px;
+	max-width: 40rem;
 	margin: auto;
 	padding: 1em 0;
 }
@@ -36,23 +36,24 @@
 .nav-links-row {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 2rem;
 }
 
 .nav-items {
 	display: flex;
-	gap: 1.25rem;
+	gap: 1.75rem;
 }
 
 .nav-items a {
 	color: var(--color-text);
 	text-decoration: none;
-	border-radius: 12px;
-	transition: color 0.3s, background-color 0.15s;
+	padding-bottom: 2px;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s;
 }
 
 .nav-items a:hover {
-	background-color: rgba(128, 128, 128, 0.15);
+	border-bottom-color: var(--color-text);
 }
 
 .theme-toggle {
@@ -110,7 +111,7 @@
 	.nav-header {
 		width: 100%;
 		justify-content: space-between;
-		margin-bottom: 0.4em;
+		margin-bottom: 1em;
 	}
 
 	.theme-toggle-mobile {
