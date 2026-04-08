@@ -6,7 +6,7 @@ const About = () => {
 
 	return (
 		<div className="about-wrapper">
-			<div className="about-contact-heading">Let's get in touch</div>
+			<h2 className="about-contact-heading">Let's get in touch</h2>
 			<div className="about-page-links">
 				{contactItems.map((item, ind) => (
 					<a key={ind} href={item.link} target="_blank" rel="noopener noreferrer">

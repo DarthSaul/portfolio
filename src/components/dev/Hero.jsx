@@ -76,6 +76,7 @@ const Hero = () => {
 	useEffect(() => () => clearInterval(timerRef.current), []);
 
 	const startFireworks = () => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		clearInterval(timerRef.current);
 		const fire = () => setParticles((prev) => [...prev, ...newRockets()]);
 		fire();
@@ -135,7 +136,7 @@ const Hero = () => {
 							/>
 						),
 					)}
-					<img src="/avatar-thin.svg" alt="avatar" className="hero-avatar" />
+					<img src={`${import.meta.env.BASE_URL}avatar-thin.svg`} alt="avatar" className="hero-avatar" />
 				</div>
 				<div className="hero-text">
 					<div className="hero-headline">
