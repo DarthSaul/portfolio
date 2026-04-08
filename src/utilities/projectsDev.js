@@ -1,17 +1,21 @@
 import {
 	faMask,
-	faHamburger,
+	faBurger,
 	faFolder,
-	faCoffee,
+	faMugSaucer,
 	faDragon,
+	faBuildingColumns,
+	faDroplet,
+	faDumbbell,
 } from '@fortawesome/free-solid-svg-icons';
 
 const projects = {
 	cityNationalBank: {
 		name: 'City National Bank',
 		headline: 'Senior Platform Developer',
+		period: '2023 - Present',
 		currentRole: true,
-		icon: faCoffee,
+		icon: faBuildingColumns,
 		projectLink: '',
 		githubLink: '',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/v1709935742/Portfolio/jpeak3rvapve2pnwsv3e.png',
@@ -22,9 +26,10 @@ const projects = {
 	},
 	conservationLabs: {
 		name: 'Conservation Labs',
-		headline: 'Front-end developer',
+		headline: 'Lead Frontend Developer',
+		period: '2021 - 2023',
 		currentRole: false,
-		icon: faCoffee,
+		icon: faDroplet,
 		projectLink: '',
 		githubLink: '',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_1000/v1665443587/Portfolio/Screen_Shot_2022-10-10_at_6.12.43_PM_hfwvg7.png',
@@ -40,8 +45,8 @@ const projects = {
 	},
 	coffeeCorner: {
 		name: 'Coffee Corner',
-		headline: 'Join a community of coffee lovers',
-		icon: faCoffee,
+		headline: 'Community for coffee lovers',
+		icon: faMugSaucer,
 		projectLink: 'https://ancient-cove-69346.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/coffee-corner',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_1000/v1667276369/Portfolio/Screen_Shot_2022-11-01_at_12.19.24_AM_hxsmvx.png',
@@ -57,8 +62,8 @@ const projects = {
 	},
 	foodFromFriends: {
 		name: 'Food From Friends',
-		headline: 'Share lists of your food recs',
-		icon: faHamburger,
+		headline: 'App for sharing restaurant recommendations and curated lists',
+		icon: faBurger,
 		projectLink: 'https://arcane-lowlands-25770.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/food-from-friends',
 		imgUrl: 'https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_1000/v1666906753/Portfolio/Screen_Shot_2022-10-27_at_5.38.33_PM_ypgjjq.png',
@@ -74,7 +79,7 @@ const projects = {
 	},
 	ghibli: {
 		name: 'Ghibli Wallpapers',
-		headline: 'A Studio Ghibli wallpaper library ',
+		headline: 'Studio Ghibli desktop wallpaper library',
 		icon: faDragon,
 		projectLink: 'https://calm-mountain-15835.herokuapp.com/home',
 		githubLink: 'https://github.com/DarthSaul/ghibli-wallpapers',
@@ -105,6 +110,14 @@ const projects = {
 			'Website security measures in place.',
 		],
 		id: 6,
+	},
+	fitnessTracker: {
+		name: 'Fitness Tracker',
+		headline: 'Workout tracker with program library, scheduling, and personalized analysis',
+		icon: faDumbbell,
+		projectLink: 'https://fitness-app.me/',
+		githubLink: 'https://github.com/DarthSaul/fitness-tracker',
+		id: 8,
 	},
 	portfolio: {
 		name: 'Portfolio',

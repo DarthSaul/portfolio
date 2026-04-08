@@ -1,4 +1,3 @@
-import React from 'react';
 import CodePerson from '../../assets/undraw_code_inspection_bdl7 (1).svg';
 import PWA from '../../assets/undraw_progressive_app_m-9-ms.svg';
 
