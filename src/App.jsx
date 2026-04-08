@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
-import { Element } from 'react-scroll';
 import Nav from './components/dev/Nav';
 import Work from './components/dev/Work';
 import About from './components/dev/About';
@@ -12,17 +11,11 @@ import './css/App.css';
 
 const MainPage = () => (
 	<div className="content-container">
-		<Element name="home">
-			<Hero />
-		</Element>
+		<Hero />
 		<WaveDivider />
-		<Element name="work">
-			<Work />
-		</Element>
+		<Work />
 		<WaveDivider />
-		<Element name="about">
-			<About />
-		</Element>
+		<About />
 	</div>
 );
 
