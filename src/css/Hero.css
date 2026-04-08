@@ -12,6 +12,7 @@
 
 .hero-avatar-wrap {
 	margin-top: 2rem;
+	margin-left: -6px;
 	width: 150px;
 	height: 150px;
 	display: flex;
@@ -55,7 +56,8 @@
 		opacity: 1;
 	}
 	to {
-		transform: translate(-50%, calc(-50% + var(--origin-y))) rotate(var(--rotate)) translateY(calc(-1 * var(--dist)));
+		transform: translate(-50%, calc(-50% + var(--origin-y))) rotate(var(--rotate))
+			translateY(calc(-1 * var(--dist)));
 		opacity: 1;
 	}
 }
@@ -96,12 +98,24 @@
 .hero-headline {
 	display: flex;
 	flex-direction: column;
-	gap: 0.25rem;
-	color: var(--color-text-muted);
+	gap: 1.25rem;
 }
 
 .hero-title {
 	font-size: 1.25rem;
 	color: var(--color-text);
 	display: block;
+}
+
+.hero-subtitle {
+	color: var(--color-text-muted);
+}
+
+.hero-extra {
+	font-size: 0.875rem;
+	color: var(--color-text-muted);
+}
+.hero-extra > span {
+	display: inline-block;
+	margin-right: 0.5rem;
 }

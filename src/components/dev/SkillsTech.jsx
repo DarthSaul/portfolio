@@ -1,44 +1,43 @@
-import React from 'react';
+const skills = [
+	{
+		heading: 'Languages',
+		items: 'TypeScript / JavaScript, Python, SQL',
+	},
+	{
+		heading: 'Frontend',
+		items: 'Vue / Nuxt, React / Next.js, Tailwind CSS, Responsive & accessible UI, Design systems & component libraries',
+	},
+	{
+		heading: 'Backend',
+		items: 'Node.js / Express, FastAPI, REST API design, PostgreSQL, MongoDB',
+	},
+	{
+		heading: 'AI & LLM Integration',
+		items: 'LLM API integration (Anthropic, OpenAI), Retrieval-augmented generation (RAG), Prompt design & evaluation, AI-powered product features',
+	},
+	{
+		heading: 'Cloud & Infrastructure',
+		items: 'AWS, Git / GitHub, CI/CD, Docker',
+	},
+	{
+		heading: 'Testing & Quality',
+		items: 'Vitest, Jest, Code review, Production system design',
+	},
+	{
+		heading: 'Ways of Working',
+		items: 'Agile / Scrum, Figma, Cross-functional collaboration, Technical mentorship',
+	},
+];
 
 const SkillsTech = () => {
 	return (
 		<div className="skills-grid">
-			<div className="skills-section">
-				<div className="skills-heading">Technologies</div>
-				<div className="skills-columns">
-					<div className="skills-col">
-						<div>JavaScript / TypeScript</div>
-						<div>Node, Express</div>
-						<div>Git, GitHub, AWS</div>
-					</div>
-					<div className="skills-col">
-						<div>Vue.js, React.js</div>
-						<div>SQL (PostgreSQL)</div>
-						<div>NoSQL (MongoDB)</div>
-					</div>
-					<div className="skills-col">
-						<div>HTML & CSS</div>
-						<div>Bootstrap</div>
-						<div>Jest, Vitest</div>
-					</div>
+			{skills.map(({ heading, items }) => (
+				<div key={heading} className="skills-row">
+					<span className="skills-heading">{heading}</span>
+					<span className="skills-items">{items}</span>
 				</div>
-			</div>
-
-			<div className="skills-section">
-				<div className="skills-heading">Skills</div>
-				<div className="skills-columns">
-					<div className="skills-col">
-						<div>Design systems</div>
-						<div>Component libraries</div>
-						<div>Responsive web design</div>
-					</div>
-					<div className="skills-col">
-						<div>REST APIs</div>
-						<div>Agile, Scrum</div>
-						<div>Figma</div>
-					</div>
-				</div>
-			</div>
+			))}
 		</div>
 	);
 };

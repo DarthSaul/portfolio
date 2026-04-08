@@ -1,9 +1,19 @@
-import { faMask, faBurger, faFolder, faMugSaucer, faDragon, faBuildingColumns, faDroplet } from '@fortawesome/free-solid-svg-icons';
+import {
+	faMask,
+	faBurger,
+	faFolder,
+	faMugSaucer,
+	faDragon,
+	faBuildingColumns,
+	faDroplet,
+	faDumbbell,
+} from '@fortawesome/free-solid-svg-icons';
 
 const projects = {
 	cityNationalBank: {
 		name: 'City National Bank',
 		headline: 'Senior Platform Developer',
+		period: '2023 - Present',
 		currentRole: true,
 		icon: faBuildingColumns,
 		projectLink: '',
@@ -16,7 +26,8 @@ const projects = {
 	},
 	conservationLabs: {
 		name: 'Conservation Labs',
-		headline: 'Frontend developer',
+		headline: 'Lead Frontend Developer',
+		period: '2021 - 2023',
 		currentRole: false,
 		icon: faDroplet,
 		projectLink: '',
@@ -34,7 +45,7 @@ const projects = {
 	},
 	coffeeCorner: {
 		name: 'Coffee Corner',
-		headline: 'Join a community of coffee lovers',
+		headline: 'Community for coffee lovers',
 		icon: faMugSaucer,
 		projectLink: 'https://ancient-cove-69346.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/coffee-corner',
@@ -51,7 +62,7 @@ const projects = {
 	},
 	foodFromFriends: {
 		name: 'Food From Friends',
-		headline: 'Share lists of your food recs',
+		headline: 'App for sharing restaurant recommendations and curated lists',
 		icon: faBurger,
 		projectLink: 'https://arcane-lowlands-25770.herokuapp.com/',
 		githubLink: 'https://github.com/DarthSaul/food-from-friends',
@@ -68,7 +79,7 @@ const projects = {
 	},
 	ghibli: {
 		name: 'Ghibli Wallpapers',
-		headline: 'A Studio Ghibli wallpaper library ',
+		headline: 'Studio Ghibli desktop wallpaper library',
 		icon: faDragon,
 		projectLink: 'https://calm-mountain-15835.herokuapp.com/home',
 		githubLink: 'https://github.com/DarthSaul/ghibli-wallpapers',
@@ -99,6 +110,14 @@ const projects = {
 			'Website security measures in place.',
 		],
 		id: 6,
+	},
+	fitnessTracker: {
+		name: 'Fitness Tracker',
+		headline: 'Workout tracker with program library, scheduling, and personalized analysis',
+		icon: faDumbbell,
+		projectLink: 'https://fitness-app.me/',
+		githubLink: 'https://github.com/DarthSaul/fitness-tracker',
+		id: 8,
 	},
 	portfolio: {
 		name: 'Portfolio',

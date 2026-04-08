@@ -16,21 +16,21 @@ const contactItems = [
 		beta: true,
 	},
 	{
-		name: 'Medium',
-		link: 'https://medium.com/@saulgraves',
-		icon: faMedium,
-		beta: true,
-	},
-	{
 		name: 'LinkedIn',
 		link: 'https://www.linkedin.com/in/saulgraves/',
 		icon: faLinkedin,
 		beta: true,
 	},
 	{
-		name: 'Email',
+		name: 'Mail',
 		link: 'mailto:graves.saul@gmail.com',
 		icon: faEnvelope,
+		beta: true,
+	},
+	{
+		name: 'Medium',
+		link: 'https://medium.com/@saulgraves',
+		icon: faMedium,
 		beta: true,
 	},
 	{

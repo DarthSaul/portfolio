@@ -3,7 +3,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function ProjectCard({ project }) {
-	const { name, headline, icon, projectLink, githubLink } = project;
+	const { name, headline, icon, projectLink, githubLink, period } = project;
 
 	return (
 		<div className="project-row">
@@ -19,6 +19,9 @@ function ProjectCard({ project }) {
 				</div>
 			</div>
 			<div className="project-row-right">
+				{period && (
+					<span className="project-period">{period}</span>
+				)}
 				{projectLink && (
 					<a href={projectLink} target="_blank" rel="noreferrer" className="project-link" aria-label="Live site">
 						<FontAwesomeIcon icon={faArrowUpRightFromSquare} />

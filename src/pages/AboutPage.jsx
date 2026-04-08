@@ -1,51 +1,45 @@
-import { useEffect } from 'react';
 import SkillsTech from '../components/dev/SkillsTech';
 import '../css/About.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const AboutPage = () => {
-	useEffect(() => { AOS.init(); }, []);
-
 	return (
 		<div className="content-container">
-			<div className="about-page-wrapper" data-aos="fade" data-aos-duration="500">
-				<h2 className="about-section-heading">Bio</h2>
-				<img
-					src="https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_600/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
-					alt="Saul Graves"
-					className="bio-img"
-				/>
+			<div className="about-page-wrapper">
 				<div className="about-bio-text">
 					<div>
-						Hello! I'm Saul, a software developer currently based in New York City.
+						Hello! I'm Saul, a senior software engineer currently based in the big
+						apple.
 					</div>
 					<div>
-						While I'm trained in the arts of full-stack, I currently specialize in
-						front-end development, design systems, TDD, and building scalable web
-						applications rooted in seamless user experiences.
+						I specialize in versatility; I love building sprawling yet scalable
+						backends, performant frontends rooted in seamless UX, and above all, I
+						love people.
 					</div>
 					<div>
 						I currently work at City National Bank, where I lead the frontend
-						development of our Roxbury Design System, a Vue.js component library
-						and UX/UI kit consumed across various facets of the bank. We're focused
-						on TDD, building at scale and optimizing our library's performance.
+						development of our Roxbury Design System, a robust UX/UI kit consumed
+						across all lines of business. We're focused on TDD, building at scale
+						and optimizing our library's performance. I also contribute to CI/CD
+						pipeline improvements, and I have a passion for mentoring and growing
+						engineering teams.
 					</div>
 					<div>
-						I learned web development because I wanted to design, build, and create
-						things that can be shared across the world. Jumping into code has been
-						the best decision of my life, and I recently started writing about my
-						experiences on{' '}
-						<a href="https://medium.com/@saulgraves" target="_blank" rel="noreferrer">
-							Medium
-						</a>
-						.
+						Outside of work, I'm crafting fullstack apps designed to solve real
+						problems in my own life, and I obssess over the full end-to-end software
+						development lifecycle.
 					</div>
+
+					<img
+						src="https://res.cloudinary.com/darthsaul/image/upload/c_scale,w_600/v1670552605/Portfolio/IMG_7715_resized_nmp7vf.jpg"
+						alt="Saul Graves"
+						className="bio-img"
+					/>
+
 					<div>
-						While I'm not coding, I try to spend time away from the keyboard. I'm
-						on a big fantasy and sci-fi novel binge, which currently has me reading
-						Brandon Sanderson's <i>The Way Of Kings</i>. I love to cook, although
-						the food may have mixed results. My coffee, however, is perfection.
+						While I'm not building, you can typically find me reading Brandon
+						Sanderson, talking too much about my favorite movies, or waiting for the
+						Knicks to once again break my heart. I love to cook, although the food
+						may have mixed results. My coffee, however, is perfection.
 					</div>
 				</div>
 

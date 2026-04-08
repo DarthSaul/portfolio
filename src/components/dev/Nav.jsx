@@ -1,18 +1,27 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../../css/Nav.css';
 
-// Restore persisted theme before first render
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+// Restore persisted theme before first render, falling back to system preference
+try {
+	const savedTheme = localStorage.getItem('theme');
+	if (savedTheme) {
+		document.documentElement.dataset.theme = savedTheme;
+	} else {
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+	}
+} catch (_) {}
 
 const toggleTheme = () => {
 	const html = document.documentElement;
 	const next = html.dataset.theme === 'light' ? 'dark' : 'light';
 	html.dataset.theme = next;
-	localStorage.setItem('theme', next);
+	try {
+		localStorage.setItem('theme', next);
+	} catch (_) {}
 };
 
 const ThemeToggle = ({ className = '' }) => (
@@ -38,8 +47,8 @@ const HoNav = () => {
 
 					<div className="nav-links-row">
 						<div className="nav-items">
-							<RouterLink to="/about">About</RouterLink>
-							<RouterLink to="/blog">Blog</RouterLink>
+							<NavLink to="/about">About</NavLink>
+							<NavLink to="/blog">Blog</NavLink>
 						</div>
 						<ThemeToggle className="theme-toggle-desktop" />
 					</div>

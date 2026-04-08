@@ -5,8 +5,8 @@
 ───────────────────────────────────────── */
 :root {
 	/* Design tokens */
-	--color-black: #ffffff;
-	--color-white: #16132a;
+	--color-foreground: #ffffff;
+	--color-background: #16132a;
 	--color-primary: #8fb4ff;
 	--color-gray-100: #111827;
 	--color-gray-200: #1f2937;
@@ -34,11 +34,11 @@
 	--avatar-filter: invert(1);
 	--toggle-bg: rgba(255, 255, 255, 0.12);
 	--toggle-border: rgba(255, 255, 255, 0.25);
-	--toggle-knob-x: 0em;
+	--toggle-knob-x: 1.8em;
 	--card-bg: var(--color-gray-200);
 	--card-gradient: none;
 	--card-border: #2d3f55;
-	--dot-color: rgba(255, 255, 255, 0.07);
+	--dot-color: rgba(255, 255, 255, 0.11);
 	--row-hover-bg: rgba(255, 255, 255, 0.04);
 }
 
@@ -47,8 +47,8 @@
 ───────────────────────────────────────── */
 [data-theme='light'] {
 	/* Design tokens */
-	--color-black: #1a1a2e;
-	--color-white: #f8fafc;
+	--color-foreground: #1a1a2e;
+	--color-background: #f8fafc;
 	--color-primary: #4361cc;
 	--color-gray-100: #f1f5f9;
 	--color-gray-200: #e2e8f0;
@@ -76,11 +76,11 @@
 	--avatar-filter: none;
 	--toggle-bg: rgba(0, 0, 0, 0.08);
 	--toggle-border: rgba(0, 0, 0, 0.18);
-	--toggle-knob-x: 1.8em;
-	--card-bg: var(--color-white);
+	--toggle-knob-x: 0em;
+	--card-bg: var(--color-background);
 	--card-gradient: none;
 	--card-border: var(--color-gray-200);
-	--dot-color: rgba(0, 0, 0, 0.09);
+	--dot-color: rgba(0, 0, 0, 0.15);
 	--row-hover-bg: rgba(0, 0, 0, 0.04);
 }
 
@@ -116,7 +116,7 @@ body {
 		radial-gradient(circle, var(--dot-color) 1px, transparent 1px),
 		linear-gradient(to right, var(--bg-start), var(--bg-mid), var(--bg-end));
 	background-size:
-		26px 26px,
+		17px 17px,
 		100%;
 	min-height: 100vh;
 	height: 100%;

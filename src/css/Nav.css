@@ -56,6 +56,10 @@
 	border-bottom-color: var(--color-text);
 }
 
+.nav-items a.active {
+	border-bottom: 1px dashed var(--color-accent);
+}
+
 .theme-toggle {
 	display: flex;
 	align-items: center;
@@ -83,12 +87,10 @@
 	transform: translateX(var(--toggle-knob-x));
 	transition: transform 0.25s ease, background 0.3s, color 0.3s;
 	flex-shrink: 0;
+	position: relative;
 }
 
 /* Icon swap — fade instead of display:none so the transition is smooth */
-.theme-toggle-knob {
-	position: relative;
-}
 
 .theme-icon-sun,
 .theme-icon-moon {
