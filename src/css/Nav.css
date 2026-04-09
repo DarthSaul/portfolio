@@ -29,9 +29,14 @@
 	transition: opacity 0.2s;
 }
 
-.nav-title a:hover,
-.nav-title a:focus-visible {
+.nav-title a:hover {
 	opacity: 0.7;
+}
+
+.nav-title a:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 3px;
+	border-radius: 2px;
 }
 
 .nav-title span {
