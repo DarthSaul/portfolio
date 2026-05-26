@@ -1,0 +1,206 @@
+/* ─── MDX body typography ─── */
+.blog-post-body > * + * {
+	margin-top: 1.1rem;
+}
+
+.blog-post-body p {
+	font-weight: 300;
+}
+
+.blog-post-body a {
+	color: var(--color-accent);
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+}
+
+.blog-post-body a:hover,
+.blog-post-body a:focus-visible {
+	color: var(--color-accent-hover);
+}
+
+.mdx-h1 {
+	font-size: 1.7rem;
+	font-weight: 500;
+	margin-top: 2.25rem;
+}
+
+.mdx-h2 {
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-top: 2rem;
+}
+
+.mdx-h3 {
+	font-size: 1.15rem;
+	font-weight: 500;
+	margin-top: 1.5rem;
+}
+
+.blog-post-body ul,
+.blog-post-body ol {
+	padding-left: 1.4rem;
+	font-weight: 300;
+}
+
+.blog-post-body li + li {
+	margin-top: 0.3rem;
+}
+
+/* ─── Inline code ─── */
+.mdx-code-inline {
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 4px;
+	padding: 0.05rem 0.35rem;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 0.88em;
+}
+
+/* ─── Fenced code (Shiki) ─── */
+.mdx-pre,
+.blog-post-body pre.shiki {
+	background: var(--card-bg) !important;
+	border: 1px solid var(--card-border);
+	border-radius: 8px;
+	padding: 0.9rem 1rem;
+	overflow-x: auto;
+	font-size: 0.85rem;
+	line-height: 1.55;
+}
+
+.blog-post-body pre.shiki code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
+/* Light/dark theme switching for Shiki output. We pass
+   { themes: { light, dark }, defaultColor: false } to @shikijs/rehype, which
+   emits both `color` and `--shiki-dark` CSS variables per token. */
+.blog-post-body pre.shiki,
+.blog-post-body pre.shiki span {
+	color: var(--shiki-light);
+	background-color: var(--shiki-light-bg);
+}
+
+[data-theme='light'] .blog-post-body pre.shiki,
+[data-theme='light'] .blog-post-body pre.shiki span {
+	color: var(--shiki-light);
+	background-color: var(--shiki-light-bg);
+}
+
+:root:not([data-theme='light']) .blog-post-body pre.shiki,
+:root:not([data-theme='light']) .blog-post-body pre.shiki span {
+	color: var(--shiki-dark);
+	background-color: var(--shiki-dark-bg);
+}
+
+/* ─── Blockquote ─── */
+.mdx-blockquote {
+	border-left: 3px solid var(--color-accent);
+	padding-left: 1rem;
+	color: var(--color-text-muted);
+	font-style: italic;
+}
+
+/* ─── Figures ─── */
+.mdx-figure {
+	margin: 1.5rem 0;
+	text-align: center;
+}
+
+.mdx-figure img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	border: 1px solid var(--card-border);
+}
+
+.mdx-figcaption {
+	color: var(--color-text-muted);
+	font-size: 0.8rem;
+	font-weight: 300;
+	margin-top: 0.5rem;
+}
+
+/* ─── Callout ─── */
+.mdx-callout {
+	border: 1px solid var(--card-border);
+	border-left-width: 3px;
+	border-radius: 6px;
+	padding: 0.8rem 1rem;
+	background: var(--card-bg);
+}
+
+.mdx-callout-info {
+	border-left-color: var(--color-accent);
+}
+
+.mdx-callout-warn {
+	border-left-color: #f59e0b;
+}
+
+.mdx-callout-tip {
+	border-left-color: #10b981;
+}
+
+.mdx-callout-header {
+	display: flex;
+	align-items: baseline;
+	gap: 0.55rem;
+	margin-bottom: 0.35rem;
+}
+
+.mdx-callout-icon {
+	font-size: 1rem;
+	line-height: 1;
+}
+
+.mdx-callout-info .mdx-callout-icon {
+	color: var(--color-accent);
+}
+
+.mdx-callout-warn .mdx-callout-icon {
+	color: #f59e0b;
+}
+
+.mdx-callout-tip .mdx-callout-icon {
+	color: #10b981;
+}
+
+.mdx-callout-title {
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
+.mdx-callout-body {
+	font-size: 0.95rem;
+	font-weight: 300;
+	color: var(--color-text);
+}
+
+.mdx-callout-body > * + * {
+	margin-top: 0.5rem;
+}
+
+/* ─── Aside ─── */
+.mdx-aside {
+	display: flex;
+	gap: 0.85rem;
+	padding-left: 0.25rem;
+	color: var(--color-text-muted);
+	font-size: 0.92rem;
+	font-weight: 300;
+}
+
+.mdx-aside-rule {
+	width: 2px;
+	background: var(--card-border);
+	border-radius: 1px;
+	flex: 0 0 auto;
+}
+
+.mdx-aside-body > * + * {
+	margin-top: 0.5rem;
+}

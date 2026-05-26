@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" width="640" height="220" role="img" aria-label="MDX pipeline diagram">
+  <defs>
+    <style>
+      .box { fill: rgba(143, 180, 255, 0.12); stroke: #8fb4ff; stroke-width: 1.4; rx: 8; }
+      .label { fill: #cbd5e1; font: 14px Poppins, sans-serif; }
+      .sub { fill: #94a3b8; font: 11px Poppins, sans-serif; }
+      .arrow { fill: none; stroke: #8fb4ff; stroke-width: 1.4; }
+    </style>
+    <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8fb4ff"/>
+    </marker>
+  </defs>
+  <g transform="translate(20,60)">
+    <rect class="box" width="120" height="84" rx="8"/>
+    <text class="label" x="60" y="40" text-anchor="middle">.mdx file</text>
+    <text class="sub" x="60" y="60" text-anchor="middle">src/posts/</text>
+  </g>
+  <g transform="translate(180,60)">
+    <rect class="box" width="120" height="84" rx="8"/>
+    <text class="label" x="60" y="35" text-anchor="middle">frontmatter</text>
+    <text class="sub" x="60" y="55" text-anchor="middle">+ remark + shiki</text>
+  </g>
+  <g transform="translate(340,60)">
+    <rect class="box" width="120" height="84" rx="8"/>
+    <text class="label" x="60" y="35" text-anchor="middle">import.meta.glob</text>
+    <text class="sub" x="60" y="55" text-anchor="middle">posts utility</text>
+  </g>
+  <g transform="translate(500,60)">
+    <rect class="box" width="120" height="84" rx="8"/>
+    <text class="label" x="60" y="35" text-anchor="middle">/blog/:slug</text>
+    <text class="sub" x="60" y="55" text-anchor="middle">prerendered HTML</text>
+  </g>
+  <path class="arrow" d="M140,102 L180,102" marker-end="url(#head)"/>
+  <path class="arrow" d="M300,102 L340,102" marker-end="url(#head)"/>
+  <path class="arrow" d="M460,102 L500,102" marker-end="url(#head)"/>
+</svg>

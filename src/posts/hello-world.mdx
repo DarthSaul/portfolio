@@ -1,0 +1,98 @@
+---
+title: Hello, world
+slug: hello-world
+date: 2026-05-25
+description: How this blog is wired up, and how to add a new post.
+tags:
+  - meta
+  - mdx
+draft: false
+replies: true
+canonical: https://saulgraves.com/blog/hello-world
+---
+
+import postImage from './images/hello-world.svg';
+
+This is the first post. It's an MDX file living at `src/posts/hello-world.mdx`,
+and everything you see below is produced by the same machinery your future
+posts will run through.
+
+## Adding a new post
+
+Drop a new `.mdx` file into `src/posts/` and it shows up automatically — no
+manual registration, no import, no route config.
+
+<Callout type="tip" title="Frontmatter is the contract">
+  Every post needs `title`, `date` (ISO `YYYY-MM-DD`), `slug`, and
+  `description`. `tags`, `draft`, `replies`, and `canonical` are optional.
+  Drafts are hidden from the index and feed but the URL still resolves so you
+  can preview them.
+</Callout>
+
+A minimal post looks like:
+
+```mdx
+---
+title: A new thing
+slug: a-new-thing
+date: 2026-06-01
+description: One-line summary that lands on the index card and OG tag.
+tags: [writing]
+---
+
+Body goes here. Use **regular markdown** plus any custom components.
+```
+
+## Custom components
+
+Two components ship out of the box — extend `src/components/mdx/MDXComponents.jsx`
+to add more.
+
+<Callout type="info" title="Callout">
+  Three variants: `info`, `warn`, `tip`. Pass a `title` if you want a heading.
+</Callout>
+
+<Callout type="warn">
+  No `title` is also fine — the icon carries the meaning.
+</Callout>
+
+<Aside>
+  Smaller, quieter than a callout. Use this for parenthetical asides — the
+  kind of thing you'd footnote in print.
+</Aside>
+
+## Code blocks
+
+Fenced code blocks get syntax highlighted by Shiki at build time, so there's
+no client-side highlighter shipping in the bundle:
+
+```js
+// src/utilities/posts.js
+const modules = import.meta.glob('../posts/*.mdx', { eager: true });
+const sources = import.meta.glob('../posts/*.mdx', { eager: true, query: '?raw', import: 'default' });
+```
+
+Inline `code` works too, via the standard backticks.
+
+## Images
+
+Put images alongside the posts, in `src/posts/images/`, then import them at
+the top of the post:
+
+```mdx
+import diagram from './images/diagram.svg';
+
+<img src={diagram} alt="A descriptive caption that doubles as the figcaption." />
+```
+
+<img src={postImage} alt="The MDX pipeline: write, frontmatter, glob, render." />
+
+Vite handles hashing and bundling — the URL you ship to production points at
+the hashed asset, not the source path.
+
+## Reply via email
+
+Each post ends with a small "Reply via email" link. The recipient is set by
+the `VITE_REPLY_EMAIL` env var (with a fallback for local dev). Drop a
+`replies: false` line into frontmatter on posts where it'd feel wrong, and
+the link disappears.

@@ -1,22 +1,25 @@
-import { Link } from 'react-router';
-import { listPosts } from '../utilities/posts';
+import { useParams, Link } from 'react-router';
+import { postsByTag } from '../utilities/posts';
 import Seo from '../components/blog/Seo';
 import PostMeta from '../components/blog/PostMeta';
 import '../css/Blog.css';
 
-const BlogPage = () => {
-	const posts = listPosts();
+const TagPage = () => {
+	const { tag } = useParams();
+	const posts = postsByTag(tag);
 	return (
 		<div className="content-container">
 			<Seo
-				title="Blog"
-				description="Essays and notes on building software, by Saul Graves."
-				path="/blog"
+				title={`#${tag}`}
+				description={`Posts tagged #${tag}`}
+				path={`/blog/tag/${tag}`}
 			/>
 			<div className="blog-page-wrapper">
-				<h2 className="blog-heading">Blog</h2>
+				<h2 className="blog-heading">
+					Posts tagged <span className="blog-tag-name">#{tag}</span>
+				</h2>
 				{posts.length === 0 ? (
-					<p className="blog-coming-soon">Coming soon.</p>
+					<p className="blog-coming-soon">No posts under this tag yet.</p>
 				) : (
 					<ul className="blog-index-list">
 						{posts.map((post) => (
@@ -36,9 +39,12 @@ const BlogPage = () => {
 						))}
 					</ul>
 				)}
+				<p className="blog-back-link">
+					<Link to="/blog">← All posts</Link>
+				</p>
 			</div>
 		</div>
 	);
 };
 
-export default BlogPage;
+export default TagPage;

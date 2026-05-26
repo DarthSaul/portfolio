@@ -4,16 +4,19 @@ import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import '../../css/Nav.css';
 
-// Restore persisted theme before first render, falling back to system preference
-try {
-	const savedTheme = localStorage.getItem('theme');
-	if (savedTheme) {
-		document.documentElement.dataset.theme = savedTheme;
-	} else {
-		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-		document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
-	}
-} catch (_) {}
+// Restore persisted theme before first render, falling back to system
+// preference. Guarded for SSR (no `window`/`document` during prerender).
+if (typeof window !== 'undefined') {
+	try {
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			document.documentElement.dataset.theme = savedTheme;
+		} else {
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+		}
+	} catch (_) {}
+}
 
 const toggleTheme = () => {
 	const html = document.documentElement;
