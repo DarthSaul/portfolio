@@ -8,7 +8,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm start          # Dev server (Vite) at localhost:5173
 npm run build      # Production build → /dist
 npm run preview    # Preview production build locally
-npm test           # Vitest test runner
 ```
 
 Deployment is handled by Netlify (see `netlify.toml`). Push to the tracked branch to trigger a deploy.
