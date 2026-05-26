@@ -7,8 +7,7 @@
 
 import { SITE_URL } from './Seo';
 
-// TODO(saul): swap in the real address once you've decided on one.
-const FALLBACK_EMAIL = 'hello@saulgraves.com';
+const FALLBACK_EMAIL = 'graves.saul@gmail.com';
 
 const ReplyByEmail = ({ postTitle, postPath }) => {
 	const email = import.meta.env.VITE_REPLY_EMAIL || FALLBACK_EMAIL;

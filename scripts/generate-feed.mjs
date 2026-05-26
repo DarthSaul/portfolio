@@ -15,7 +15,7 @@ const distDir = path.join(projectRoot, 'dist');
 const SITE_URL = 'https://saulgraves.com';
 const SITE_TITLE = 'Saul Graves';
 const SITE_DESC = 'Essays and notes on building software, by Saul Graves.';
-const AUTHOR_EMAIL = process.env.VITE_REPLY_EMAIL || 'hello@saulgraves.com';
+const AUTHOR_EMAIL = process.env.VITE_REPLY_EMAIL || 'graves.saul@gmail.com';
 
 function readPosts() {
 	if (!fs.existsSync(postsDir)) return [];

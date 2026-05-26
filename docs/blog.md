@@ -104,9 +104,9 @@ are `github-light` / `github-dark`, switched by `[data-theme='light']` on
 ## Reply via email
 
 Recipient is configured by the `VITE_REPLY_EMAIL` env var. Without it, the
-fallback `hello@saulgraves.com` is used (with a TODO to swap in the real
-address). Set it in Netlify under **Site settings → Environment variables**,
-or in a local `.env.local` for development:
+fallback `graves.saul@gmail.com` is used. Override it in Netlify under
+**Site settings → Environment variables**, or in a local `.env.local` for
+development:
 
 ```
 VITE_REPLY_EMAIL=you@example.com
