@@ -6,7 +6,7 @@ description: How this blog is wired up, and how to add a new post.
 tags:
   - meta
   - mdx
-draft: false
+draft: true
 replies: true
 canonical: https://saulgraves.com/blog/hello-world
 ---
@@ -23,10 +23,9 @@ Drop a new `.mdx` file into `src/posts/` and it shows up automatically — no
 manual registration, no import, no route config.
 
 <Callout type="tip" title="Frontmatter is the contract">
-  Every post needs `title`, `date` (ISO `YYYY-MM-DD`), `slug`, and
-  `description`. `tags`, `draft`, `replies`, and `canonical` are optional.
-  Drafts are hidden from the index and feed but the URL still resolves so you
-  can preview them.
+	Every post needs `title`, `date` (ISO `YYYY-MM-DD`), `slug`, and `description`. `tags`, `draft`, `replies`, and
+	`canonical` are optional. Drafts are hidden from the index and feed but the URL still resolves so you can preview
+	them.
 </Callout>
 
 A minimal post looks like:
@@ -49,16 +48,13 @@ Two components ship out of the box — extend `src/components/mdx/MDXComponents.
 to add more.
 
 <Callout type="info" title="Callout">
-  Three variants: `info`, `warn`, `tip`. Pass a `title` if you want a heading.
+	Three variants: `info`, `warn`, `tip`. Pass a `title` if you want a heading.
 </Callout>
 
-<Callout type="warn">
-  No `title` is also fine — the icon carries the meaning.
-</Callout>
+<Callout type="warn">No `title` is also fine — the icon carries the meaning.</Callout>
 
 <Aside>
-  Smaller, quieter than a callout. Use this for parenthetical asides — the
-  kind of thing you'd footnote in print.
+	Smaller, quieter than a callout. Use this for parenthetical asides — the kind of thing you'd footnote in print.
 </Aside>
 
 ## Code blocks

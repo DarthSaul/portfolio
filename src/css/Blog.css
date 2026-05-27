@@ -7,6 +7,24 @@
 	margin-bottom: 1.5rem;
 }
 
+.blog-subtitle {
+	color: var(--color-text-muted);
+	font-weight: 300;
+	font-size: 0.95rem;
+}
+
+/* When a subtitle follows the heading, tighten the gap so they read as a unit. */
+.blog-heading + .blog-subtitle {
+	margin-top: -1rem;
+	margin-bottom: 1.5rem;
+}
+
+/* The wave divider on /blog gets more breathing room than the one between
+   home-page sections, which have their own internal padding. */
+.blog-page-wrapper .wave-divider {
+	margin: 3rem 0;
+}
+
 .blog-tag-name {
 	color: var(--color-accent);
 	font-weight: 500;
@@ -162,13 +180,20 @@
 	background: var(--card-bg);
 	color: var(--color-text);
 	text-decoration: none;
-	transition: border-color 0.2s, color 0.2s;
+	transition:
+		border-color 0.2s,
+		color 0.2s;
 }
 
-.post-prev-next-link:hover,
-.post-prev-next-link:focus-visible {
+.post-prev-next-link:not(.post-prev-next-link-disabled):hover,
+.post-prev-next-link:not(.post-prev-next-link-disabled):focus-visible {
 	border-color: var(--color-accent);
 	color: var(--color-accent);
+}
+
+.post-prev-next-link-disabled {
+	cursor: default;
+	opacity: 0.55;
 }
 
 .post-prev-next-link-right {
@@ -185,6 +210,13 @@
 .post-prev-next-title {
 	font-weight: 500;
 	font-size: 0.95rem;
+}
+
+.post-prev-next-empty {
+	color: var(--color-text-muted);
+	font-weight: 300;
+	font-size: 0.9rem;
+	font-style: italic;
 }
 
 .blog-back-link {

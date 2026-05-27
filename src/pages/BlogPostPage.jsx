@@ -12,7 +12,7 @@ import '../css/Mdx.css';
 const NotFound = () => (
 	<div className="content-container">
 		<div className="blog-page-wrapper">
-			<h2 className="blog-heading">Post not found</h2>
+			<h1 className="blog-heading">Post not found</h1>
 			<p className="blog-coming-soon">
 				<Link to="/blog">← Back to blog</Link>
 			</p>
@@ -44,11 +44,7 @@ const BlogPostPage = () => {
 				<header className="blog-post-header">
 					<h1 className="blog-post-title">{post.title}</h1>
 					{post.description && <p className="blog-post-lede">{post.description}</p>}
-					<PostMeta
-						date={post.date}
-						readingTime={post.readingTime}
-						tags={post.tags}
-					/>
+					<PostMeta date={post.date} readingTime={post.readingTime} tags={post.tags} />
 				</header>
 
 				<div className="blog-post-body">
