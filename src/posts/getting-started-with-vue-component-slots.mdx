@@ -2,10 +2,11 @@
 title: Getting started with Vue component slots
 slug: getting-started-with-vue-component-slots
 date: 2023-01-23
-description: When props hit a wall — composing Vue components with slots, so a CardContainer can render whatever you slot into it.
+description: Passing content through Vue components when props aren't enough.
 tags:
   - vue
   - components
+  - slots
 draft: false
 replies: true
 canonical: https://medium.com/@saulgraves/getting-started-with-vue-component-slots-aba3250b9421
@@ -13,7 +14,7 @@ canonical: https://medium.com/@saulgraves/getting-started-with-vue-component-slo
 
 import slotsHero from './images/slots-hero.jpg';
 
-*Originally published on [Medium](https://medium.com/@saulgraves/getting-started-with-vue-component-slots-aba3250b9421) in January 2023.*
+_Originally published on [Medium](https://medium.com/@saulgraves/getting-started-with-vue-component-slots-aba3250b9421) in January 2023._
 
 When just setting out to learn Vue.js, slots are admittedly not the most important subject to learn right away. The crux of Vue components revolves around props and events; props is data sent down to a child component, while events are emitted back up the parent.
 
@@ -44,23 +45,17 @@ With the CSS solution, we could have several components like so:
 ```html
 <!-- ChartCard.vue -->
 <template>
-  <div class="my-custom-card">
-    Chart visuals here
-  </div>
+	<div class="my-custom-card">Chart visuals here</div>
 </template>
 
 <!-- SettingsCard.vue -->
 <template>
-  <div class="my-custom-card">
-    Settings form here
-  </div>
+	<div class="my-custom-card">Settings form here</div>
 </template>
 
 <!-- LoginCard.vue -->
 <template>
-  <div class="my-custom-card">
-    Login form here
-  </div>
+	<div class="my-custom-card">Login form here</div>
 </template>
 ```
 
@@ -69,16 +64,14 @@ Instead, we’re going to move to a single component that contains the card styl
 ```html
 <!-- CardContainer.vue -->
 <template>
-  <div class="my-custom-card">
-    Whatever we need here
-  </div>
+	<div class="my-custom-card">Whatever we need here</div>
 </template>
 
 <style lang="scss" scoped>
-.my-custom-card {
-  border-radius: 10px;
-  padding: 1em;
-}
+	.my-custom-card {
+		border-radius: 10px;
+		padding: 1em;
+	}
 </style>
 ```
 
@@ -88,7 +81,7 @@ Throughout our application, we’ll now utilize `CardContainer.vue` and dynamica
 
 Now that we have a `CardContainer.vue` component created, we need a flexible way to provide content to the card.
 
-Returning to our chart on a dashboard example, imagine we had another component called `ChartData.vue`. This component contains a data visualization element, such as a bar chart from a JavaScript library like [Apache ECharts](https://echarts.apache.org/en/index.html) (my favorite). We want to place `ChartData.vue` ***within*** `CardContainer.vue`.
+Returning to our chart on a dashboard example, imagine we had another component called `ChartData.vue`. This component contains a data visualization element, such as a bar chart from a JavaScript library like [Apache ECharts](https://echarts.apache.org/en/index.html) (my favorite). We want to place `ChartData.vue` **_within_** `CardContainer.vue`.
 
 Here is where we run into a limitation of props. Simply put, you can’t pass a component down as a prop.
 
@@ -97,15 +90,15 @@ For example, this is incorrect Vue code:
 ```html
 <!-- DashboardPage.vue -->
 <script setup>
-import CardContainer from './learn/CardContainer.vue';
-import ChartData from './learn/ChartData.vue';
+	import CardContainer from './learn/CardContainer.vue';
+	import ChartData from './learn/ChartData.vue';
 </script>
- 
+
 <template>
- <div>
-    <!-- Won't work! -->
-   <CardContainer :componentProp="ChartData" />
- </div>
+	<div>
+		<!-- Won't work! -->
+		<CardContainer :componentProp="ChartData" />
+	</div>
 </template>
 ```
 
@@ -118,20 +111,18 @@ Inside of `CardContainer.vue`, we’ll place a `<slot>` wherever we wish slotted
 ```html
 <!-- CardContainer.vue -->
 <template>
-  <div class="my-custom-card">
+	<div class="my-custom-card">
+		<p>Card Title</p>
 
-    <p>Card Title</p>
-
-    <slot></slot>
-  
-</div>
+		<slot></slot>
+	</div>
 </template>
 
 <style lang="scss" scoped>
-.my-custom-card {
-  border-radius: 10px;
-  padding: 1em;
-}
+	.my-custom-card {
+		border-radius: 10px;
+		padding: 1em;
+	}
 </style>
 ```
 
@@ -140,11 +131,11 @@ Back on `DashboardPage.vue`, we can then open up our card component and dynamica
 ```html
 <!-- DashboardPage.vue -->
 <template>
-  <div>
-    <CardContainer>
-      <ChartData />
-    </CardContainer>
-  </div>
+	<div>
+		<CardContainer>
+			<ChartData />
+		</CardContainer>
+	</div>
 </template>
 ```
 
@@ -159,19 +150,19 @@ To set up a named slot, we just need to provide a `name` to a slot. For example,
 ```html
 <!-- CardContainer.vue -->
 <template>
-  <div class="container">
-    <header>
-      <slot name="header"></slot>
-    </header>
+	<div class="container">
+		<header>
+			<slot name="header"></slot>
+		</header>
 
-    <main>
-      <slot></slot>
-    </main>
+		<main>
+			<slot></slot>
+		</main>
 
-    <footer>
-      <slot name="footer"></slot>
-    </footer>
-  </div>
+		<footer>
+			<slot name="footer"></slot>
+		</footer>
+	</div>
 </template>
 ```
 
@@ -182,17 +173,15 @@ To specify the slot you would like to place certain content in, you use a `<temp
 ```html
 <!-- DashboardPage.vue -->
 <template>
-  <div>
-    <CardContainer>
+	<div>
+		<CardContainer>
+			<template v-slot:header>
+				<p>Card Title</p>
+			</template>
 
-      <template v-slot:header>
-        <p>Card Title</p>
-      </template>
-
-      <ChartData />
-
-    </CardContainer>
-  </div>
+			<ChartData />
+		</CardContainer>
+	</div>
 </template>
 ```
 
@@ -203,17 +192,15 @@ Since we didn’t specify a named slot for `ChartData`, it will be placed in the
 ```html
 <!-- DashboardPage.vue -->
 <template>
-  <div>
-    <CardContainer>
+	<div>
+		<CardContainer>
+			<template #header>
+				<p>Card Title</p>
+			</template>
 
-      <template #header>
-        <p>Card Title</p>
-      </template>
-
-      <ChartData />
-
-    </CardContainer>
-  </div>
+			<ChartData />
+		</CardContainer>
+	</div>
 </template>
 ```
 

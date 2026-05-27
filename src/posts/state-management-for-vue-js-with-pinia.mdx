@@ -2,7 +2,7 @@
 title: State management for Vue.js with Pinia
 slug: state-management-for-vue-js-with-pinia
 date: 2023-01-19
-description: Why Pinia replaces Vuex as Vue's official state-management story, with a walk-through of building your first store.
+description: A walkthrough of building your first Pinia store.
 tags:
   - vue
   - pinia
@@ -18,7 +18,7 @@ import piniaViteScaffold from './images/pinia-vite-scaffold.png';
 import piniaFileTree from './images/pinia-file-tree.png';
 import piniaCountResult from './images/pinia-count-result.png';
 
-*Originally published on [Medium](https://medium.com/@saulgraves/state-management-for-vue-js-with-pinia-af9a1533cf20) in January 2023.*
+_Originally published on [Medium](https://medium.com/@saulgraves/state-management-for-vue-js-with-pinia-af9a1533cf20) in January 2023._
 
 <img src={piniaHero} alt="Photo by Julien Pianetti on Unsplash" />
 
@@ -107,11 +107,11 @@ Next, we’ll [install Pinia](https://pinia.vuejs.org/getting-started.html) by r
 With our Vite scaffolded project, our `main.js` file initially looks like this:
 
 ```javascript
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import './style.css';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+createApp(App).mount('#app');
 ```
 
 We’ll update it like so:
@@ -142,13 +142,13 @@ Before we jump into defining our first store, let’s quickly review the functio
 In the `script` tag, this file is managing the `count` state locally within the component:
 
 ```javascript
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 defineProps({
-  msg: String,
-})
+	msg: String,
+});
 
-const count = ref(0)
+const count = ref(0);
 ```
 
 The `count` state is then being modified within the template via an `@click` event listener applied to a button element:
@@ -168,11 +168,11 @@ Add a file to the `/stores` directory called `counter.js`. Open that file in you
 The first two key concepts for using Pinia are using the `defineStore` method provided by Pinia, and naming our store. We want to import that method, pass a string to that method that will be the name of our store, and export that defined store using a `use[StoreName]Store` convention. For example:
 
 ```javascript
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
-  // Store configuration will come here
-})
+	// Store configuration will come here
+});
 ```
 
 Here, note how we’re naming the store `counter`, and then exporting the defined store as `useCounterStore`. **This is the convention recommended by Pinia and yes, you should absolutely use this convention.**
@@ -195,9 +195,9 @@ We’ll start with defining the state, which will be a property with a value of 
 import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
- state: () => ({
-  count: 0,
- })
+	state: () => ({
+		count: 0,
+	}),
 });
 ```
 
@@ -215,12 +215,12 @@ Getters are defined as methods provided on a `getters` object. We also need to p
 import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
- state: () => ({
-  count: 0,
- }),
- getters: {
-  doubleCount: (state) => state.count * 2,
- }
+	state: () => ({
+		count: 0,
+	}),
+	getters: {
+		doubleCount: (state) => state.count * 2,
+	},
 });
 ```
 
@@ -238,17 +238,17 @@ We’ll add an `increment` function:
 import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
- state: () => ({
-  count: 0,
- }),
- getters: {
-  doubleCount: (state) => state.count * 2,
- },
- actions: {
-  increment() {
-   this.count++;
-  },
- },
+	state: () => ({
+		count: 0,
+	}),
+	getters: {
+		doubleCount: (state) => state.count * 2,
+	},
+	actions: {
+		increment() {
+			this.count++;
+		},
+	},
 });
 ```
 
@@ -264,15 +264,15 @@ We’ll import the store from the module we defined it in, and we’ll also init
 
 ```html
 <script setup>
- import { ref } from 'vue';
- import { useCounterStore } from '../stores/counter';
- const counterStore = useCounterStore();
+	import { ref } from 'vue';
+	import { useCounterStore } from '../stores/counter';
+	const counterStore = useCounterStore();
 
- defineProps({
-  msg: String,
- });
+	defineProps({
+		msg: String,
+	});
 
- const count = ref(0);
+	const count = ref(0);
 </script>
 ```
 
@@ -281,9 +281,7 @@ Now with `counterStore` available to us in the setup, we’ll use it. First, we�
 Let’s update our button element like so:
 
 ```html
-<button type="button" @click="counterStore.increment()">
-   count is {{ counterStore.count }}
-</button>
+<button type="button" @click="counterStore.increment()">count is {{ counterStore.count }}</button>
 ```
 
 And voila! Our application in the browser will function exactly the same as before, but the store will available globally to any component that is configured to consume it.
@@ -291,9 +289,7 @@ And voila! Our application in the browser will function exactly the same as befo
 Let’s not forget about our `doubleCount` getter, which we can add to render beneath the button element:
 
 ```html
-<button type="button" @click="counterStore.increment()">
-   count is {{ counterStore.count }}
-</button>
+<button type="button" @click="counterStore.increment()">count is {{ counterStore.count }}</button>
 
 <p>count times 2 is {{ counterStore.doubleCount }}</p>
 ```
@@ -312,11 +308,10 @@ For example, let’s say we wanted to save `counterStore.doubleCount` to a varia
 
 ```html
 <script setup>
- import { ref } from 'vue';
- import { useCounterStore } from '../stores/counter';
- const counterStore = useCounterStore();
- const doubleCount = ref(counterStore.doubleCount);
-
+	import { ref } from 'vue';
+	import { useCounterStore } from '../stores/counter';
+	const counterStore = useCounterStore();
+	const doubleCount = ref(counterStore.doubleCount);
 </script>
 ```
 
@@ -324,11 +319,10 @@ However, doubleCount will no longer be reactive. It will render with the initial
 
 ```html
 <script setup>
- import { computed } from 'vue';
- import { useCounterStore } from '../stores/counter';
- const counterStore = useCounterStore();
- const doubleCount = computed(() => counterStore.doubleCount);
-
+	import { computed } from 'vue';
+	import { useCounterStore } from '../stores/counter';
+	const counterStore = useCounterStore();
+	const doubleCount = computed(() => counterStore.doubleCount);
 </script>
 ```
 
@@ -340,7 +334,7 @@ Your HTML could then be slightly less verbose:
 
 ## When to use Pinia
 
-Keep in mind that you should *not* by default install and utilize a state management solution, regardless of the specifics of your application. If you’re building a simple calculator app, for example, you most likely do not need global state.
+Keep in mind that you should _not_ by default install and utilize a state management solution, regardless of the specifics of your application. If you’re building a simple calculator app, for example, you most likely do not need global state.
 
 If your project only has a handful of components, it’s very possible that a simpler, more lightweight solution to maintaining state is through props and event emission.
 
@@ -348,6 +342,6 @@ I mentioned earlier that if you’re passing props to one component just to be p
 
 ### Key references
 
-- [Pinia documentation](https://pinia.vuejs.org/) — there’s ***a lot*** more to Pinia than what we covered today!
+- [Pinia documentation](https://pinia.vuejs.org/) — there’s **_a lot_** more to Pinia than what we covered today!
 - [Vue.js documentation](https://vuejs.org/)
 - [Vue Mastery](https://www.vuemastery.com/)
