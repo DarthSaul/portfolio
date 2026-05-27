@@ -31,7 +31,7 @@ const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
 const dynamicRoutes = [
 	...listPosts().map((p) => `/blog/${p.slug}`),
-	...listTags().map(({ tag }) => `/blog/tag/${tag}`),
+	...listTags().map(({ tag }) => `/blog/tag/${encodeURIComponent(tag)}`),
 ];
 
 const routes = [...new Set([...STATIC_ROUTES, ...dynamicRoutes])];

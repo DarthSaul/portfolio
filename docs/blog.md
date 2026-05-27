@@ -51,7 +51,7 @@ posts where that prompt feels off (link roundups, personal notes, etc.).
 
 ## File layout
 
-```
+```text
 src/
   posts/
     hello-world.mdx
@@ -108,7 +108,7 @@ fallback `graves.saul@gmail.com` is used. Override it in Netlify under
 **Site settings → Environment variables**, or in a local `.env.local` for
 development:
 
-```
+```env
 VITE_REPLY_EMAIL=you@example.com
 ```
 
@@ -117,11 +117,14 @@ body prefilled with the post URL.
 
 ## Prerendering, SEO, feeds
 
-Every route is statically prerendered after the Vite build. See
-`scripts/prerender.mjs` — it imports the SSR bundle, renders each route to a
-string, splices in the head tags `react-helmet-async` captured, and writes the
-result to `dist/<route>/index.html`. Social scrapers (LinkedIn, Twitter,
-Facebook, Slack) see real `<title>` / `<meta>` / OG tags without executing JS.
+Every route is statically prerendered after the Vite build.
+`scripts/prerender.mjs` imports the SSR bundle (built via `vite build --ssr
+src/entry-server.jsx`), renders each route to a string, then runs
+`extractHeadTags` on the rendered HTML — a small helper that lifts any
+`<title>`, `<meta>`, and `<link>` tags emitted inside the React tree (via
+`src/components/blog/Seo.jsx`) into `<head>`. The final HTML is written to
+`dist/<route>/index.html`. Social scrapers (LinkedIn, Twitter, Facebook,
+Slack) see real `<title>` / `<meta>` / OG tags without executing JS.
 
 - **RSS:** `dist/rss.xml` — generated from `src/posts/` by
   `scripts/generate-feed.mjs`.
@@ -130,7 +133,7 @@ Facebook, Slack) see real `<title>` / `<meta>` / OG tags without executing JS.
 
 The full build command is:
 
-```
+```bash
 vite build \
   && vite build --ssr src/entry-server.jsx --outDir dist/server \
   && node scripts/prerender.mjs \
@@ -147,7 +150,7 @@ vite build \
 
 ## Local development
 
-```
+```bash
 npm start                       # Vite dev server at localhost:5173
 npm run build                   # Production build incl. prerender + feeds
 npm run preview                 # Serve dist/ locally to test the built output

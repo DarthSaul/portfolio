@@ -91,7 +91,9 @@ ${items}
 
 function buildSitemap(posts) {
 	const staticUrls = ['/', '/about', '/blog'];
-	const tagUrls = [...new Set(posts.flatMap((p) => p.tags))].map((t) => `/blog/tag/${t}`);
+	const tagUrls = [...new Set(posts.flatMap((p) => p.tags))].map(
+		(t) => `/blog/tag/${encodeURIComponent(t)}`,
+	);
 	const postUrls = posts.map((p) => `/blog/${p.slug}`);
 	const dateBySlug = Object.fromEntries(posts.map((p) => [p.slug, p.date]));
 	const all = [...staticUrls, ...postUrls, ...tagUrls];

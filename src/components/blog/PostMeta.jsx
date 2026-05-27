@@ -15,7 +15,7 @@ const PostMeta = ({ date, readingTime, tags = [], linkTags = true }) => (
 				{tags.map((t) =>
 					linkTags ? (
 						<li key={t}>
-							<Link to={`/blog/tag/${t}`}>#{t}</Link>
+							<Link to={`/blog/tag/${encodeURIComponent(t)}`}>#{t}</Link>
 						</li>
 					) : (
 						<li key={t}>#{t}</li>

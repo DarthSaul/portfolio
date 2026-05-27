@@ -15,7 +15,7 @@ The site serves as a hub for project highlights, a brief bio, my blog, and conta
 - **React 19** + **React Router v7**
 - **Vite** — dev server and production build
 - **MDX** (`@mdx-js/rollup`) + **Shiki** — git-as-CMS blog with build-time syntax highlighting (see [`docs/blog.md`](./docs/blog.md))
-- **react-helmet-async** + custom SSR prerender — static HTML for every route so social scrapers pick up meta tags
+- **React 19 native head** via [`Seo`](./src/components/blog/Seo.jsx) + custom SSR prerender ([`scripts/prerender.mjs`](./scripts/prerender.mjs)) — every route ships static HTML with hoisted `<title>` / `<meta>` so social scrapers pick up tags without running JS
 - **Font Awesome** — icons
 - Custom **mobile-first CSS**
 - **Netlify** — hosting and continuous deploy
