@@ -17,11 +17,13 @@ Deployment is handled by Netlify (see `netlify.toml`). Push to the tracked branc
 React 19 single-page application built with Vite, deployed to Netlify.
 
 **Data layer** — content is driven by two utility files:
+
 - `src/utilities/projectsDev.js` — object map keyed by project ID (name, headline, period, icon, links, images, bullets)
-- `src/utilities/contactInfo.js` — social/contact links (GitHub, LinkedIn, Medium, email, resume)
+- `src/utilities/contactInfo.js` — social/contact links (GitHub, LinkedIn, Medium, email)
 - `src/services/projects.js` — `ProjectDataService` class for looking up projects by ID
 
 **Components** live in `src/components/dev/`, each paired with a CSS file in `src/css/`:
+
 - `Nav.jsx` — sticky nav bar with theme toggle (dark/light); restores theme from localStorage on load, falling back to `prefers-color-scheme`
 - `Hero.jsx` — landing section with avatar fireworks animation on hover
 - `Work.jsx` — renders two sections ("Work" and "Projects") from manually curated arrays at the top of the file; controls display order
