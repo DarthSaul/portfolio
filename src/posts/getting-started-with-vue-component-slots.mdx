@@ -1,0 +1,219 @@
+---
+title: Getting started with Vue component slots
+slug: getting-started-with-vue-component-slots
+date: 2023-01-23
+description: Passing content through Vue components when props aren't enough.
+tags:
+  - vue
+  - components
+  - slots
+draft: false
+replies: true
+canonical: https://medium.com/@saulgraves/getting-started-with-vue-component-slots-aba3250b9421
+---
+
+import slotsHero from './images/slots-hero.jpg';
+
+_Originally published on [Medium](https://medium.com/@saulgraves/getting-started-with-vue-component-slots-aba3250b9421) in January 2023._
+
+When just setting out to learn Vue.js, slots are admittedly not the most important subject to learn right away. The crux of Vue components revolves around props and events; props is data sent down to a child component, while events are emitted back up the parent.
+
+Getting a handle on props and events should undoubtedly be the first task you accomplish if you’re seeking to become a Vue.js developer.
+
+There will inevitably, however, come a point in time where props limit your ability to build a robust application with reusable components. My favorite example of hitting a dead end with props revolves around the concept of passing a component down as props.
+
+Pass a component down as props? You might be thinking, is that even possible? Well — no. And that’s exactly where slots come in handy.
+
+<img src={slotsHero} alt="Photo by Pat Whelen on Unsplash" />
+
+## The requirement for better reusability
+
+Let’s first consider a scenario where you’re implementing a custom card element in your application. You have several features in your application that should utilize the same style of card, such as a chart on a dashboard, a form on the settings page, and login component.
+
+One possible solution is to simply repeat your styling and setup of the card wherever you need it, and create individual components for each of those use cases. For example, you could create a `ChartCard.vue`, `SettingsCard.vue`, and `LoginCard.vue` component.
+
+Providing each of those components with a custom CSS class like `my-custom-card` and defining that class in the app’s global CSS would work fine. But what if at a later date you needed to adjust each of those cards to include a footer with an action button? While you can change the overall style of the card in a single operation by editing the CSS, you would need to return to each of those component files and apply the same code over and over again.
+
+We need a better solution that calls for less work and more flexibility.
+
+## Shifting towards reusable components
+
+Continuing with our example of a certain card style that you wish to repeat throughout your application, let’s move away from the idea of reusing a CSS class, and instead shift towards a reusable component.
+
+With the CSS solution, we could have several components like so:
+
+```html
+<!-- ChartCard.vue -->
+<template>
+	<div class="my-custom-card">Chart visuals here</div>
+</template>
+
+<!-- SettingsCard.vue -->
+<template>
+	<div class="my-custom-card">Settings form here</div>
+</template>
+
+<!-- LoginCard.vue -->
+<template>
+	<div class="my-custom-card">Login form here</div>
+</template>
+```
+
+Instead, we’re going to move to a single component that contains the card styling. For example:
+
+```html
+<!-- CardContainer.vue -->
+<template>
+	<div class="my-custom-card">Whatever we need here</div>
+</template>
+
+<style lang="scss" scoped>
+	.my-custom-card {
+		border-radius: 10px;
+		padding: 1em;
+	}
+</style>
+```
+
+Throughout our application, we’ll now utilize `CardContainer.vue` and dynamically pass that component whatever we need to be rendered inside of it.
+
+## The limitations of props
+
+Now that we have a `CardContainer.vue` component created, we need a flexible way to provide content to the card.
+
+Returning to our chart on a dashboard example, imagine we had another component called `ChartData.vue`. This component contains a data visualization element, such as a bar chart from a JavaScript library like [Apache ECharts](https://echarts.apache.org/en/index.html) (my favorite). We want to place `ChartData.vue` **_within_** `CardContainer.vue`.
+
+Here is where we run into a limitation of props. Simply put, you can’t pass a component down as a prop.
+
+For example, this is incorrect Vue code:
+
+```html
+<!-- DashboardPage.vue -->
+<script setup>
+	import CardContainer from './learn/CardContainer.vue';
+	import ChartData from './learn/ChartData.vue';
+</script>
+
+<template>
+	<div>
+		<!-- Won't work! -->
+		<CardContainer :componentProp="ChartData" />
+	</div>
+</template>
+```
+
+We need a way to render `ChartData.vue` within `CardContainer.vue`. Enter slots!
+
+## The slot outlet
+
+Inside of `CardContainer.vue`, we’ll place a `<slot>` wherever we wish slotted content to be placed. Here’s an example of what our component can look like:
+
+```html
+<!-- CardContainer.vue -->
+<template>
+	<div class="my-custom-card">
+		<p>Card Title</p>
+
+		<slot></slot>
+	</div>
+</template>
+
+<style lang="scss" scoped>
+	.my-custom-card {
+		border-radius: 10px;
+		padding: 1em;
+	}
+</style>
+```
+
+Back on `DashboardPage.vue`, we can then open up our card component and dynamically slot the chart component within it. For example:
+
+```html
+<!-- DashboardPage.vue -->
+<template>
+	<div>
+		<CardContainer>
+			<ChartData />
+		</CardContainer>
+	</div>
+</template>
+```
+
+The `ChartData.vue` component will then render exactly where we placed `<slot></slot>` in the card container.
+
+## Named slots
+
+If we want to pass different components or content into different areas of `CardContainer.vue`, we could utilize named slots.
+
+To set up a named slot, we just need to provide a `name` to a slot. For example, we can add two named slots and one **default** slot to our card:
+
+```html
+<!-- CardContainer.vue -->
+<template>
+	<div class="container">
+		<header>
+			<slot name="header"></slot>
+		</header>
+
+		<main>
+			<slot></slot>
+		</main>
+
+		<footer>
+			<slot name="footer"></slot>
+		</footer>
+	</div>
+</template>
+```
+
+Notice how the slot within `<main>` does not have a name. This will become the default slot, and anything passed to `CardContainer.vue` as a slot but is not designated for a named slot will by default be placed inside of `<main>`.
+
+To specify the slot you would like to place certain content in, you use a `<template v-slot:slotName>` syntax. For example:
+
+```html
+<!-- DashboardPage.vue -->
+<template>
+	<div>
+		<CardContainer>
+			<template v-slot:header>
+				<p>Card Title</p>
+			</template>
+
+			<ChartData />
+		</CardContainer>
+	</div>
+</template>
+```
+
+Since we didn’t specify a named slot for `ChartData`, it will be placed in the default slot location, which we defined as inside of `<main>` on the card component.
+
+**Vue provides a shorthand for named slots** — instead of `v-slot:header`, we can simply write `#header`. For example:
+
+```html
+<!-- DashboardPage.vue -->
+<template>
+	<div>
+		<CardContainer>
+			<template #header>
+				<p>Card Title</p>
+			</template>
+
+			<ChartData />
+		</CardContainer>
+	</div>
+</template>
+```
+
+## Slots provide two levels of reusability
+
+In my own experience, slots have become most useful when I need to reuse two components.
+
+This `CardContainer` with `ChartData` scenario we’ve been working with provides a fantastic example of this. The `ChartData` component can accept an `options` prop that defines different aspects of the chart, such as the type, color, axis labels, etc. We can then reuse that component in many different places for different use cases, for example we may need a bar chart in one place and a pie chart in another.
+
+There may also be one place where I want to have a chart displayed within a card element, and another place where I want a chart flat on the UI of a page. This is why we don’t want to bake the card styling into the `ChartData` component. We want to maintain a greater degree of flexibility.
+
+Since we’re using a slot in the `CardContainer` component, we can reuse the `CardContainer` component with or without `ChartData`, and both are reusable in two different places.
+
+For much more on Slots in Vue.js, check out Vue’s documentation:
+
+> [Slots | Vue.js](https://vuejs.org/guide/components/slots.html)

@@ -1,12 +1,5 @@
-import {
-	faLinkedin,
-	faGithub,
-	faMedium,
-} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFileLines } from '@fortawesome/free-regular-svg-icons';
-
-import resume from '../Saul_Graves-Resume.pdf';
 
 const contactItems = [
 	{
@@ -32,12 +25,6 @@ const contactItems = [
 		link: 'https://medium.com/@saulgraves',
 		icon: faMedium,
 		beta: true,
-	},
-	{
-		name: 'Resume',
-		link: resume,
-		icon: faFileLines,
-		beta: false,
 	},
 ];
 

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Saul Graves">
+  <style>
+    /* Defaults match the dark theme (--color-background + --color-primary). */
+    .bg { fill: #16132a; }
+    .fg { fill: #8fb4ff; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #fafafa; }
+      .fg { fill: #4361cc; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14" />
+  <text
+    class="fg"
+    x="32"
+    y="47"
+    text-anchor="middle"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    font-size="44"
+    font-weight="700"
+  >S</text>
+</svg>
